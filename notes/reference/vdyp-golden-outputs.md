@@ -32,6 +32,24 @@ VDYP SI Wrapper:                  7.12j
 SINDEX:                           1.51
 ```
 
+## Reproduced synthetic run
+
+On 2026-11-09 the console was exercised under WineHQ stable 11.0 with the
+synthetic fixture in `fixtures/console-input/`:
+
+| Field | Value |
+| --- | --- |
+| Console version | 7.16k |
+| Runtime | Wine 11.0 on Linux x86_64 |
+| Command | `wine VDYP7Console.exe -i Console -o ConsoleOutput.txt -e ConsoleErrors.txt -c VDYP_CFG/ -d . -ofmt CSVYieldTable -agestart 0 -ageend 300 -inc 1` |
+| Exit | 0 |
+| Output | 48,407 bytes, 301 data rows, 33 CSV columns |
+| Output SHA256 | `b866b59c9bb9458390812e835202f1d623df34497a9ab3339aabe87745665750` |
+| Tracked subset | `fixtures/yield-output/golden-sample.csv` (header + 10 rows) |
+
+This reproduces the console path on synthetic input. It is not a BC dataset and
+does not claim cross-runtime parity with Windows.
+
 ## Limits
 
 - The archive output is a formatted text table, not `csvyieldtable` CSV output.

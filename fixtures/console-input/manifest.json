@@ -2,7 +2,7 @@
   "bundle": "console-input",
   "status": "synthetic",
   "note": "Synthetic console input shaped after the shipped CSV headers. Not BC government data.",
-  "acceptance": "not yet accepted by a console run; the host Wine runtime is broken (see notes/reference/vdyp-runtime-failure.md).",
+  "acceptance": "accepted by a VDYP7Console run on 2026-11-09 under Wine 11.0; exit 0, 301 output rows.",
   "files": [
     {
       "path": "Console/HISTORY.csv",

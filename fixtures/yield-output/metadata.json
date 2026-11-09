@@ -1,0 +1,16 @@
+{
+  "source_file": "fixtures/console-input",
+  "source_kind": "synthetic console input",
+  "runtime": "Wine 11.0",
+  "console_version": "7.16k",
+  "command": "wine VDYP7Console.exe -i Console -o ConsoleOutput.txt -e ConsoleErrors.txt -c VDYP_CFG/ -d . -ofmt CSVYieldTable -agestart 0 -ageend 300 -inc 1",
+  "exit_code": 0,
+  "full_output_bytes": 48407,
+  "full_output_sha256": "b866b59c9bb9458390812e835202f1d623df34497a9ab3339aabe87745665750",
+  "full_row_count": 301,
+  "subset_row_count": 10,
+  "subset_sha256": "6f381f2d3b8d5d4d8eba64f75730a0c8234ad2395024c9eaa0cc6858ae1776b7",
+  "column_count": 33,
+  "reproduced_at_utc": "2026-11-09T05:08:00Z",
+  "note": "Header plus the first 10 rows of a reproduced run on synthetic input. Not BC data."
+}

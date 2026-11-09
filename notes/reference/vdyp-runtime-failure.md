@@ -3,7 +3,13 @@
 Date: 2026-11-09
 Host: Linux x86_64, Ubuntu 24.04 userland
 Wine: `wine-9.0 (Ubuntu 9.0~repack-4build3)`
-Status: **host runtime failure; the model was not exercised**
+Status: **resolved on 2026-11-09 by WineHQ stable 11.0**; the console then ran successfully. The original failure is kept below as history.
+
+## Resolution
+
+WineHQ stable 11.0 was installed on 2026-11-09 after distro Wine 9.0 failed at
+startup. `wine cmd /c echo hi` then returned 0, and `VDYP7Console.exe` accepted
+the synthetic fixture. The first successful run produced 301 rows and exit 0.
 
 ## What happened
 

@@ -25,6 +25,7 @@ from pathlib import Path
 from typing import Final
 
 DEFAULT_SCHEMA: Final[Path] = Path("notes/reference/vdyp-columns.json")
+DEFAULT_ALIASES: Final[Path] = Path("notes/reference/vdyp-csv-header-aliases.json")
 REQUIRED_COLUMNS: Final[tuple[str, ...]] = ("year", "age", "vol ws")
 NORMALIZE_PATTERN: Final[re.Pattern[str]] = re.compile(r"[^a-z0-9]+")
 INTEGER_PATTERN: Final[re.Pattern[str]] = re.compile(r"^[-+]?\d+$")
@@ -216,6 +217,39 @@ def load_schema(path: Path = DEFAULT_SCHEMA) -> tuple[YieldColumn, ...]:
     return tuple(columns)
 
 
+def load_alias_config(path: Path) -> tuple[dict[str, str], tuple[str, ...]]:
+    """Load the observed CSV-header aliases and allowed extra columns.
+
+    Parameters
+    ----------
+    path : Path
+        Alias JSON file.
+
+    Returns
+    -------
+    tuple of (dict of str to str, tuple of str)
+        Alias map and extra column names.
+
+    Raises
+    ------
+    YieldParseError
+        When the file is unreadable or malformed.
+    """
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise YieldParseError("ALIAS-UNREADABLE", str(exc)) from exc
+    if not isinstance(payload, dict):
+        raise YieldParseError("ALIAS-MALFORMED", "alias file is not an object")
+    raw_aliases = payload.get("aliases", {})
+    raw_extra = payload.get("extra_columns", [])
+    if not isinstance(raw_aliases, dict) or not isinstance(raw_extra, list):
+        raise YieldParseError("ALIAS-MALFORMED", "aliases or extra_columns has the wrong type")
+    aliases = {str(key): str(value) for key, value in raw_aliases.items()}
+    extra = tuple(str(item) for item in raw_extra)
+    return aliases, extra
+
+
 def coerce_cell(cell: str) -> CellValue:
     """Convert one CSV cell to a typed value.
 
@@ -247,6 +281,8 @@ def parse_yield_text(
     schema: Sequence[YieldColumn],
     provenance: Mapping[str, object] | None = None,
     required: Sequence[str] = REQUIRED_COLUMNS,
+    aliases: Mapping[str, str] | None = None,
+    extra_columns: Sequence[str] = (),
 ) -> YieldTable:
     """Parse yield-table CSV text.
 
@@ -262,6 +298,10 @@ def parse_yield_text(
         Runtime or run metadata to attach.
     required : sequence of str, optional
         Required normalized column names.
+    aliases : mapping of str to str or None, optional
+        CSV header alias to schema name. Matching ignores case and punctuation.
+    extra_columns : sequence of str, optional
+        Header names to accept and drop, such as a run-mode column.
 
     Returns
     -------
@@ -278,26 +318,47 @@ def parse_yield_text(
     if not rows:
         raise YieldParseError("EMPTY", "CSV has no header")
     header = [normalize_name(name) for name in rows[0]]
-    if len(set(header)) != len(header):
-        raise YieldParseError("DUPLICATE-COLUMN", "CSV header has duplicate names")
+    raw_header_length = len(header)
     schema_by_name = {normalize_name(column.name): column for column in schema}
-    unknown = [name for name in header if name not in schema_by_name]
+    alias_map = {
+        normalize_name(key): normalize_name(value) for key, value in (aliases or {}).items()
+    }
+    extra = {normalize_name(name) for name in extra_columns}
+    targets: list[str] = []
+    selected_indices: list[int] = []
+    unknown: list[str] = []
+    for index, name in enumerate(header):
+        if name in extra:
+            continue
+        target = alias_map.get(name, name)
+        if target not in schema_by_name:
+            unknown.append(name)
+            continue
+        targets.append(target)
+        selected_indices.append(index)
     if unknown:
         raise YieldParseError("UNKNOWN-COLUMN", f"unknown columns: {', '.join(unknown)}")
-    missing = [name for name in required if name not in header]
+    if len(set(targets)) != len(targets):
+        raise YieldParseError("DUPLICATE-COLUMN", "CSV header maps to duplicate schema columns")
+    missing = [normalize_name(name) for name in required if normalize_name(name) not in targets]
     if missing:
         raise YieldParseError("MISSING-COLUMN", f"missing columns: {', '.join(missing)}")
-    columns = tuple(schema_by_name[name] for name in header)
+    columns = tuple(schema_by_name[target] for target in targets)
     data: list[YieldRow] = []
     for line_number, raw in enumerate(rows[1:], start=2):
         if not raw:
             continue
-        if len(raw) != len(columns):
+        if len(raw) != raw_header_length:
             raise YieldParseError(
                 "RAGGED-ROW",
-                f"line {line_number}: expected {len(columns)} fields, found {len(raw)}",
+                f"line {line_number}: expected {raw_header_length} fields, found {len(raw)}",
             )
-        data.append(YieldRow(line_number, tuple(coerce_cell(cell) for cell in raw)))
+        data.append(
+            YieldRow(
+                line_number,
+                tuple(coerce_cell(raw[index]) for index in selected_indices),
+            )
+        )
     if not data:
         raise YieldParseError("NO-ROWS", "CSV has no data rows")
     metadata = dict(provenance) if provenance is not None else {}
@@ -308,6 +369,7 @@ def parse_yield_csv(
     path: Path,
     *,
     schema_path: Path = DEFAULT_SCHEMA,
+    alias_path: Path | None = DEFAULT_ALIASES,
     source_file: str | None = None,
     provenance: Mapping[str, object] | None = None,
 ) -> YieldTable:
@@ -319,6 +381,8 @@ def parse_yield_csv(
         CSV file.
     schema_path : Path, optional
         Schema artifact.
+    alias_path : Path or None, optional
+        Header alias file. ``None`` disables aliases.
     source_file : str or None, optional
         Repository-relative label. Defaults to the file name.
     provenance : mapping of str to object or None, optional
@@ -329,11 +393,14 @@ def parse_yield_csv(
     YieldTable
         Parsed table.
     """
+    aliases, extra = load_alias_config(alias_path) if alias_path is not None else ({}, ())
     return parse_yield_text(
         path.read_text(encoding="utf-8-sig"),
         source_file=source_file or path.name,
         schema=load_schema(schema_path),
         provenance=provenance,
+        aliases=aliases,
+        extra_columns=extra,
     )
 
 
@@ -354,11 +421,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Parse VDYP7 csvyieldtable output.")
     parser.add_argument("--csv", type=Path, required=True, help="CSV output file")
     parser.add_argument("--schema", type=Path, default=DEFAULT_SCHEMA, help="column schema")
+    parser.add_argument(
+        "--aliases", type=Path, default=DEFAULT_ALIASES, help="CSV header alias file"
+    )
     parser.add_argument("--json", type=Path, help="also write the parsed table")
     parser.add_argument("--summary", action="store_true", help="print only the summary")
     args = parser.parse_args(argv)
     try:
-        table = parse_yield_csv(args.csv, schema_path=args.schema)
+        table = parse_yield_csv(args.csv, schema_path=args.schema, alias_path=args.aliases)
     except YieldParseError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1

@@ -17,9 +17,9 @@ Console/
 
 `manifest.json` records each file's synthetic status, size, and purpose.
 
-Status: **not yet accepted by a console run.** The host Wine runtime is broken;
-see `notes/reference/vdyp-runtime-failure.md`. The fixture is committed so the
-first working runtime can test it immediately.
+Status: **accepted by a console run on 2026-11-09** under Wine 11.0. The run
+returned exit 0 and produced 301 CSV rows. The evidence is
+`fixtures/yield-output/` and `notes/reference/vdyp-golden-outputs.md`.
 
 To try it, use the runner planned in P3.3 with `-i ./Console` and a copy of the
 install's `VDYP.INI`. Do not add the raw BC sample data here.

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -11,6 +12,7 @@ from yield_parser import (
     REQUIRED_COLUMNS,
     YieldColumn,
     coerce_cell,
+    load_alias_config,
     load_schema,
     main,
     normalize_name,
@@ -202,3 +204,44 @@ def test_cli_without_json_succeeds(tmp_path: Path, capsys: pytest.CaptureFixture
     path.write_text("Year,Age,Vol ws\n2001,50,100.5\n", encoding="utf-8")
     assert main(["--csv", str(path), "--schema", str(SCHEMA)]) == 0
     assert "rows: 1" in capsys.readouterr().out
+
+
+GOLDEN: Path = ROOT / "fixtures" / "yield-output" / "golden-sample.csv"
+GOLDEN_METADATA: Path = ROOT / "fixtures" / "yield-output" / "metadata.json"
+ALIASES: Path = ROOT / "notes" / "reference" / "vdyp-csv-header-aliases.json"
+
+
+def test_alias_config_loads() -> None:
+    aliases, extra = load_alias_config(ALIASES)
+    assert aliases["TABLE_NUM"] == "Table Num"
+    assert "PRJ_VOL_WS" in aliases
+    assert extra == ("DISTRICT", "PRJ_MODE")
+
+
+def test_alias_config_unreadable(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="ALIAS-UNREADABLE"):
+        load_alias_config(tmp_path / "absent.json")
+
+
+def test_golden_sample_parses_with_aliases() -> None:
+    table = parse_yield_csv(GOLDEN, schema_path=SCHEMA, alias_path=ALIASES)
+    assert len(table.rows) == 10
+    names = [column.name for column in table.columns]
+    assert "Year" in names
+    assert "Age" in names
+    assert "Vol ws" in names
+    assert "DISTRICT" not in names
+    assert "PRJ_MODE" not in names
+    first = dict(zip(names, table.rows[0].values, strict=True))
+    assert first["Year"] == 2000
+    assert first["Age"] == 0
+    assert first["Spcs 1 Cd"] == "AT"
+    assert table.columns[names.index("Vol ws")].units == "m3/ha"
+
+
+def test_golden_metadata_matches_the_subset() -> None:
+    metadata = json.loads(GOLDEN_METADATA.read_text(encoding="utf-8"))
+    assert metadata["full_row_count"] == 301
+    assert metadata["subset_row_count"] == 10
+    assert len(metadata["full_output_sha256"]) == 64
+    assert hashlib.sha256(GOLDEN.read_bytes()).hexdigest() == metadata["subset_sha256"]
