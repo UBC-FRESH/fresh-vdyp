@@ -155,6 +155,14 @@ file, source SHA256, normalized SHA256, equation family, control sequence, and
 row count. `notes/reference/vdyp-normalized-summary.json` records the counts and
 the two unsupported families.
 
+## Runtime check
+
+`python scripts/vdyp_runtime.py --check` reports `mode: wine`, Wine 9.0
+(Ubuntu repack) on Linux x86_64, the 32-bit PE32 `VDYP7Console.exe`, and the
+`VDYP_CFG` configuration directory. The check returns 0 errors and 0 warnings.
+The tracked note omits the absolute paths; they are supplied through
+`VDYP_INSTALL`, `VDYP_CFG_DIR`, and `WINE`.
+
 ## Runtime note
 
 The console runtime was not exercised in this planning pass. Phase 3 must test:

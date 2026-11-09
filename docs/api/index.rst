@@ -21,3 +21,4 @@ whenever you add a module to the project.
    provenance
    vdyp-control
    vdyp-map
+   vdyp-runtime
