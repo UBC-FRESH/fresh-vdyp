@@ -1,0 +1,1060 @@
+{
+  "control_files": [
+    "VDYP_CFG/VDYP.CTR",
+    "VDYP_CFG/VDYPBACK.CTR"
+  ],
+  "entry_count": 112,
+  "counts": {
+    "not_a_file": 6,
+    "resolved": 89,
+    "runtime": 8,
+    "empty": 3,
+    "external": 6
+  },
+  "missing_targets": [],
+  "unreferenced_bundle_files": [
+    "VDYP_CFG/coe/BACOE12A.DAT",
+    "VDYP_CFG/coe/BACOE269.DAT",
+    "VDYP_CFG/coe/BAFIP16.COE",
+    "VDYP_CFG/coe/BEC0.DAT",
+    "VDYP_CFG/coe/DQCOE12A.DAT",
+    "VDYP_CFG/coe/DQFIP16Z.COE",
+    "VDYP_CFG/coe/FIPSTKR.PRM",
+    "VDYP_CFG/coe/GB01.COE",
+    "VDYP_CFG/coe/GD19.COE",
+    "VDYP_CFG/coe/PCT_40.COE",
+    "VDYP_CFG/coe/REG01.DAT",
+    "VDYP_CFG/coe/REGBA25.coe",
+    "VDYP_CFG/coe/REGBAV01.COE",
+    "VDYP_CFG/coe/REGDQ18.COE",
+    "VDYP_CFG/coe/REGDQ24.COE",
+    "VDYP_CFG/coe/REGDQ26.coe",
+    "VDYP_CFG/coe/REGHL.DAT",
+    "VDYP_CFG/coe/REGVDU.DAT",
+    "VDYP_CFG/coe/REGVU.DAT",
+    "VDYP_CFG/coe/REGVWU.DAT",
+    "VDYP_CFG/coe/REGYHLP.DAT",
+    "VDYP_CFG/coe/REGYHLPA.DAT",
+    "VDYP_CFG/coe/REGYHLPC.COE",
+    "VDYP_CFG/coe/SP0.DAT",
+    "VDYP_CFG/coe/TOP309.COE",
+    "VDYP_CFG/coe/TOP98.COE",
+    "VDYP_CFG/coe/VCG_VRI1.DAT",
+    "VDYP_CFG/coe/VCG_VRI2.DAT",
+    "VDYP_CFG/coe/VCG_VRI3.DAT",
+    "VDYP_CFG/coe/YLDBA309.COE",
+    "VDYP_CFG/coe/YLDBA405.COE",
+    "VDYP_CFG/coe/YLDDQ259.DAT",
+    "VDYP_CFG/coe/YLDDQ309.COE"
+  ],
+  "entries": [
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "001",
+      "value": "00999999",
+      "description": "Max # of Polygons to process (I8)",
+      "status": "not_a_file",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "009",
+      "value": "coe\\becdef.dat",
+      "description": "BEC Zone Definitions",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/Becdef.dat",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "010",
+      "value": "coe\\sp0def.dat",
+      "description": "Standard SP0 Codes        RD_SP0",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/SP0DEF.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "011",
+      "value": "vp_fip2.dat",
+      "description": "VDYP7 Polygon input",
+      "status": "runtime",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "012",
+      "value": "vs_fip2.dat",
+      "description": "VDYP7 Layer by Species, input",
+      "status": "runtime",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "013",
+      "value": "vu_fip2.dat",
+      "description": "VDYP7 Layer by SP0 by Util, input",
+      "status": "runtime",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "014",
+      "value": "growto.dat",
+      "description": "Grow-to years",
+      "status": "runtime",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "015",
+      "value": "vp_grow2.dat",
+      "description": "VDYP7 Polygon  out",
+      "status": "runtime",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "016",
+      "value": "vs_grow2.dat",
+      "description": "VDYP7 Layer by SP0  out",
+      "status": "runtime",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "018",
+      "value": "vu_grow2.dat",
+      "description": "VDYP7 Layer by SP0 by Util out",
+      "status": "runtime",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "019",
+      "value": "vc_grow2.dat",
+      "description": "Compatibility variables (output file, if any)",
+      "status": "runtime",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "020",
+      "value": "coe\\vgrpdef1.dat",
+      "description": "Defines Volume Eqn groups RD_VGRP      IPSJF117",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/VGRPDEF1.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "021",
+      "value": "coe\\dgrp.dat",
+      "description": "Defines Decay Groups      RD_DGRP      IPSJF123",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/DGRP.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "022",
+      "value": "coe\\bgrp.dat",
+      "description": "Defines Breakage Groups   RD_BGRP      IPSJF157",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/BGRP.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "025",
+      "value": "coe\\sieqn.prm",
+      "description": "Site Curve Numbers assigned",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/SIEQN.PRM",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "025",
+      "value": "",
+      "description": "Nullifies above siteCurve #",
+      "status": "empty",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "026",
+      "value": "coe\\siagemax.prm",
+      "description": "Maximum ages for ht incr, by site curve number (SIAGEMAX.prm=140)",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/SIAGEMAX.PRM",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "028",
+      "value": "coe\\cvadj.prm",
+      "description": "CV adjustment and relalted parameters",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/CVADJ.PRM",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "030",
+      "value": "coe\\grpba1.dat",
+      "description": "Default Eq # BA=f(CC)     RD_GRBA1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/GRPBA1.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "031",
+      "value": "coe\\gmodba1.dat",
+      "description": "Eqn modifiers for above   RD_GMBA1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/GMODBA1.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "043",
+      "value": "coe\\upperb02.coe",
+      "description": "Upper BA, DQ by C/I SP0_P  RD_E043 IPSJF128",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/UPPERB02.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "050",
+      "value": "coe\\regyhlp.coe",
+      "description": "HL, Primary SP, Eqn P1     RD_YHL1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGYHLP.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "051",
+      "value": "coe\\regyhlpa.coe",
+      "description": "HL, Primary SP, Eqn P2     RD_YHL2",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGYHLPA.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "052",
+      "value": "coe\\regyhlpb.dat",
+      "description": "HL, Primary SP, Eqn P3     RD_YHL3",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGYHLPB.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "053",
+      "value": "coe\\reghl.coe",
+      "description": "HL, Non-primary Species    RD_YHL4",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGHL.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "060",
+      "value": "coe\\REGDQI04.coe",
+      "description": "By-species DQ              RD_E060    IPFJF125",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGDQI04.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "061",
+      "value": "coe\\COMPLIM.coe",
+      "description": "Species component size limits RD_E061 IPSJF158",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/COMPLIM.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "070",
+      "value": "coe\\regbac.dat",
+      "description": "Util. Comp, BA             RD_UBA1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGBAC.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "071",
+      "value": "coe\\regdqc.dat",
+      "description": "Util. Comp, DQ             RD_UDQ1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGDQC.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "080",
+      "value": "coe\\regpr1c.dat",
+      "description": "Small Comp., Probability   RD_SBA1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGPR1C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "081",
+      "value": "coe\\regba2c.dat",
+      "description": "Small Comp., BA            RD_SBA2",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGBA2C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "082",
+      "value": "coe\\regdq4c.dat",
+      "description": "Small Comp., DQ            RD_SDQ1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGDQ4C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "085",
+      "value": "coe\\reghl1c.dat",
+      "description": "Small Comp., HL            RD_SHL1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGHL1C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "086",
+      "value": "coe\\regv1c.dat",
+      "description": "Small Comp., WS Volume     RD_SVT1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGV1C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "090",
+      "value": "coe\\VTOTREG4.coe",
+      "description": "Total stand WholeStem Vol  RD_YVT1  IPSJF117",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/VTOTREG4.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "091",
+      "value": "coe\\regvu.coe",
+      "description": "Util Comp, WS volume       RD_YVT2  IPSJF121",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGVU.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "092",
+      "value": "coe\\regvcu.coe",
+      "description": "Close Utilization Vol      RD_YVC1  IPSJF122",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGVCU.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "093",
+      "value": "coe\\regvdu.coe",
+      "description": "Vol net of Decay           RD_YVD1  IPSJF123",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGVDU.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "094",
+      "value": "coe\\regvwu.coe",
+      "description": "Vol net of (Decay+Waste)   RD_YVW1  IPSJF123",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGVWU.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "095",
+      "value": "coe\\regbreak.coe",
+      "description": "Breakage                   RD_EMP95 IPSJF157",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGBREAK.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "096",
+      "value": "coe\\vetvol1.dat",
+      "description": "Vet-layer volume adjust    RD_YVET",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/VETVOL1.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "097",
+      "value": "coe\\vetdq2.dat",
+      "description": "DQ for Vet layer           RD_YDQV",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/VETDQ2.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "101",
+      "value": "-1   1   2   2   1   1",
+      "description": "Contol variables (10I4)",
+      "status": "not_a_file",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "106",
+      "value": "coe\\YLDBA407.coe",
+      "description": "BA Yield (Primary layer)   RD_E106 ipsjf160",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/YLDBA407.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "107",
+      "value": "coe\\YLDDQ45.coe",
+      "description": "DQ Yield (Primary layer)   RD_E107 ipsjf161",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/YLDDQ45.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "108",
+      "value": "coe\\PCT_407.coe",
+      "description": "Upper bounds (BA, DQ)  RD_E108  ipsjf160 (emp106, emp107)",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/PCT_407.coe",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "111",
+      "value": "coe\\emp111A1.PRM",
+      "description": "Growth in BA (Prim layer) Fiat Model (EMP111A) IPSJF162",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/EMP111A1.PRM",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "117",
+      "value": "coe\\emp117A1.prm",
+      "description": "DQ growth (Pri. L) IPSJF178, fiat & mixed model.",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/EMP117A1.prm",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "121",
+      "value": "coe\\growba27.coe",
+      "description": "Growth in BA (Prim layer) Emp. Model (EMP121) IPSJF162",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/GROWBA27.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "122",
+      "value": "coe\\GD23.coe",
+      "description": "DQ growth EMP122  IPSJF178, empirical model",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/GD23.coe",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "123",
+      "value": "coe\\REGDQL2.coe",
+      "description": "Limits on DQ growth  EMP123  IPSJF178",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGDQL2.coe",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "148",
+      "value": "coe\\basp05.coe",
+      "description": "BA growth Primary SP IPSJF148",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/BASP05.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "149",
+      "value": "coe\\basp06.coe",
+      "description": "BA growth NONPrimary SP IPSJF149",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/BASP06.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "150",
+      "value": "coe\\dqsp05.coe",
+      "description": "DQ growth Primary SP IPSJF150",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/DQSP05.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "151",
+      "value": "coe\\dqsp06.coe",
+      "description": "DQ growth NONPrimary Sp. IPSJF151",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/DQSP06.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "198",
+      "value": "coe\\MOD19813.prm",
+      "description": "Modifier file (IPSJF155, XII) RD_E198",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/mod19813.prm",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYP.CTR",
+      "sequence": "199",
+      "value": "2 3 2 2 0 2 0 1 1 0 415 5 713 3",
+      "description": "Debug switches (25) 0=default See IPSJF155, App. IX",
+      "status": "not_a_file",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "001",
+      "value": "00999999",
+      "description": "Max # of Polygons to process (I8)",
+      "status": "not_a_file",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "009",
+      "value": "coe\\becdef.dat",
+      "description": "BEC Zone Definitions",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/Becdef.dat",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "010",
+      "value": "coe\\sp0def.dat",
+      "description": "Standard SP0 Codes        RD_SP0",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/SP0DEF.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "011",
+      "value": "\\bcgrow\\backtst\\VP_IN36.dat",
+      "description": "VDYP7 Polygon input",
+      "status": "external",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "012",
+      "value": "\\bcgrow\\backtst\\VS_IN36.dat",
+      "description": "VDYP7 Layer by Species, input",
+      "status": "external",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "013",
+      "value": "\\bcgrow\\backtst\\VU_IN36.dat",
+      "description": "VDYP7 Layer by SP0 by Util, input",
+      "status": "external",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "014",
+      "value": "",
+      "description": "Grow-to years  (DISABLED)",
+      "status": "empty",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "015",
+      "value": "\\bcgrow\\backtst\\VP_OUT36.dat",
+      "description": "VDYP7 Polygon  out",
+      "status": "external",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "016",
+      "value": "\\bcgrow\\backtst\\VS_OUT36.dat",
+      "description": "VDYP7 Layer by SP0  out",
+      "status": "external",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "018",
+      "value": "\\bcgrow\\backtst\\VU_OUT36.dat",
+      "description": "VDYP7 Layer by SP0 by Util out",
+      "status": "external",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "020",
+      "value": "coe\\vgrpdef1.dat",
+      "description": "Defines Volume Eqn groups RD_VGRP",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/VGRPDEF1.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "021",
+      "value": "coe\\dgrp.dat",
+      "description": "Defines Decay Groups      RD_DGRP",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/DGRP.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "022",
+      "value": "coe\\bgrp.dat",
+      "description": "Defines Breakage Groups   RD_BGRP   IPSJF157",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/BGRP.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "025",
+      "value": "coe\\sieqn.prm",
+      "description": "Site Curve Numbers assigned",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/SIEQN.PRM",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "025",
+      "value": "",
+      "description": "Nullifies above siteCurve #",
+      "status": "empty",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "026",
+      "value": "coe\\siagemax.prm",
+      "description": "Maximum ages for ht incr, by site curve number",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/SIAGEMAX.PRM",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "028",
+      "value": "coe\\cvadj.prm",
+      "description": "CV adjustment and relalted parameters",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/CVADJ.PRM",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "030",
+      "value": "coe\\grpba1.dat",
+      "description": "Default Eq # BA=f(CC)     RD_GRBA1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/GRPBA1.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "031",
+      "value": "coe\\gmodba1.dat",
+      "description": "Eqn modifiers for above   RD_GMBA1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/GMODBA1.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "043",
+      "value": "coe\\upperb02.coe",
+      "description": "Upper BA, DQ by C/I SP0_P  RD_E043 IPSJF128",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/UPPERB02.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "050",
+      "value": "coe\\regyhlp.coe",
+      "description": "HL, Primary SP, Eqn P1     RD_YHL1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGYHLP.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "051",
+      "value": "coe\\regyhlpa.coe",
+      "description": "HL, Primary SP, Eqn P2     RD_YHL2",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGYHLPA.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "052",
+      "value": "coe\\regyhlpb.dat",
+      "description": "HL, Primary SP, Eqn P3     RD_YHL3",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGYHLPB.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "053",
+      "value": "coe\\reghl.coe",
+      "description": "HL, Non-primary Species    RD_YHL4",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGHL.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "060",
+      "value": "coe\\REGDQI04.coe",
+      "description": "By-species DQ              RD_E060    IPFJF125",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGDQI04.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "061",
+      "value": "coe\\COMPLIM.coe",
+      "description": "Species component size limits RD_E061 IPSJF158",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/COMPLIM.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "070",
+      "value": "coe\\regbac.dat",
+      "description": "Util. Comp, BA             RD_UBA1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGBAC.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "071",
+      "value": "coe\\regdqc.dat",
+      "description": "Util. Comp, DQ             RD_UDQ1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGDQC.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "080",
+      "value": "coe\\regpr1c.dat",
+      "description": "Small Comp., Probability   RD_SBA1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGPR1C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "081",
+      "value": "coe\\regba2c.dat",
+      "description": "Small Comp., BA            RD_SBA2",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGBA2C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "082",
+      "value": "coe\\regdq4c.dat",
+      "description": "Small Comp., DQ            RD_SDQ1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGDQ4C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "085",
+      "value": "coe\\reghl1c.dat",
+      "description": "Small Comp., HL            RD_SHL1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGHL1C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "086",
+      "value": "coe\\regv1c.dat",
+      "description": "Small Comp., WS Volume     RD_SVT1",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGV1C.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "090",
+      "value": "coe\\VTOTREG4.coe",
+      "description": "Total stand WholeStem Vol  RD_YVT1    IPSJF117",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/VTOTREG4.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "091",
+      "value": "coe\\REGVU.coe",
+      "description": "Util Comp, WS volume       RD_YVT2    IPSJF121",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGVU.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "092",
+      "value": "coe\\regvcu.coe",
+      "description": "Close Utilization Vol      RD_YVC1    IPSJF122",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGVCU.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "093",
+      "value": "coe\\regvdu.coe",
+      "description": "Vol net of Decay           RD_YVD1    IPSJF123",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGVDU.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "094",
+      "value": "coe\\regvwu.coe",
+      "description": "Vol net of (Decay+Waste)   RD_YVW1    IPSJF123",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGVWU.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "095",
+      "value": "coe\\regbreak.coe",
+      "description": "Breakage                   RD_EMP95   IPSJF157",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/REGBREAK.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "096",
+      "value": "coe\\vetvol1.dat",
+      "description": "Vet-layer volume adjust    RD_YVET",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/VETVOL1.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "097",
+      "value": "coe\\vetdq2.dat",
+      "description": "DQ for Vet layer           RD_YDQV",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/VETDQ2.DAT",
+      "kind": "data"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "101",
+      "value": "1800   0   2   4   1   0",
+      "description": "Contol variables (10I4)",
+      "status": "not_a_file",
+      "resolved_path": null,
+      "kind": null
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "106",
+      "value": "coe\\YLDBA407.coe",
+      "description": "BA Yield (Primary layer)   RD_E106 ipsjf160",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/YLDBA407.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "107",
+      "value": "coe\\YLDDQ45.coe",
+      "description": "DQ Yield (Primary layer)   RD_E107 ipsjf161",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/YLDDQ45.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "108",
+      "value": "coe\\PCT_407.coe",
+      "description": "Upper bounds (BA, DQ)  RD_E108  ipsjf160 (emp106, emp107)",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/PCT_407.coe",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "111",
+      "value": "coe\\emp111A1.prm",
+      "description": "BA growth IPSJF173, fiat model.  To be removed later.",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/EMP111A1.PRM",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "117",
+      "value": "coe\\emp117A1.prm",
+      "description": "DQ growth (Pri. L) IPSJF173, fiat model.",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/EMP117A1.prm",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "121",
+      "value": "coe\\growba11.coe",
+      "description": "Growth in BA (Prim layer) Emp. Model (EMP121) IPSJF162",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/GROWBA11.coe",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "122",
+      "value": "coe\\GD20.coe",
+      "description": "DQ growth EMP122  IPSJF173, empirical model",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/GD20.coe",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "148",
+      "value": "coe\\basp05.coe",
+      "description": "BA growth Primary SP IPSJF148",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/BASP05.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "149",
+      "value": "coe\\basp06.coe",
+      "description": "BA growth NONPrimary SP IPSJF149",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/BASP06.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "150",
+      "value": "coe\\dqsp05.coe",
+      "description": "DQ growth Primary SP IPSJF150",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/DQSP05.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "151",
+      "value": "coe\\dqsp06.coe",
+      "description": "DQ growth NONPrimary Sp. IPSJF151",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/DQSP06.COE",
+      "kind": "coefficient"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "198",
+      "value": "coe\\MOD19813.prm",
+      "description": "Modifier file (IPSJF155, XII) RD_E198",
+      "status": "resolved",
+      "resolved_path": "VDYP_CFG/coe/mod19813.prm",
+      "kind": "parameter"
+    },
+    {
+      "control_file": "VDYP_CFG/VDYPBACK.CTR",
+      "sequence": "199",
+      "value": "0 0 0 0 0 0 0 0 0 0 415 5 713 3",
+      "description": "Debug switches (25) 0=default  See IPSJF155  App IX.",
+      "status": "not_a_file",
+      "resolved_path": null,
+      "kind": null
+    }
+  ]
+}

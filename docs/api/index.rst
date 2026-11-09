@@ -13,3 +13,4 @@ whenever you add a module to the project.
    dashboard
    inventory-vdyp
    vdyp-control
+   vdyp-map

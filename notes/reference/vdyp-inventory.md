@@ -129,6 +129,15 @@ and 33 `.DAT` files (case-insensitive), matching the planning count.
 second occurrence nullifies the site-curve assignment; the parser preserves
 both in file order. `VDYPBACK.CTR` omits sequences `019` and `123`.
 
+## Control-sequence map
+
+`notes/reference/vdyp-control-map.json` joins the 112 control entries to the
+install tree: 89 resolve to bundle files, 8 are runtime input/output names, 6
+are external paths, 6 are non-file parameters, and 3 are empty nullifications.
+No coefficient target is missing. 33 files under `VDYP_CFG/coe` are not
+referenced by either control file and remain candidates for later catalog
+investigation.
+
 ## Runtime note
 
 The console runtime was not exercised in this planning pass. Phase 3 must test:
