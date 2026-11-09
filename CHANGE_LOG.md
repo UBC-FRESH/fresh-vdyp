@@ -18,3 +18,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Launched Phase 1 with parent issue #6, child issues #7-#11, and branch `feature/p1-source-inventory`.
 - Completed P1.1-P1.5: 211-file inventory; control and column parsers (57/55/101); control map (112 entries, 0 missing); binding provenance validator; synthetic fixtures and a golden-output inventory. Closed child issues #7-#11.
 - Opened pull request #12 with the Phase 1 close-out report and queued it for maintainer approval.
+- Merged pull request #12 as `d627751`, closed Phase 1 parent issue #6, and deleted `feature/p1-source-inventory`; P1 is complete.
+- Launched Phase 2 with parent issue #13, child issues #14-#19, and branch `feature/p2-coefficient-catalog`.

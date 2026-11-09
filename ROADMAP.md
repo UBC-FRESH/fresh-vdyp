@@ -13,8 +13,8 @@ after its parent issue exists and the maintainer approves it.
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
 | P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | complete |
-| P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | pr-open |
-| P2 Coefficient catalog and parser | TBD | `feature/p2-coefficient-catalog` | planned |
+| P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | complete |
+| P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | active |
 | P3 Console runner and yield parser | TBD | `feature/p3-console-runner` | planned |
 | P4 Curve API and public datasets | TBD | `feature/p4-curve-api` | planned |
 | P5 Incremental Python equations | TBD | `feature/p5-python-equations` | planned |
@@ -67,7 +67,7 @@ Acceptance criteria:
 
 Parent issue: #6
 Branch: `feature/p1-source-inventory`
-Status: pr-open
+Status: complete
 
 Goal: inventory the VDYP7 bundle and freeze the control-file and provenance
 contract before extraction begins.
@@ -87,9 +87,9 @@ Acceptance criteria:
 
 ## Phase 2: Coefficient catalog and parser
 
-Parent issue: TBD
+Parent issue: #13
 Branch: `feature/p2-coefficient-catalog`
-Status: planned
+Status: active
 
 Goal: convert the plain-text coefficient bundle into a normalized, validated
 catalog.

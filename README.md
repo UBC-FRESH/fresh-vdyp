@@ -14,7 +14,7 @@ Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 
 ## Status
 
-Phase 1 (source inventory and control map) is active. `ROADMAP.md` lists the phases,
+Phase 2 (coefficient catalog and parser) is active. `ROADMAP.md` lists the phases,
 and GitHub issues carry the live status. The first working milestone is the
 source inventory and coefficient catalog, not a full VDYP growth-model rewrite.
 

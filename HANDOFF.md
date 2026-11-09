@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: Phase 1 pr-open; pull request #12 queued for approval.
+Status: Phase 2 active; parent issue #13 on branch `feature/p2-coefficient-catalog`.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
@@ -122,7 +122,8 @@ P3.2 parse csvyieldtable output
 - Local repo: seeded and committed.
 - Remote: private `UBC-FRESH/fresh-vdyp`, `main` pushed.
 - Phase 0: complete. Pull request #5 merged as `b73362a`; issue #1 closed; child issues #2-#4 closed.
-- Phase 1: pr-open. Parent issue #6, pull request #12, child issues #7-#11 closed. Close-out report at `notes/reports/phase-1-closeout.md`, awaiting maintainer approval.
+- Phase 1: complete. Pull request #12 merged as `d627751`; issue #6 closed; child issues #7-#11 closed.
+- Phase 2: active on `feature/p2-coefficient-catalog`; parent issue #13, child issues #14-#19 open.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.
