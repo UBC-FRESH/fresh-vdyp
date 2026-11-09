@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: Phase 1 active; parent issue #6 on branch `feature/p1-source-inventory`.
+Status: Phase 1 pr-open; pull request #12 queued for approval.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
@@ -122,7 +122,7 @@ P3.2 parse csvyieldtable output
 - Local repo: seeded and committed.
 - Remote: private `UBC-FRESH/fresh-vdyp`, `main` pushed.
 - Phase 0: complete. Pull request #5 merged as `b73362a`; issue #1 closed; child issues #2-#4 closed.
-- Phase 1: all five tasks complete on `feature/p1-source-inventory`; parent issue #6, child issues #7-#11 closed. Pull request and close-out report are next.
+- Phase 1: pr-open. Parent issue #6, pull request #12, child issues #7-#11 closed. Close-out report at `notes/reports/phase-1-closeout.md`, awaiting maintainer approval.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.

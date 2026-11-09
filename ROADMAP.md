@@ -13,7 +13,7 @@ after its parent issue exists and the maintainer approves it.
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
 | P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | complete |
-| P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | active |
+| P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | pr-open |
 | P2 Coefficient catalog and parser | TBD | `feature/p2-coefficient-catalog` | planned |
 | P3 Console runner and yield parser | TBD | `feature/p3-console-runner` | planned |
 | P4 Curve API and public datasets | TBD | `feature/p4-curve-api` | planned |
@@ -67,7 +67,7 @@ Acceptance criteria:
 
 Parent issue: #6
 Branch: `feature/p1-source-inventory`
-Status: active
+Status: pr-open
 
 Goal: inventory the VDYP7 bundle and freeze the control-file and provenance
 contract before extraction begins.
