@@ -47,3 +47,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Published tag `v0.1.0` and GitHub release `fresh-vdyp 0.1.0` with the wheel and sdist. PyPI upload was not run (no credentials); the FEMIC repository change remains pending its own approval and a clean branch.
 - Published `fresh-vdyp 0.1.0` to PyPI with the `release.yml` trusted-publisher workflow (environment `pypi`). TestPyPI rejected the same claims, so it is not configured for this publisher.
 - Merged the optional FEMIC dependency and back-link guide in `UBC-FRESH/femic#610` (merge commit `c86a464`).
+- Fixed the Docs workflow by adding `fastapi`, `pydantic`, and `typer` to `docs/requirements.txt`; autodoc can import the interface modules and the Pages deploy passes.
