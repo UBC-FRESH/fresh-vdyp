@@ -116,12 +116,12 @@ Status: active
 
 Goal: run `VDYP7Console` safely and turn its CSV yield tables into typed rows.
 
-- [ ] P3.1 Implement runtime discovery and a Wine/Windows adapter
-- [ ] P3.2 Build a minimal polygon/layer input fixture
-- [ ] P3.3 Run `VDYP7Console` and capture stdout, stderr, and message files
-- [ ] P3.4 Parse `csvyieldtable` output into typed curve rows
-- [ ] P3.5 Add runner and parser tests with a golden output
-- [ ] P3.6 Record runtime failures without substituting invented values
+- [x] P3.1 Implement runtime discovery and a Wine/Windows adapter
+- [x] P3.2 Build a minimal polygon/layer input fixture
+- [x] P3.3 Run `VDYP7Console` and capture stdout, stderr, and message files
+- [x] P3.4 Parse `csvyieldtable` output into typed curve rows
+- [x] P3.5 Add runner and parser tests with a golden output
+- [x] P3.6 Record runtime failures without substituting invented values
 
 Acceptance criteria:
 
