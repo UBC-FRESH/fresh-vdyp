@@ -42,8 +42,21 @@ for the domain and tolerance shown.
 
 | Family | Status |
 | --- | --- |
-| `REGVCU` close-utilization volume | `not_implemented` |
-| `REGVU` utilization component | `not_implemented` |
+| `REGVCU` close-utilization volume | `not_implemented` — needs per-utilization-class inputs |
+| `REGVU` utilization component | `not_implemented` — needs per-utilization-class inputs |
 | `REGHL` height / Lorey height | `not_implemented` |
 | BA increment | `not_implemented` |
 | DQ increment | `not_implemented` |
+
+### Utilization-class oracle gap
+
+`REGVCU` and `REGVU` operate on utilization classes 1-4 and then sum or
+normalize into class 0. The reproduced `CSVYieldTable` exposes only class 0
+columns (`PRJ_VOL_WS`, `PRJ_VOL_CU`, `PRJ_BA`, `PRJ_TPH`, and so on). It does
+not expose class 1-4 basal area, TPH, DQ, or whole-stem volume.
+
+Without those vectors, a Python `REGVCU`/`REGVU` result cannot be validated
+against the console. Implementing them from the public source is possible, but
+promoting them would not meet the project rule that a family needs a console
+case. They stay `not_implemented` until an oracle output with per-class detail
+is captured.
