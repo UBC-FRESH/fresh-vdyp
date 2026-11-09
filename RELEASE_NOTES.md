@@ -40,6 +40,9 @@ result = service.query(fresh_vdyp.CurveQuery(age_start=100, age_end=100))
 The FastAPI service is `uvicorn fvdyp_api:app`; the root page is a small
 FRESH-style bundle/curve/validation view.
 
+FEMIC integration is available as the optional `fresh-vdyp` extra; see
+`docs/integration/femic.rst` and `UBC-FRESH/femic#610`.
+
 ## Validation status
 
 | Family | Status |

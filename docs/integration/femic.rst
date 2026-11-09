@@ -55,5 +55,6 @@ Limits
 FEMIC repository change
 -----------------------
 
-Adding the dependency and back-link to the FEMIC repository is an external
-change. It is queued for maintainer approval and is not made by this project.
+The optional dependency and this guide were merged in
+`UBC-FRESH/femic#610` on 2026-11-09 (merge commit `c86a464`). FEMIC keeps its
+existing VDYP path when the package is absent.
