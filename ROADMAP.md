@@ -18,8 +18,8 @@ after its parent issue exists and the maintainer approves it.
 | P3 Console runner and yield parser | #21 | `feature/p3-console-runner` | complete |
 | P4 Curve API and public datasets | #29 | `feature/p4-curve-api` | complete |
 | P5 Incremental Python equations | #36 | `feature/p5-python-equations` | complete |
-| P6 CLI, API, web, and agent | #44 | `feature/p6-interfaces` | pr-open |
-| P7 Validation, packaging, and FEMIC integration | TBD | `feature/p7-release-integration` | planned |
+| P6 CLI, API, web, and agent | #44 | `feature/p6-interfaces` | complete |
+| P7 Validation, packaging, and FEMIC integration | #51 | `feature/p7-release-integration` | active |
 
 ## Lifecycle Map
 
@@ -180,7 +180,7 @@ Acceptance criteria:
 
 Parent issue: #44
 Branch: `feature/p6-interfaces`
-Status: pr-open
+Status: complete
 
 Goal: make the package usable by people and agents through a typed API, CLI,
 FRESH-style web UI, and bounded assistant tools.
@@ -201,9 +201,9 @@ Acceptance criteria:
 
 ## Phase 7: Validation, packaging, and FEMIC integration
 
-Parent issue: TBD
+Parent issue: #51
 Branch: `feature/p7-release-integration`
-Status: planned
+Status: active
 
 Goal: prove the package, publish it, and make it a usable dependency for FEMIC.
 

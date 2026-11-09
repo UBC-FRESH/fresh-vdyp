@@ -14,7 +14,7 @@ Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 
 ## Status
 
-Phase 6 (CLI, API, web, and agent) is queued for approval. `ROADMAP.md` lists the phases,
+Phase 7 (validation, packaging, and FEMIC integration) is active. `ROADMAP.md` lists the phases,
 and GitHub issues carry the live status. The first working milestone is the
 source inventory and coefficient catalog, not a full VDYP growth-model rewrite.
 
