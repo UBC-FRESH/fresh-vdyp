@@ -41,16 +41,16 @@
     },
     {
       "family": "BA increment",
-      "status": "not_implemented",
+      "status": "experimental",
       "coefficient_file": "BASP05.COE, BASP06.COE",
-      "reason": "increment families are deferred; no console case yet",
+      "reason": "implemented; synthetic state vectors only; increment-level oracle unavailable",
       "evidence": "notes/reference/vdyp-equation-validation.md"
     },
     {
       "family": "DQ increment",
-      "status": "not_implemented",
+      "status": "experimental",
       "coefficient_file": "DQSP05.COE, DQSP06.COE",
-      "reason": "increment families are deferred; no console case yet",
+      "reason": "implemented; synthetic state vectors only; increment-level oracle unavailable",
       "evidence": "notes/reference/vdyp-equation-validation.md"
     }
   ]

@@ -13,13 +13,18 @@ from equations import (
     MATURE_TOLERANCE,
     VALIDATED_MIN_AGE,
     EquationError,
+    GrowthCoefficients,
     WholeStemCoefficients,
+    basal_area_increment,
     close_utilization_ratio,
+    estimate_basal_area_increment,
     estimate_close_utilization_volume,
     estimate_non_primary_height,
+    estimate_quad_mean_diameter_increment,
     estimate_utilization_components,
     estimate_whole_stem_volume,
     family_status,
+    load_growth_coefficients,
     load_reghl,
     load_regvcu,
     load_regvu,
@@ -27,6 +32,7 @@ from equations import (
     load_vtotreg4,
     main,
     non_primary_lorey_height,
+    quad_mean_diameter_increment,
     ratio,
     validate_against_golden,
     whole_stem_volume_per_hectare,
@@ -391,3 +397,278 @@ def test_missing_reghl_row_uses_the_public_default() -> None:
     assert estimate.status == "experimental"
     assert "default" in estimate.reason
     assert estimate.value == pytest.approx(25.0)
+
+
+def test_load_growth_coefficients(tmp_path: Path) -> None:
+    path = tmp_path / "BASP05.COE"
+    path.write_text("1 9 -0.0896 0.007892 0.00105\n", encoding="ascii")
+    rows = load_growth_coefficients(path, family="basp05")
+    assert rows[1].model == 9
+    assert rows[1].coefficients == pytest.approx((-0.0896, 0.007892, 0.00105))
+
+
+def test_basal_area_increment_models() -> None:
+    for model in (3, 8, 9):
+        row = GrowthCoefficients(1, model, (0.0, 0.0, 0.0))
+        value = basal_area_increment(
+            row,
+            ba_start=100.0,
+            ba_end=110.0,
+            species_ba_start=50.0,
+            dominant_height=20.0,
+            years_at_breast_height=10.0,
+            species_lorey_height=15.0,
+        )
+        assert value == pytest.approx(5.0), model
+
+
+def test_basal_area_increment_handles_a_full_species_share() -> None:
+    row = GrowthCoefficients(1, 3, (0.0, 0.0, 0.0))
+    value = basal_area_increment(
+        row,
+        ba_start=100.0,
+        ba_end=110.0,
+        species_ba_start=100.0,
+        dominant_height=20.0,
+        years_at_breast_height=10.0,
+        species_lorey_height=15.0,
+    )
+    assert value == pytest.approx(10.0)
+
+
+def test_basal_area_increment_rejects_an_unknown_model() -> None:
+    row = GrowthCoefficients(1, 1, (0.0, 0.0, 0.0))
+    with pytest.raises(EquationError):
+        basal_area_increment(
+            row,
+            ba_start=100.0,
+            ba_end=110.0,
+            species_ba_start=50.0,
+            dominant_height=20.0,
+            years_at_breast_height=10.0,
+            species_lorey_height=15.0,
+        )
+
+
+def test_quad_mean_diameter_increment() -> None:
+    row = GrowthCoefficients(1, 9, (0.0, 0.0, 0.0))
+    value = quad_mean_diameter_increment(
+        row,
+        dq_start=10.0,
+        dq_end=12.0,
+        species_dq_start=10.0,
+        layer_lorey_height=20.0,
+        species_lorey_height=10.0,
+    )
+    assert value == pytest.approx(2.0)
+
+
+def test_quad_mean_diameter_increment_clamps_at_the_minimum() -> None:
+    row = GrowthCoefficients(1, 9, (-1000.0, 0.0, 0.0))
+    value = quad_mean_diameter_increment(
+        row,
+        dq_start=10.0,
+        dq_end=12.0,
+        species_dq_start=10.0,
+        layer_lorey_height=20.0,
+        species_lorey_height=10.0,
+    )
+    assert value == pytest.approx(7.51 - 10.0)
+
+
+def test_increment_wrappers_are_experimental_or_not_implemented() -> None:
+    rows = {1: GrowthCoefficients(1, 3, (0.0, 0.0, 0.0))}
+    ba = estimate_basal_area_increment(
+        rows,
+        1,
+        ba_start=100.0,
+        ba_end=110.0,
+        species_ba_start=50.0,
+        dominant_height=20.0,
+        years_at_breast_height=10.0,
+        species_lorey_height=15.0,
+    )
+    assert ba.status == "experimental"
+    missing = estimate_basal_area_increment(
+        rows,
+        2,
+        ba_start=100.0,
+        ba_end=110.0,
+        species_ba_start=50.0,
+        dominant_height=20.0,
+        years_at_breast_height=10.0,
+        species_lorey_height=15.0,
+    )
+    assert missing.status == "not_implemented"
+    dq = estimate_quad_mean_diameter_increment(
+        {1: GrowthCoefficients(1, 9, (0.0, 0.0, 0.0))},
+        1,
+        dq_start=10.0,
+        dq_end=12.0,
+        species_dq_start=10.0,
+        layer_lorey_height=20.0,
+        species_lorey_height=10.0,
+    )
+    assert dq.status == "experimental"
+
+
+def test_whole_stem_requires_nine_coefficients() -> None:
+    with pytest.raises(EquationError):
+        whole_stem_volume_per_tree([0.0] * 8, 20.0, 10.0)
+
+
+def test_close_utilization_ratio_requires_three_coefficients() -> None:
+    with pytest.raises(EquationError):
+        close_utilization_ratio((0.0, 0.0), 10.0, 20.0)
+
+
+def test_close_utilization_unknown_group_is_not_implemented() -> None:
+    estimate = estimate_close_utilization_volume(
+        {},
+        {},
+        species="AT",
+        bec="BWBS",
+        whole_stem_by_class={1: 1.0},
+        dq_by_class={1: 10.0},
+        lorey_height=20.0,
+    )
+    assert estimate.status == "not_implemented"
+
+
+def test_utilization_unknown_group_is_not_implemented() -> None:
+    estimate = estimate_utilization_components(
+        {},
+        {},
+        species="AT",
+        bec="BWBS",
+        base_area_by_class={1: 1.0},
+        dq_by_class={1: 10.0},
+        dq_all=10.0,
+        lorey_height=20.0,
+        total_all=100.0,
+    )
+    assert estimate.status == "not_implemented"
+
+
+def test_utilization_wrong_coefficient_count_is_not_implemented() -> None:
+    estimate = estimate_utilization_components(
+        {(1, 6): (0.0, 1.0, 0.0)},
+        {("AT", "BWBS"): 6},
+        species="AT",
+        bec="BWBS",
+        base_area_by_class={1: 10.0},
+        dq_by_class={1: 10.0},
+        dq_all=10.0,
+        lorey_height=20.0,
+        total_all=100.0,
+    )
+    assert estimate.status == "not_implemented"
+    assert "4 coefficients" in estimate.reason
+
+
+def test_reghl_height_must_exceed_1_3() -> None:
+    from equations import ReghlCoefficients
+
+    row = ReghlCoefficients("AC", "AT", "C", 1, (1.0, 1.0))
+    with pytest.raises(EquationError):
+        non_primary_lorey_height(row, lead_height=1.3, primary_height=25.0)
+
+
+def test_reghl_requires_two_coefficients() -> None:
+    from equations import ReghlCoefficients
+
+    row = ReghlCoefficients("AC", "AT", "C", 1, (1.0,))
+    with pytest.raises(EquationError):
+        non_primary_lorey_height(row, lead_height=30.0, primary_height=25.0)
+
+
+def test_basal_area_increment_rejects_invalid_inputs() -> None:
+    row = GrowthCoefficients(1, 3, (0.0, 0.0, 0.0))
+    with pytest.raises(EquationError):
+        basal_area_increment(
+            row,
+            ba_start=0.0,
+            ba_end=10.0,
+            species_ba_start=5.0,
+            dominant_height=20.0,
+            years_at_breast_height=10.0,
+            species_lorey_height=15.0,
+        )
+    with pytest.raises(EquationError):
+        basal_area_increment(
+            row,
+            ba_start=100.0,
+            ba_end=110.0,
+            species_ba_start=0.0,
+            dominant_height=20.0,
+            years_at_breast_height=10.0,
+            species_lorey_height=15.0,
+        )
+
+
+def test_quad_mean_diameter_increment_rejects_invalid_inputs() -> None:
+    row = GrowthCoefficients(1, 9, (0.0, 0.0, 0.0))
+    with pytest.raises(EquationError):
+        quad_mean_diameter_increment(
+            row,
+            dq_start=7.0,
+            dq_end=12.0,
+            species_dq_start=10.0,
+            layer_lorey_height=20.0,
+            species_lorey_height=10.0,
+        )
+    with pytest.raises(EquationError):
+        quad_mean_diameter_increment(
+            row,
+            dq_start=10.0,
+            dq_end=12.0,
+            species_dq_start=7.0,
+            layer_lorey_height=20.0,
+            species_lorey_height=10.0,
+        )
+
+
+def test_dq_increment_missing_row_is_not_implemented() -> None:
+    estimate = estimate_quad_mean_diameter_increment(
+        {},
+        1,
+        dq_start=10.0,
+        dq_end=12.0,
+        species_dq_start=10.0,
+        layer_lorey_height=20.0,
+        species_lorey_height=10.0,
+    )
+    assert estimate.status == "not_implemented"
+
+
+def test_volume_groups_skip_short_and_non_numeric_rows(tmp_path: Path) -> None:
+    path = tmp_path / "VGRPDEF1.DAT"
+    path.write_text("AT\nAT BWBS not-a-number\nAT ESSF 10\n", encoding="ascii")
+    groups = load_volume_groups(path)
+    assert groups == {("AT", "ESSF"): 11}
+
+
+def test_validate_against_golden_skips_blank_volume(tmp_path: Path) -> None:
+    config, golden = write_synthetic_case(tmp_path)
+    golden.write_text(
+        "PRJ_VOL_WS,PRJ_TOTAL_AGE,SPECIES_1_CODE,PRJ_LOREY_HT,PRJ_DIAMETER,PRJ_TPH\n"
+        ",100,AT,20,10,100\n"
+        "1000,100,AT,20,10,100\n",
+        encoding="ascii",
+    )
+    rows = validate_against_golden(config, golden)
+    assert len(rows) == 1
+
+
+def test_cli_returns_one_for_unreadable_inputs(tmp_path: Path) -> None:
+    assert (
+        main(
+            [
+                "--config-dir",
+                str(tmp_path / "absent-config"),
+                "--golden",
+                str(tmp_path / "absent.csv"),
+            ]
+        )
+        == 1
+    )

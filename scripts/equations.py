@@ -105,8 +105,6 @@ def load_vtotreg4(path: Path) -> dict[int, WholeStemCoefficients]:
     for row in table.rows:
         group = int(row.values[0])
         coefficients = tuple(float(value) for value in row.values[1:])
-        if len(coefficients) != COEFFICIENT_COUNT:
-            raise EquationError(f"VTOTREG4 group {group} has {len(coefficients)} coefficients")
         result[group] = WholeStemCoefficients(
             group, coefficients, table.source_file, row.line_number
         )
@@ -633,8 +631,6 @@ def load_reghl(path: Path) -> dict[tuple[str, str, str], ReghlCoefficients]:
         region = str(row.values[2])
         equation_index = int(row.values[3])
         coefficients = tuple(float(value) for value in row.values[4:])
-        if len(coefficients) != 2:
-            raise EquationError("REGHL requires two coefficients")
         result[(non_primary, primary, region)] = ReghlCoefficients(
             non_primary, primary, region, equation_index, coefficients
         )
@@ -721,6 +717,236 @@ def estimate_non_primary_height(
     if used_default:
         reason = "default REGHL coefficients used; " + reason
     return FamilyEstimate(value, "experimental", reason, None)
+
+
+@dataclass(frozen=True)
+class GrowthCoefficients:
+    """One primary-species growth coefficient row.
+
+    Attributes
+    ----------
+    group : int
+        Growth group or stratum number.
+    model : int
+        Model selector from the source file.
+    coefficients : tuple of float
+        Three coefficients.
+    """
+
+    group: int
+    model: int
+    coefficients: tuple[float, ...]
+
+
+def load_growth_coefficients(
+    path: Path,
+    *,
+    family: str,
+) -> dict[int, GrowthCoefficients]:
+    """Load a primary-species growth file.
+
+    Parameters
+    ----------
+    path : Path
+        ``BASP05.COE`` or ``DQSP05.COE``.
+    family : str
+        Parser family name, ``basp05`` or ``dqsp05``.
+
+    Returns
+    -------
+    dict of int to GrowthCoefficients
+        Rows keyed by group.
+    """
+    table = parse_coe_file(path, source_file=f"VDYP_CFG/coe/{path.name}")
+    result: dict[int, GrowthCoefficients] = {}
+    for row in table.rows:
+        group = int(row.values[0])
+        model = int(row.values[1])
+        coefficients = tuple(float(value) for value in row.values[2:])
+        result[group] = GrowthCoefficients(group, model, coefficients)
+    return result
+
+
+def basal_area_increment(
+    coefficients: GrowthCoefficients,
+    *,
+    ba_start: float,
+    ba_end: float,
+    species_ba_start: float,
+    dominant_height: float,
+    years_at_breast_height: float,
+    species_lorey_height: float,
+) -> float:
+    """Estimate the primary-species basal-area increment (EMP148).
+
+    Parameters
+    ----------
+    coefficients : GrowthCoefficients
+        Growth row selected by stratum.
+    ba_start : float
+        Layer basal area at the start of the period.
+    ba_end : float
+        Layer basal area at the end of the period.
+    species_ba_start : float
+        Primary-species basal area at the start.
+    dominant_height : float
+        Dominant height at the start.
+    years_at_breast_height : float
+        Primary-species years at breast height at the start.
+    species_lorey_height : float
+        Primary-species Lorey height at the start.
+
+    Returns
+    -------
+    float
+        Species basal-area increment.
+
+    Raises
+    ------
+    EquationError
+        When the model selector or an input is invalid.
+    """
+    if ba_start <= 0.0 or ba_end < ba_start:
+        raise EquationError("basal areas must be positive and non-decreasing")
+    if species_ba_start <= 0.0:
+        raise EquationError("species_ba_start must be positive")
+    proportion = species_ba_start / ba_start
+    if proportion > 0.999:
+        return ba_end - ba_start
+    a0, a1, a2 = (float(value) for value in coefficients.coefficients)
+    logit = math.log(proportion / (1.0 - proportion))
+    if coefficients.model == 3:
+        delta_logit = a0 + a1 * dominant_height
+    elif coefficients.model == 8:
+        delta_logit = a0 + a1 * years_at_breast_height + a2 * species_lorey_height / dominant_height
+    elif coefficients.model == 9:
+        delta_logit = a0 + a1 * logit + a2 * ba_start
+    else:
+        raise EquationError(f"unknown basal-area model {coefficients.model}")
+    x = math.exp(logit + delta_logit)
+    proportion_end = x / (1.0 + x)
+    return proportion_end * ba_end - species_ba_start
+
+
+def quad_mean_diameter_increment(
+    coefficients: GrowthCoefficients,
+    *,
+    dq_start: float,
+    dq_end: float,
+    species_dq_start: float,
+    layer_lorey_height: float,
+    species_lorey_height: float,
+) -> float:
+    """Estimate the primary-species DQ increment (EMP150).
+
+    Parameters
+    ----------
+    coefficients : GrowthCoefficients
+        Growth row selected by stratum.
+    dq_start : float
+        Layer quadratic mean diameter at the start.
+    dq_end : float
+        Layer quadratic mean diameter at the end.
+    species_dq_start : float
+        Primary-species quadratic mean diameter at the start.
+    layer_lorey_height : float
+        Layer Lorey height at the start.
+    species_lorey_height : float
+        Primary-species Lorey height at the start.
+
+    Returns
+    -------
+    float
+        Species DQ increment.
+
+    Raises
+    ------
+    EquationError
+        When an input or the equation result is invalid.
+    """
+    dq_base = 7.45
+    if dq_start <= dq_base or dq_end <= dq_base:
+        raise EquationError("layer DQ must exceed 7.45 cm")
+    if species_dq_start <= dq_base or layer_lorey_height <= 0.0:
+        raise EquationError("species DQ and layer height are invalid")
+    a0, a1, a2 = (float(value) for value in coefficients.coefficients)
+    rate_start = (species_dq_start - dq_base) / (dq_start - dq_base)
+    log_rate_start = math.log(rate_start)
+    delta_log_rate = (
+        a0 + a1 * math.log(species_dq_start) + a2 * species_lorey_height / layer_lorey_height
+    )
+    rate_end = math.exp(log_rate_start + delta_log_rate)
+    species_dq_end = rate_end * (dq_end - dq_base) + dq_base
+    species_dq_end = max(species_dq_end, 7.51)
+    return species_dq_end - species_dq_start
+
+
+def estimate_basal_area_increment(
+    coefficients: Mapping[int, GrowthCoefficients],
+    group: int,
+    **kwargs: float,
+) -> FamilyEstimate:
+    """Estimate a BA increment with an explicit experimental status.
+
+    Parameters
+    ----------
+    coefficients : mapping of int to GrowthCoefficients
+        Parsed BASP05 rows.
+    group : int
+        Growth stratum.
+    **kwargs : float
+        Arguments forwarded to :func:`basal_area_increment`.
+
+    Returns
+    -------
+    FamilyEstimate
+        ``experimental`` when computed; ``not_implemented`` when the row is
+        missing.
+    """
+    row = coefficients.get(group)
+    if row is None:
+        return FamilyEstimate(0.0, "not_implemented", f"no BA growth row for group {group}", None)
+    value = basal_area_increment(row, **kwargs)
+    return FamilyEstimate(
+        value,
+        "experimental",
+        "increment-level console oracle is not available",
+        group,
+    )
+
+
+def estimate_quad_mean_diameter_increment(
+    coefficients: Mapping[int, GrowthCoefficients],
+    group: int,
+    **kwargs: float,
+) -> FamilyEstimate:
+    """Estimate a DQ increment with an explicit experimental status.
+
+    Parameters
+    ----------
+    coefficients : mapping of int to GrowthCoefficients
+        Parsed DQSP05 rows.
+    group : int
+        Growth stratum.
+    **kwargs : float
+        Arguments forwarded to :func:`quad_mean_diameter_increment`.
+
+    Returns
+    -------
+    FamilyEstimate
+        ``experimental`` when computed; ``not_implemented`` when the row is
+        missing.
+    """
+    row = coefficients.get(group)
+    if row is None:
+        return FamilyEstimate(0.0, "not_implemented", f"no DQ growth row for group {group}", None)
+    value = quad_mean_diameter_increment(row, **kwargs)
+    return FamilyEstimate(
+        value,
+        "experimental",
+        "increment-level console oracle is not available",
+        group,
+    )
 
 
 def validate_against_golden(

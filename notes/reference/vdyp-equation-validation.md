@@ -46,8 +46,8 @@ for the domain and tolerance shown. The machine-readable form is
 | `REGVCU` close-utilization volume | `experimental` — implemented; synthetic vectors only; no per-class oracle |
 | `REGVU` utilization component | `experimental` — implemented; synthetic vectors only; no per-class oracle |
 | `REGHL` non-primary height | `experimental` — implemented; per-species height oracle unavailable |
-| BA increment | `not_implemented` |
-| DQ increment | `not_implemented` |
+| BA increment | `experimental` — implemented; synthetic state vectors only |
+| DQ increment | `experimental` — implemented; synthetic state vectors only |
 
 ### Utilization-class oracle gap
 
@@ -72,6 +72,6 @@ captured.
 
 ### Increment families
 
-BA and DQ increment families are deferred. They require a controlled
-multi-year state sequence and an increment-level oracle case; no implementation
-is claimed.
+BA and DQ increment families are implemented as `experimental` from EMP148 and
+EMP150 with synthetic state vectors. They are not promoted: a controlled
+multi-year increment-level console case is still required.
