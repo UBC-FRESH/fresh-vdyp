@@ -1,0 +1,1487 @@
+{
+  "schema_version": 1,
+  "source_model": "VDYP7",
+  "source_version": "7",
+  "citation": "Province of British Columbia. VDYP7 coefficient and control bundle.",
+  "file_count": 211,
+  "total_bytes": 24742956,
+  "files": [
+    {
+      "id": "vdyp-gitignore",
+      "kind": "other",
+      "relative_path": ".gitignore",
+      "size_bytes": 53,
+      "sha256": "573af64a4ec78912c56da9ace443ec0f20e0951a8ed4d72d6e45c81be25b2cae"
+    },
+    {
+      "id": "vdyp-gitignore-2",
+      "kind": "other",
+      "relative_path": ".gitignore~",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "vdyp-console-input-zip",
+      "kind": "archive",
+      "relative_path": "console_input.zip",
+      "size_bytes": 777322,
+      "sha256": "cc9dc24db1bb81574c969d9cf773b51dfaee70da1f6ea2538983fb2620ae6639"
+    },
+    {
+      "id": "vdyp-consoleerrors-txt",
+      "kind": "document",
+      "relative_path": "ConsoleErrors.txt",
+      "size_bytes": 95,
+      "sha256": "e6843d42ab6de6292add14d3671386d06feb5d33052c11e604b385ffd24162a3"
+    },
+    {
+      "id": "vdyp-dtsrun-exe",
+      "kind": "binary",
+      "relative_path": "DTSRun.exe",
+      "size_bytes": 401408,
+      "sha256": "a74c7aa448d4a37a5bc8bf8e2640306a0262a1f6e43173d448f1901abd4eb54d"
+    },
+    {
+      "id": "vdyp-dtsrun-ini",
+      "kind": "control",
+      "relative_path": "DTSRun.ini",
+      "size_bytes": 63,
+      "sha256": "0be8a826ac78a3903422913d1df335616f729108ee4f2594c87cf641c9ef9819"
+    },
+    {
+      "id": "vdyp-dynlog-dll",
+      "kind": "binary",
+      "relative_path": "DynLog.dll",
+      "size_bytes": 110592,
+      "sha256": "0a9a49a960e3cbb924ae048f654661abd856927996723b5991fff498c000ab1d"
+    },
+    {
+      "id": "vdyp-extract2-avi",
+      "kind": "document",
+      "relative_path": "extract2.avi",
+      "size_bytes": 82432,
+      "sha256": "bdded302d941f0adde2c2943f51ceafd2693eeff9cedc23ffbad7594ea978cc9"
+    },
+    {
+      "id": "vdyp-fipstart-exe",
+      "kind": "binary",
+      "relative_path": "FIPSTART.EXE",
+      "size_bytes": 466944,
+      "sha256": "d41f0d0f5db9c08d43c95f67f096c97c108c06466e53064b61d3cd76a5fb5447"
+    },
+    {
+      "id": "vdyp-jetcomp-doc",
+      "kind": "document",
+      "relative_path": "JetComp.doc",
+      "size_bytes": 63488,
+      "sha256": "9a33465813c0b4b94199e8720d377c3af40fa5e3af0a1ae7c26d410a567c8121"
+    },
+    {
+      "id": "vdyp-jetcomp-exe",
+      "kind": "binary",
+      "relative_path": "JETCOMP.exe",
+      "size_bytes": 65536,
+      "sha256": "6f3edd5c980f9000613fb3cf44c763764498fa817f10c1227dee3b8bee490bb3"
+    },
+    {
+      "id": "vdyp-loggingoutput-txt",
+      "kind": "document",
+      "relative_path": "loggingOutput.txt",
+      "size_bytes": 30249,
+      "sha256": "6d002eec2e8134e558d263e09e2641a24cb9570c87c690e15874837973bde972"
+    },
+    {
+      "id": "vdyp-osenvsupt-dll",
+      "kind": "binary",
+      "relative_path": "OSEnvSupt.dll",
+      "size_bytes": 57344,
+      "sha256": "1e7d37784c9f03903eb2268709e3c0a88962804a561e2aae4d8d27194588bca4"
+    },
+    {
+      "id": "vdyp-programming-dynlog-fi",
+      "kind": "other",
+      "relative_path": "Programming/dynlog.fi",
+      "size_bytes": 37097,
+      "sha256": "de6d90bb065c5af80cb986b1331912cd335441bf07e281723cd4ebe15ff9b500"
+    },
+    {
+      "id": "vdyp-programming-dynlog-h",
+      "kind": "source",
+      "relative_path": "Programming/dynlog.h",
+      "size_bytes": 50248,
+      "sha256": "85fc55e1469a3f7ae151d1a486130edd045a57fca3dc71f04df6b267dd4328c4"
+    },
+    {
+      "id": "vdyp-programming-dynlogconfigtemplate-txt",
+      "kind": "document",
+      "relative_path": "Programming/DynLogConfigTemplate.txt",
+      "size_bytes": 26842,
+      "sha256": "38b0bd01ba072b75a60345bb1753021079e8fa708c0b6a09171cb991697da189"
+    },
+    {
+      "id": "vdyp-programming-environ-h",
+      "kind": "source",
+      "relative_path": "Programming/environ.h",
+      "size_bytes": 24719,
+      "sha256": "2cdfd2e1d17f6737a44d4fb615b298746bd0387dadaacfc3c7d34f784379e080"
+    },
+    {
+      "id": "vdyp-programming-environ-stddefs-h",
+      "kind": "source",
+      "relative_path": "Programming/environ_stddefs.h",
+      "size_bytes": 29758,
+      "sha256": "66ef165ec861b9297a7c1d61aa399eb97c92f63887c154b685fe07d15ee00daa"
+    },
+    {
+      "id": "vdyp-programming-sindex33-exp",
+      "kind": "binary",
+      "relative_path": "Programming/SINDEX33.exp",
+      "size_bytes": 4510,
+      "sha256": "893f10c9bb963dea2c234894abffc52ce94e7136faddcd527824c710d444e729"
+    },
+    {
+      "id": "vdyp-programming-sindex33-lib",
+      "kind": "binary",
+      "relative_path": "Programming/SINDEX33.lib",
+      "size_bytes": 7814,
+      "sha256": "70ac24cd6d1826a7d7a95b40ed61beac1cdea9bf4a5fbd394ad01948c5c71d88"
+    },
+    {
+      "id": "vdyp-programming-vdyp7core-exp",
+      "kind": "binary",
+      "relative_path": "Programming/VDYP7CORE.exp",
+      "size_bytes": 14250,
+      "sha256": "58341ccbba88da981ec1631134c7d49ac3a1cdb7929403451ca1dbaa06ca437f"
+    },
+    {
+      "id": "vdyp-programming-vdyp7core-fi",
+      "kind": "other",
+      "relative_path": "Programming/vdyp7core.fi",
+      "size_bytes": 44122,
+      "sha256": "22fa7c1b80ad33944ed1d147e20c380076fc4dd251a2b14fc4ad717eb36e4cec"
+    },
+    {
+      "id": "vdyp-programming-vdyp7core-h",
+      "kind": "source",
+      "relative_path": "Programming/vdyp7core.h",
+      "size_bytes": 72278,
+      "sha256": "9622ccd9cc96d5fd0e225de360f483cc63031f4a45de69f1d4b8166d4cb516a3"
+    },
+    {
+      "id": "vdyp-programming-vdyp7core-lib",
+      "kind": "binary",
+      "relative_path": "Programming/VDYP7CORE.lib",
+      "size_bytes": 25040,
+      "sha256": "0cfdcbd6c2215843fcfae1e0855cb3f17a15c6dbfb466fc020b82f60f37b2ee1"
+    },
+    {
+      "id": "vdyp-programming-vdyp7interface-def",
+      "kind": "other",
+      "relative_path": "Programming/vdyp7interface.def",
+      "size_bytes": 3217,
+      "sha256": "5e5d5eb3d2fbb282e4c3f2e2f5a237a40605a6214a653c8439fb1613d2708620"
+    },
+    {
+      "id": "vdyp-programming-vdyp7interface-exp",
+      "kind": "binary",
+      "relative_path": "Programming/VDYP7Interface.exp",
+      "size_bytes": 18188,
+      "sha256": "3bd49a79c490438469f48c65656cfc41e7886a3921f998615eba3dc84591cf1d"
+    },
+    {
+      "id": "vdyp-programming-vdyp7interface-h",
+      "kind": "source",
+      "relative_path": "Programming/vdyp7interface.h",
+      "size_bytes": 238271,
+      "sha256": "ee992c1faa8adcf80833e527072c2ffa6b91bdd0afe88aaa05663899730322ed"
+    },
+    {
+      "id": "vdyp-programming-vdyp7interface-lib",
+      "kind": "binary",
+      "relative_path": "Programming/VDYP7Interface.lib",
+      "size_bytes": 28024,
+      "sha256": "99a32af24fea43400b2f62eca435ddcc54d2b9ddd00bd794d0bd7d3e834b1c4a"
+    },
+    {
+      "id": "vdyp-readme-md",
+      "kind": "document",
+      "relative_path": "README.md",
+      "size_bytes": 794,
+      "sha256": "e14c33a2e5bb153644d5963d4654009fc2fe00fddfa41924307a51356e5f2f29"
+    },
+    {
+      "id": "vdyp-sampledata-cmdlineargextractor-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/CmdLineArgExtractor.cmd",
+      "size_bytes": 7424,
+      "sha256": "fbff04c4257efc622c1ba2d5f58de9679dc3b0cd353ccf2393bf559f20614e9a"
+    },
+    {
+      "id": "vdyp-sampledata-compressmdb-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/CompressMDB.cmd",
+      "size_bytes": 3085,
+      "sha256": "dd8189cdf973ed45f6a6802713f37cff822134ea7b539fa0d780f2ff7b9c5ea5"
+    },
+    {
+      "id": "vdyp-sampledata-console-history-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/HISTORY.csv",
+      "size_bytes": 24090,
+      "sha256": "5d9e818295eab731a5c8ef147a7c0e89ef82e068b8f593b7cc05ce10708826ae"
+    },
+    {
+      "id": "vdyp-sampledata-console-layer-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/LAYER.csv",
+      "size_bytes": 84923,
+      "sha256": "6005445f477b9254efb58cae51fd4c51838fd0bf8e43ed9bbbb9fa04e7064030"
+    },
+    {
+      "id": "vdyp-sampledata-console-non-veg-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/NON_VEG.csv",
+      "size_bytes": 16158,
+      "sha256": "62e0365a1e83e2043a0167ea18bc705bc78bc6578db6a4d0102c479178b3d04a"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-history-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/HISTORY.csv",
+      "size_bytes": 24090,
+      "sha256": "5d9e818295eab731a5c8ef147a7c0e89ef82e068b8f593b7cc05ce10708826ae"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-layer-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/LAYER.csv",
+      "size_bytes": 84923,
+      "sha256": "6005445f477b9254efb58cae51fd4c51838fd0bf8e43ed9bbbb9fa04e7064030"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-non-veg-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/NON_VEG.csv",
+      "size_bytes": 16158,
+      "sha256": "62e0365a1e83e2043a0167ea18bc705bc78bc6578db6a4d0102c479178b3d04a"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-other-veg-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/OTHER_VEG.csv",
+      "size_bytes": 63109,
+      "sha256": "60fdfc5ec070d9449f58fc3b68260312ce65fcd7560edd719801690554893f11"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-polygon-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/POLYGON.csv",
+      "size_bytes": 34092,
+      "sha256": "327fee9eaf60faea96204509f72f220d195eeb1a95e7a9fa99081c17774edef0"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-polygon-id-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/POLYGON_ID.csv",
+      "size_bytes": 50673,
+      "sha256": "b5f266cb7733fbbfa3faf20bb7cea2934563f196d7a33c114731042affe34c67"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-schema-ini",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/schema.ini",
+      "size_bytes": 5989,
+      "sha256": "34b65d12ae2b1b1472ece3c064847f54b8d6f663c84c99d621b0f93644da9c4a"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-species-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/SPECIES.csv",
+      "size_bytes": 105744,
+      "sha256": "2f4fe121ab1548bf32b1d230aa20b0dbd01be7d05d7948fd776f759561083137"
+    },
+    {
+      "id": "vdyp-sampledata-console-originalcsvs-vriadjst-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OriginalCSVs/VRIADJST.csv",
+      "size_bytes": 97,
+      "sha256": "233b7679c5428de21b2633aaf57dd2ef525cb354ecb8899bd453a0fde799cac7"
+    },
+    {
+      "id": "vdyp-sampledata-console-other-veg-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/OTHER_VEG.csv",
+      "size_bytes": 63109,
+      "sha256": "60fdfc5ec070d9449f58fc3b68260312ce65fcd7560edd719801690554893f11"
+    },
+    {
+      "id": "vdyp-sampledata-console-polygon-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/POLYGON.csv",
+      "size_bytes": 34092,
+      "sha256": "327fee9eaf60faea96204509f72f220d195eeb1a95e7a9fa99081c17774edef0"
+    },
+    {
+      "id": "vdyp-sampledata-console-polygon-id-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/POLYGON_ID.csv",
+      "size_bytes": 50673,
+      "sha256": "b5f266cb7733fbbfa3faf20bb7cea2934563f196d7a33c114731042affe34c67"
+    },
+    {
+      "id": "vdyp-sampledata-console-schema-ini",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/schema.ini",
+      "size_bytes": 5989,
+      "sha256": "34b65d12ae2b1b1472ece3c064847f54b8d6f663c84c99d621b0f93644da9c4a"
+    },
+    {
+      "id": "vdyp-sampledata-console-species-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/SPECIES.csv",
+      "size_bytes": 105744,
+      "sha256": "2f4fe121ab1548bf32b1d230aa20b0dbd01be7d05d7948fd776f759561083137"
+    },
+    {
+      "id": "vdyp-sampledata-console-vriadjst-csv",
+      "kind": "sample",
+      "relative_path": "SampleData/Console/VRIADJST.csv",
+      "size_bytes": 97,
+      "sha256": "233b7679c5428de21b2633aaf57dd2ef525cb354ecb8899bd453a0fde799cac7"
+    },
+    {
+      "id": "vdyp-sampledata-expandvriadjststrataintopit-load",
+      "kind": "sample",
+      "relative_path": "SampleData/ExpandVRIADJSTStrataIntoPIT.load",
+      "size_bytes": 25725,
+      "sha256": "3f3a558026169f0d5d9af0f374ed55cd03939bd06f7e61702abbd9f803fd8ffc"
+    },
+    {
+      "id": "vdyp-sampledata-expandvristartstrataintopit-load",
+      "kind": "sample",
+      "relative_path": "SampleData/ExpandVRISTARTStrataIntoPIT.load",
+      "size_bytes": 25789,
+      "sha256": "e145538f534514fbb2aae9ce9073f29c77e3a43d08c62257e9a586a7e22a3a0f"
+    },
+    {
+      "id": "vdyp-sampledata-initializepit-load",
+      "kind": "sample",
+      "relative_path": "SampleData/InitializePIT.load",
+      "size_bytes": 32446,
+      "sha256": "18681eadde682799c9c9768e10a1e9878474f20b18e0e7b7f5ab44d93ac21939"
+    },
+    {
+      "id": "vdyp-sampledata-loadvriadjststrata-load",
+      "kind": "sample",
+      "relative_path": "SampleData/LoadVRIADJSTStrata.load",
+      "size_bytes": 12310,
+      "sha256": "1965a9782f67cfc0a412c33f4f55b6082aa65d35a06f4229181c8236059fe9e0"
+    },
+    {
+      "id": "vdyp-sampledata-loadvristartstrata-load",
+      "kind": "sample",
+      "relative_path": "SampleData/LoadVRISTARTStrata.load",
+      "size_bytes": 12702,
+      "sha256": "45007fc9f469fa8ad2b9378ebd3f7bb454330039836e1cab065123f720c1ba5a"
+    },
+    {
+      "id": "vdyp-sampledata-mdbconvert-load",
+      "kind": "sample",
+      "relative_path": "SampleData/MDBConvert.load",
+      "size_bytes": 50540,
+      "sha256": "b84c26dbd3bdb248bba769bb16b84049369bebacdcf5c39d16edc207d68a7e70"
+    },
+    {
+      "id": "vdyp-sampledata-originaldata-incosada-082g007-veg-dcb-mdb",
+      "kind": "sample",
+      "relative_path": "SampleData/OriginalData/INCOSADA/082G007_VEG_DCB.mdb",
+      "size_bytes": 1456128,
+      "sha256": "eb77207a82419250266229279519c6229d65ad2bf3e496b4d4db45f244ad14d4"
+    },
+    {
+      "id": "vdyp-sampledata-originaldata-incosada-092g010-veg-dck-mdb",
+      "kind": "sample",
+      "relative_path": "SampleData/OriginalData/INCOSADA/092G010_VEG_DCK.MDB",
+      "size_bytes": 1284096,
+      "sha256": "2fcddc1883ba2a36b8085aff414f9da113f5125df980ac4e476ec9eb74f90d08"
+    },
+    {
+      "id": "vdyp-sampledata-originaldata-pgdb-pgdbsample-mdb",
+      "kind": "sample",
+      "relative_path": "SampleData/OriginalData/PGDB/PGDBSample.mdb",
+      "size_bytes": 5586944,
+      "sha256": "cac27cd366bca2bb3a8e4faeaf319cf4ac7caf2278f87f7c5cee8e68ca0d6d08"
+    },
+    {
+      "id": "vdyp-sampledata-params-console-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Console.txt",
+      "size_bytes": 1030,
+      "sha256": "98066c0cd8200fe7484a61f2ee77c670a26b894f67f96472fcc768ade29af6c1"
+    },
+    {
+      "id": "vdyp-sampledata-params-step01-incosada-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step01-INCOSADA.txt",
+      "size_bytes": 199,
+      "sha256": "221f482c1a0252d39ac10a4ba85708c9e4b3a66912cddf0dd365f0d66493e9bb"
+    },
+    {
+      "id": "vdyp-sampledata-params-step01-pgdb-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step01-PGDB.txt",
+      "size_bytes": 200,
+      "sha256": "eaa8431a83b94c30cc59bdab203834ffb6dc5d3e3633002855dc0880150c3656"
+    },
+    {
+      "id": "vdyp-sampledata-params-step01-pgdb2text-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step01-PGDB2Text.txt",
+      "size_bytes": 161,
+      "sha256": "5788c6ced5dab96aa52f41869344a75837c48850722d14c9c92027e7668005e5"
+    },
+    {
+      "id": "vdyp-sampledata-params-step02-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step02.txt",
+      "size_bytes": 127,
+      "sha256": "290c3fa55baaef8a7253fdff8c392a8d30f177f378af408af858f2ea51a5b6c0"
+    },
+    {
+      "id": "vdyp-sampledata-params-step03a-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step03a.txt",
+      "size_bytes": 173,
+      "sha256": "5fdcdecdbe6df2cb72b72a27f71d2b73e4e1ae8684da8929e27bc7fd224d1872"
+    },
+    {
+      "id": "vdyp-sampledata-params-step03b-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step03b.txt",
+      "size_bytes": 149,
+      "sha256": "3e00cda8c281a1e489ef6ffcc3b186f60d6213d0711ed3b896918afbfd74cd52"
+    },
+    {
+      "id": "vdyp-sampledata-params-step05a-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step05a.txt",
+      "size_bytes": 140,
+      "sha256": "6d069f34e7b19c28d9a724cbc649d95247de205bf46bdf702fb260cc1a60afb9"
+    },
+    {
+      "id": "vdyp-sampledata-params-step05b-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step05b.txt",
+      "size_bytes": 152,
+      "sha256": "22f26ba95da43244d3dac51aa7656b87f04d2f04b042f11ed843c9763c9efb10"
+    },
+    {
+      "id": "vdyp-sampledata-params-step05c-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step05c.txt",
+      "size_bytes": 156,
+      "sha256": "d3797c7a81aa48a7b68a516505ed1375a706b3150cdafe623a6e216c84a002af"
+    },
+    {
+      "id": "vdyp-sampledata-params-step06-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step06.txt",
+      "size_bytes": 134,
+      "sha256": "72e022525d21314d58263bd6941e778f9d3473bf2b1876635869ec37b5cfb6d4"
+    },
+    {
+      "id": "vdyp-sampledata-params-step07a-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step07a.txt",
+      "size_bytes": 140,
+      "sha256": "1880088b726ba9f90d9b6c7d469f3d26c05919bb781f53c1884b420a8c06bb7e"
+    },
+    {
+      "id": "vdyp-sampledata-params-step07b-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step07b.txt",
+      "size_bytes": 152,
+      "sha256": "c522c187bb20a59d71aadea0d43a92d50f1384fe2a2194d90e9163ea24a912dc"
+    },
+    {
+      "id": "vdyp-sampledata-params-step07c-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step07c.txt",
+      "size_bytes": 156,
+      "sha256": "d67cb4d17da22068522085b1f5b09d5c85d58b6000651f287bd34ac3f11ec6cb"
+    },
+    {
+      "id": "vdyp-sampledata-params-step08a-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step08a.txt",
+      "size_bytes": 149,
+      "sha256": "b567a9e39b62c10190385ac8b3a407d330f97ab0d96c1625b3932a7abfee70c5"
+    },
+    {
+      "id": "vdyp-sampledata-params-step08b-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step08b.txt",
+      "size_bytes": 185,
+      "sha256": "dc5200f80b2684b51abb7c760f46cdce1b3cd2987bf07397d30a737380e85cbc"
+    },
+    {
+      "id": "vdyp-sampledata-params-step08c-txt",
+      "kind": "sample",
+      "relative_path": "SampleData/Params-Step08c.txt",
+      "size_bytes": 211,
+      "sha256": "2a2f8ffa7ad5205790f80aa6c9a87d01c8a8389bf1670df79a447244ce826552"
+    },
+    {
+      "id": "vdyp-sampledata-pgdb2template-load",
+      "kind": "sample",
+      "relative_path": "SampleData/PGDB2Template.load",
+      "size_bytes": 70561,
+      "sha256": "c66342d763eb825047ec4718f6aee1ebead56a1e34005f882af82a54140f0e46"
+    },
+    {
+      "id": "vdyp-sampledata-pgdb2text-load",
+      "kind": "sample",
+      "relative_path": "SampleData/PGDB2Text.load",
+      "size_bytes": 33411,
+      "sha256": "4cc35c2e26f950688ab2504bbb899023a35ade6f9319cee6afc72150f6c7e5f1"
+    },
+    {
+      "id": "vdyp-sampledata-resetdestinationmdb-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/ResetDestinationMDB.cmd",
+      "size_bytes": 1003,
+      "sha256": "5919730c78fa2515f3ff15e3fea03462d3eb22950f13cce0bff824dd5bd89d2d"
+    },
+    {
+      "id": "vdyp-sampledata-resetvriadjststrata-load",
+      "kind": "sample",
+      "relative_path": "SampleData/ResetVRIADJSTStrata.load",
+      "size_bytes": 7786,
+      "sha256": "19ed091aa6fe665e676e4730e689b66e3399580efcacfb5a7b035da346715ed2"
+    },
+    {
+      "id": "vdyp-sampledata-resetvristartstrata-load",
+      "kind": "sample",
+      "relative_path": "SampleData/ResetVRISTARTStrata.load",
+      "size_bytes": 10514,
+      "sha256": "444e2e9b929944ac0d82f6d1f2d38e9911f0d89d8b72d2fa494ddd1645e0aa0a"
+    },
+    {
+      "id": "vdyp-sampledata-schema-ini",
+      "kind": "sample",
+      "relative_path": "SampleData/schema.ini",
+      "size_bytes": 5989,
+      "sha256": "34b65d12ae2b1b1472ece3c064847f54b8d6f663c84c99d621b0f93644da9c4a"
+    },
+    {
+      "id": "vdyp-sampledata-step01-combinemaps-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step01-CombineMaps.cmd",
+      "size_bytes": 2703,
+      "sha256": "25351695c0ab03d01d1e85e52085fef9aa41314aa5c55b488364211c92a58b99"
+    },
+    {
+      "id": "vdyp-sampledata-step01-pgdb2template-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step01-PGDB2Template.cmd",
+      "size_bytes": 2766,
+      "sha256": "dcedcbc134e2e16ea74df6a23b9526b55483991bf4e8f9b4fc6eaec07a6f953a"
+    },
+    {
+      "id": "vdyp-sampledata-step01-pgdb2text-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step01-PGDB2Text.cmd",
+      "size_bytes": 5156,
+      "sha256": "c82474d0f0f2c4f9905a898488204b692ba2bda96b24e6b1c6ff30fbf2c881b2"
+    },
+    {
+      "id": "vdyp-sampledata-step02-initializepit-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step02-InitializePIT.cmd",
+      "size_bytes": 2188,
+      "sha256": "c78466d3ceaf7a76d9c1a710947abef1ca9cd728959a6e2d492559ce47998c46"
+    },
+    {
+      "id": "vdyp-sampledata-step03a-projecttogroundsamplingyear-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step03a-ProjectToGroundSamplingYear.cmd",
+      "size_bytes": 2293,
+      "sha256": "cbd56f4106a01390e46f6407d7b20ccb8f19082c96eb3ff939ca493464e54d0f"
+    },
+    {
+      "id": "vdyp-sampledata-step03b-projecttoreferenceyear-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step03b-ProjectToReferenceYear.cmd",
+      "size_bytes": 2218,
+      "sha256": "2c369f381b6053f90daf93e0ab6abb1dd5dd06178ef727056f40e64bc8c535e6"
+    },
+    {
+      "id": "vdyp-sampledata-step05a-resetvristartstrata-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step05a-ResetVRISTARTStrata.cmd",
+      "size_bytes": 3556,
+      "sha256": "c22afe9efd7dae85aeecacd2a0334ce07f76b8603af58d9744e697e1d4316006"
+    },
+    {
+      "id": "vdyp-sampledata-step05b-loadvristartstrata-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step05b-LoadVRISTARTStrata.cmd",
+      "size_bytes": 6830,
+      "sha256": "f2015b765963e74bf2437b8bec719fecd970e259c1929d0117105cb08488ffd4"
+    },
+    {
+      "id": "vdyp-sampledata-step05c-expandvristartstrataintopit-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step05c-ExpandVRISTARTStrataIntoPIT.cmd",
+      "size_bytes": 3581,
+      "sha256": "ead668f2659b43f677b287f8ea47f876dde827e6cf48ae5d2ee2710255aa3e56"
+    },
+    {
+      "id": "vdyp-sampledata-step06-generatevriadjstseeds-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step06-GenerateVRIADJSTSeeds.cmd",
+      "size_bytes": 2224,
+      "sha256": "808af8678026cd6ee56c04bff2c1587b30fdffc7e10a4e7ef2bf76c9d1ab37ab"
+    },
+    {
+      "id": "vdyp-sampledata-step07a-resetvriadjststrata-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step07a-ResetVRIADJSTStrata.cmd",
+      "size_bytes": 3479,
+      "sha256": "810996ee7ae5a83611f35c5751cfe9d9ff783976df046ed9abdb5cdbf0bf0f29"
+    },
+    {
+      "id": "vdyp-sampledata-step07b-loadvriadjststrata-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step07b-LoadVRIADJSTStrata.cmd",
+      "size_bytes": 6870,
+      "sha256": "83e38f458cb97433754d38ebb80463eebc2809bc9f98565b06018ef7ca206bf9"
+    },
+    {
+      "id": "vdyp-sampledata-step07c-expandvriadjststrataintopit-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step07c-ExpandVRIADJSTStrataIntoPIT.cmd",
+      "size_bytes": 3581,
+      "sha256": "ab9d96192353d1668a2338321e0972bb9ba6b2d9c6e24e3af3967bc663f5d716"
+    },
+    {
+      "id": "vdyp-sampledata-step08a-finalprojection-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step08a-FinalProjection.cmd",
+      "size_bytes": 2310,
+      "sha256": "1929f0dd08d0d5ae5e408f6ff8361e9c1c8f0fce1516f8a39b3330ab970b4d37"
+    },
+    {
+      "id": "vdyp-sampledata-step08b-produceyieldtables-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step08b-ProduceYieldTables.cmd",
+      "size_bytes": 2512,
+      "sha256": "250e1f564d4618d4e7c1086a0fbb00cc6f876b383b2ccd1f2b296192f82bad59"
+    },
+    {
+      "id": "vdyp-sampledata-step08c-template2pgdb-cmd",
+      "kind": "sample",
+      "relative_path": "SampleData/Step08c-Template2PGDB.cmd",
+      "size_bytes": 2844,
+      "sha256": "128eaecc10c1be25471c3016ba599474d9f0cfccb6ed8033ce5db6fd14073a6c"
+    },
+    {
+      "id": "vdyp-sampledata-strata-mdb",
+      "kind": "sample",
+      "relative_path": "SampleData/Strata.mdb",
+      "size_bytes": 1122304,
+      "sha256": "9190358ad9732a31c28e895115ec1666fbe0106706be2158c02f57f90b60e3e5"
+    },
+    {
+      "id": "vdyp-sampledata-template-template-mdb",
+      "kind": "sample",
+      "relative_path": "SampleData/Template/Template.mdb",
+      "size_bytes": 1556480,
+      "sha256": "25521296c673b135f195bdeef5387d9ef8fc284b112263589cf4378f0f422db6"
+    },
+    {
+      "id": "vdyp-sampledata-template2pgdb-load",
+      "kind": "sample",
+      "relative_path": "SampleData/Template2PGDB.load",
+      "size_bytes": 121280,
+      "sha256": "5c44ee6233011f9d72d8e75658a7f7a61f9db68dcfc9de50b075669b7706d1be"
+    },
+    {
+      "id": "vdyp-sindex33-dll",
+      "kind": "binary",
+      "relative_path": "SINDEX33.dll",
+      "size_bytes": 217088,
+      "sha256": "7d73c2f42b38d3c16a357fa7bfaed9845b955ed4c2e0eb7613f13c506d91deb4"
+    },
+    {
+      "id": "vdyp-sitetooltest-exe",
+      "kind": "binary",
+      "relative_path": "SiteToolTest.exe",
+      "size_bytes": 249856,
+      "sha256": "5949cad88f2dcc9e675c61c4c715c596d40333729ba2a499bc4b5b34d59aa01b"
+    },
+    {
+      "id": "vdyp-tabledef-ini",
+      "kind": "control",
+      "relative_path": "TABLEDEF.INI",
+      "size_bytes": 2374,
+      "sha256": "b9907776fa0de43f989e1c42cea917bb8f7bc4c666f195e63862f126477d42bf"
+    },
+    {
+      "id": "vdyp-unins000-dat",
+      "kind": "data",
+      "relative_path": "unins000.dat",
+      "size_bytes": 19988,
+      "sha256": "499e844e934a8d5d62f9d442ce916eb792abc4d349025fbad0e65dbd79fc0200"
+    },
+    {
+      "id": "vdyp-unins000-exe",
+      "kind": "binary",
+      "relative_path": "unins000.exe",
+      "size_bytes": 82253,
+      "sha256": "01293bb8d32d4164d5e5427aa9f3e36bbc7ed9f97d76ed7520ba92ca1224c09c"
+    },
+    {
+      "id": "vdyp-v7-adjst-dll",
+      "kind": "binary",
+      "relative_path": "V7_ADJST.dll",
+      "size_bytes": 442368,
+      "sha256": "00bb6b445212351f1b653521c4dcddc97962a59bd23184ed5cbcb35ae60f4c73"
+    },
+    {
+      "id": "vdyp-v7-back-dll",
+      "kind": "binary",
+      "relative_path": "V7_BACK.dll",
+      "size_bytes": 630784,
+      "sha256": "9d9c768e544e320faf7525733c4751aa6c78fc7a24f0653bf081fbab82237a42"
+    },
+    {
+      "id": "vdyp-v7-fip-dll",
+      "kind": "binary",
+      "relative_path": "V7_FIP.dll",
+      "size_bytes": 540672,
+      "sha256": "c1acb31c21b534418a21cb218e288bfbdc8a5b7624e5624e873f5416d9f7da3c"
+    },
+    {
+      "id": "vdyp-v7-io-dll",
+      "kind": "binary",
+      "relative_path": "V7_IO.dll",
+      "size_bytes": 245760,
+      "sha256": "ce477d7da2f9253d0050624835398878bd0ef03170c03400a3b8728aa64f9b7f"
+    },
+    {
+      "id": "vdyp-v7-vdyp-dll",
+      "kind": "binary",
+      "relative_path": "V7_VDYP.dll",
+      "size_bytes": 544768,
+      "sha256": "f1dd250e7c332408d33c2ea9bcfbd976aae2b2d807f5af2763f85227eca35cb9"
+    },
+    {
+      "id": "vdyp-v7-vri-dll",
+      "kind": "binary",
+      "relative_path": "V7_VRI.dll",
+      "size_bytes": 585728,
+      "sha256": "95e16b36f4b109bdbe07c016cf6fc162dac6dbe811626963c703e7e66a3bbc5a"
+    },
+    {
+      "id": "vdyp-v7generics-dll",
+      "kind": "binary",
+      "relative_path": "V7Generics.dll",
+      "size_bytes": 61440,
+      "sha256": "36266b93308d8c3415b13ab211095182c0178bc647003c8e69597562f42a3ab2"
+    },
+    {
+      "id": "vdyp-vdyp-ini",
+      "kind": "control",
+      "relative_path": "Vdyp.ini",
+      "size_bytes": 8830,
+      "sha256": "5d50e4ef80c8e8920e38372ff7952b3f450593cb041678a196c81767e21dc07a"
+    },
+    {
+      "id": "vdyp-vdyp7-exe",
+      "kind": "binary",
+      "relative_path": "VDYP7.EXE",
+      "size_bytes": 483328,
+      "sha256": "eb986da5003053b51c23f7b345ad361ee21902771e000e41db74b6103db4421c"
+    },
+    {
+      "id": "vdyp-vdyp7batch-exe",
+      "kind": "binary",
+      "relative_path": "VDYP7Batch.exe",
+      "size_bytes": 774222,
+      "sha256": "52ccdcc065cafd47c50f1898f324c2804bfc3d904e2c13c75e903bf3d82bac2e"
+    },
+    {
+      "id": "vdyp-vdyp7console-exe",
+      "kind": "binary",
+      "relative_path": "VDYP7Console.exe",
+      "size_bytes": 417792,
+      "sha256": "660c500af42eaccc1874c136cc26604d1bb8f9c2fd306b28594011cf257fd0c0"
+    },
+    {
+      "id": "vdyp-vdyp7core-dll",
+      "kind": "binary",
+      "relative_path": "VDYP7CORE.dll",
+      "size_bytes": 393216,
+      "sha256": "f576c2ba0f7c7c5e83d7527354f9ce0d7391de485cc3de0f1d1e1b34de0e8b78"
+    },
+    {
+      "id": "vdyp-vdyp7interface-dll",
+      "kind": "binary",
+      "relative_path": "VDYP7Interface.dll",
+      "size_bytes": 331776,
+      "sha256": "0b3fa2b4ee20b7aee222998f56806940a6599ce4c7f4f640b8cdb1c9cbf12aae"
+    },
+    {
+      "id": "vdyp-vdyp7io-dll",
+      "kind": "binary",
+      "relative_path": "VDYP7IO.dll",
+      "size_bytes": 630784,
+      "sha256": "8fc447e74cdbe42bb25e4cb8d7a72412336de4091fabb6b16a32ed3b97312e15"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-bacoe12a-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/BACOE12A.DAT",
+      "size_bytes": 5293,
+      "sha256": "3a5b417d7af8b6058e58490ae2852b29003793f53a491bc0c94f8935f20cdee0"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-bacoe269-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/BACOE269.DAT",
+      "size_bytes": 6083,
+      "sha256": "4e30c963a160dd430b5f59f1d33b35e5c7ef999dce49f3001cd8eaaea1eaa97b"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-bafip16-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/BAFIP16.COE",
+      "size_bytes": 5372,
+      "sha256": "dc60e10b860c8788c0e913dc93fdfd3b0f84e12f041d6d7af517069cb876cb3a"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-basp05-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/BASP05.COE",
+      "size_bytes": 555,
+      "sha256": "c1dda924cb019b0bd26cd15c05889c116d4d7759b444cd9f7d7b8fffe9c44a85"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-basp06-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/BASP06.COE",
+      "size_bytes": 10988,
+      "sha256": "817c41c254648a44031da100d3cd82e0c4d4708e65b4dea332a8f917185aa62e"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-bec0-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/BEC0.DAT",
+      "size_bytes": 93,
+      "sha256": "0c0e37b10de6c5bf582ef439dfb1a5ebce917a4fe4b3565b7893b7585b085382"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-becdef-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/Becdef.dat",
+      "size_bytes": 394,
+      "sha256": "3ee133f5f117a09ae1d1dc4bc8a86f4b3619b76302c7bca62bce086bd8717e75"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-bgrp-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/BGRP.DAT",
+      "size_bytes": 3102,
+      "sha256": "d595619c55be6de1f6052c2899d1d141589a317427ff6a7464273ae439ec9548"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-complim-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/COMPLIM.COE",
+      "size_bytes": 1111,
+      "sha256": "7ff8e11fb9d5e99326781caa0f6f7dc8fd3262e1f24372f7cac407dd67ddffe3"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-cvadj-prm",
+      "kind": "parameter",
+      "relative_path": "VDYP_CFG/coe/CVADJ.PRM",
+      "size_bytes": 1633,
+      "sha256": "bab794585d363883a67e5038db3fb9b5c092605618d104416debad470a21efef"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-dgrp-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/DGRP.DAT",
+      "size_bytes": 3245,
+      "sha256": "4fb1cc904d45c6e27003348cabc0a4d73e5b35df0a62ba92356e9e9ce3fb5e65"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-dqcoe12a-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/DQCOE12A.DAT",
+      "size_bytes": 4153,
+      "sha256": "408930ad0ed05310e93027910b35a0c9a0bd5ef9cc415c50a97fda573b8f6c16"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-dqfip16z-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/DQFIP16Z.COE",
+      "size_bytes": 4819,
+      "sha256": "85daa861f284387464c6aa9f6df7da9ce8f3fe5e04b7061e076a81262f164b83"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-dqsp05-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/DQSP05.COE",
+      "size_bytes": 555,
+      "sha256": "f2d1af7bb2f92d347a639953252c3ea2f5c3bf518ca9e2987fc41983d345be85"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-dqsp06-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/DQSP06.COE",
+      "size_bytes": 10988,
+      "sha256": "04e99648bfca5d8619c396d526a9b7e37866f550e06fa4a170e33b04efdeb2df"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-emp111a1-prm",
+      "kind": "parameter",
+      "relative_path": "VDYP_CFG/coe/EMP111A1.PRM",
+      "size_bytes": 196,
+      "sha256": "b712d2b892fd7a996626d075b129516fb7f74d2f5635e6f372487447b3ed560e"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-emp117a1-prm",
+      "kind": "parameter",
+      "relative_path": "VDYP_CFG/coe/EMP117A1.prm",
+      "size_bytes": 199,
+      "sha256": "8d99c9bfe1f97940f991768a3e18766fefc51e6c2cae5e541cee1410be9d113e"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-fipstkr-prm",
+      "kind": "parameter",
+      "relative_path": "VDYP_CFG/coe/FIPSTKR.PRM",
+      "size_bytes": 218,
+      "sha256": "2482f447311fa8ae61149dec289c6c6b0b794f157c97971a21ecf1f2e7641e77"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-gb01-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/GB01.COE",
+      "size_bytes": 1200,
+      "sha256": "623425290c7065a2843849b57b70af2f16a63a4c351826b8143c9a09592dbc98"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-gd19-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/GD19.COE",
+      "size_bytes": 1425,
+      "sha256": "0ce3084f33b9f91ee909f26b159e7f3463ad884d606763e10442ff78b0c6d38f"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-gd20-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/GD20.coe",
+      "size_bytes": 1425,
+      "sha256": "6615ac7d1d468d5c828d6bd37ecae024d334804bbc2311efe47358ae1247d8fc"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-gd23-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/GD23.coe",
+      "size_bytes": 1020,
+      "sha256": "267a15c9b0015539e0ab62bb065008f49b18954d90be1fd3a15185c2e29c77e1"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-gmodba1-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/GMODBA1.DAT",
+      "size_bytes": 944,
+      "sha256": "c94351f850dcbd6f303c3754033b9262248ceeff0a6e9b7fa2f93fb8a7947064"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-growba11-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/GROWBA11.coe",
+      "size_bytes": 78,
+      "sha256": "b9cd95b6c52c32625ae3d5cf810766635b7e7d1416ce0f020cab388d69dc8a02"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-growba27-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/GROWBA27.COE",
+      "size_bytes": 15568,
+      "sha256": "9b0ada31d22ad07ef91cbf95aaf4e0d333cb9d3736023bef9ccbc480f9df174d"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-grpba1-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/GRPBA1.DAT",
+      "size_bytes": 3773,
+      "sha256": "bc4e4fcf7fc9db92cbb7deeb564fb7471f4d9b933e1b1cb5b3489f679c05131a"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-mod19813-prm",
+      "kind": "parameter",
+      "relative_path": "VDYP_CFG/coe/mod19813.prm",
+      "size_bytes": 524,
+      "sha256": "88d83c4c96e5a3fe0dfa7fedc1b6b1497543a88a33038718ee7907f8d008f6a1"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-pct-40-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/PCT_40.COE",
+      "size_bytes": 2133,
+      "sha256": "b7584a9c2e12b460d8c8fbeea5698e17d132943e86e973503a8f8ad08295a084"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-pct-407-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/PCT_407.coe",
+      "size_bytes": 2133,
+      "sha256": "f095e648e09efe084212cc84d9c7a7ec1fbdfba3abe9528034f7ed1ee8acfec0"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-reg01-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REG01.DAT",
+      "size_bytes": 3285,
+      "sha256": "25d557c0aee026b89e2a521eaf246f5a754d51ad5e050343dc7f4246312ae7aa"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regba25-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGBA25.coe",
+      "size_bytes": 17514,
+      "sha256": "6c7b62df95690cb5a57ba0b6bcc05c2c11c4d2f71d05389aaa3c4fcc4efca73f"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regba2c-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGBA2C.DAT",
+      "size_bytes": 758,
+      "sha256": "4f4fc3280992eb20ef370bd00e2cbb0da664ea7b790ef59ab93cdf995d5c6ec3"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regbac-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGBAC.DAT",
+      "size_bytes": 3876,
+      "sha256": "98c889f3dd71269ad5253b3c2313aeda45f15cd7e1e6b951f18e4a678eea2001"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regbav01-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGBAV01.COE",
+      "size_bytes": 1056,
+      "sha256": "fe506a25e85ad922df529cfd2c24035a3ce7e0898e7e7896acd6d275d7a36ccf"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regbreak-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGBREAK.COE",
+      "size_bytes": 1000,
+      "sha256": "a9a27ab26dfb388aa50b69612c4e2c5a6522dbb676c4e670712e97d57b45e536"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regdq18-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGDQ18.COE",
+      "size_bytes": 13622,
+      "sha256": "6c0d2dc9b0259ae948d6b3fb811ca3ec5b785f84bc0ad3b5dbbcc3a53d36a88b"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regdq24-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGDQ24.COE",
+      "size_bytes": 15568,
+      "sha256": "1f9162e6e1c340424421d02d53232dae1105f178e2f63108eea76165efcc9cf4"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regdq26-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGDQ26.coe",
+      "size_bytes": 15568,
+      "sha256": "95c518b27fbfa6933d9768256004253616595470e8a73534b12d1fe704dfa0ef"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regdq4c-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGDQ4C.DAT",
+      "size_bytes": 438,
+      "sha256": "02707fcb5a131c043ae57844714bd13c14013c5417168ee6cc2b37079ee736ce"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regdqc-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGDQC.DAT",
+      "size_bytes": 9424,
+      "sha256": "144f1a6d8aa86625f1a56f9f830537a92a24fa77223f43c9d2c4335bcd3fba2f"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regdqi04-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGDQI04.COE",
+      "size_bytes": 315,
+      "sha256": "8e7f3373311fb59ecb9e9bf163ace886240203fc16dbe7b3c2bef8779cda4693"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regdql2-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGDQL2.coe",
+      "size_bytes": 1065,
+      "sha256": "b17f71a3857128abe0a919a9d1f51379b3477a8a9c6c155252a589c433946cf6"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-reghl-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGHL.COE",
+      "size_bytes": 9362,
+      "sha256": "49c187a8adfb716186d3a3fd6cbfc6a7a7e28b82a7e6a1ee62f630436f1c4895"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-reghl-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGHL.DAT",
+      "size_bytes": 8134,
+      "sha256": "b792fe15fa1e3a857c1d93e6046bb2f30344f2ac9d7a88ea30348488a72acb87"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-reghl1c-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGHL1C.DAT",
+      "size_bytes": 479,
+      "sha256": "c66fe75e1ae673d271a85c77066f5615ced5a91b681675845606dba64eed3c6e"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regpr1c-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGPR1C.DAT",
+      "size_bytes": 764,
+      "sha256": "480ee704278bd67e114c95772df28498e184210d6253764ecb0ad3b0e1fabfe9"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regv1c-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGV1C.DAT",
+      "size_bytes": 778,
+      "sha256": "d498ed801051b2c7b35c1a848cca187eac583bf211811438b660d37e920fb81b"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regvcu-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGVCU.COE",
+      "size_bytes": 11096,
+      "sha256": "2c24b2e700a77dddacb88bc5ac4fc50c56ac78fec1a4675dd6069bbb07b667da"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regvdu-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGVDU.COE",
+      "size_bytes": 9576,
+      "sha256": "eceed480a3e0bbacc8014f529e414c5e9651a778a7d491278494841254339109"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regvdu-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGVDU.DAT",
+      "size_bytes": 9576,
+      "sha256": "43fb5d603e1eecaeead37e0d576dab61a488870d64d29056d4f97a871347aed4"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regvu-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGVU.COE",
+      "size_bytes": 14016,
+      "sha256": "00e0ee6ac9406b875a80680ea0176b5817795465936bb4fc3b59cf55a75c114b"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regvu-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGVU.DAT",
+      "size_bytes": 14016,
+      "sha256": "48a0388bfe6bd6eb96be9ce5819be03960ac129add7347b02611258022b959ad"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regvwu-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGVWU.COE",
+      "size_bytes": 928,
+      "sha256": "cdb72d060eabd838c20b549e13fdaa0d919c9353ce97feb1348261dc450513cc"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regvwu-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGVWU.DAT",
+      "size_bytes": 928,
+      "sha256": "8af89d51251e17341b03d420d7ee7e2e20dc2883f645081ecb3d7bb6e1c5a791"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regyhlp-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGYHLP.COE",
+      "size_bytes": 1152,
+      "sha256": "b7f2126bffcec11f882b056f058eae14fed24317aba9026b5aaa32d0471db7f1"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regyhlp-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGYHLP.DAT",
+      "size_bytes": 1206,
+      "sha256": "1607b13bf2451dde5f8f48ae0767b920463f277be5f1e3287dbf153ed6da910a"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regyhlpa-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGYHLPA.COE",
+      "size_bytes": 832,
+      "sha256": "9c92de0fde7191ab1808952c2a4452f9d5d29062dce539ae22b37c9b8ccb6a31"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regyhlpa-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGYHLPA.DAT",
+      "size_bytes": 885,
+      "sha256": "39d8bdf93de79fe1422cd5490eeae047980129337be4eb9c432d598e7dcdeeb3"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regyhlpb-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/REGYHLPB.DAT",
+      "size_bytes": 1521,
+      "sha256": "fb9dc915e511a89519073be409430b751591dbc5dd170b84790a73afc0460fce"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-regyhlpc-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/REGYHLPC.COE",
+      "size_bytes": 1152,
+      "sha256": "83d31c6e3193804ffbdee7615c76d9006e76ca033f634901194b4a38fd46aee0"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-siagemax-prm",
+      "kind": "parameter",
+      "relative_path": "VDYP_CFG/coe/SIAGEMAX.PRM",
+      "size_bytes": 110,
+      "sha256": "3f0c3a66d88d4c77bda16c18be207c7e7fa5062e3cee33b969f01dc6c5b8633d"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-sieqn-prm",
+      "kind": "parameter",
+      "relative_path": "VDYP_CFG/coe/SIEQN.PRM",
+      "size_bytes": 60,
+      "sha256": "c6fd4671238ebad8f6183f4e4e09312e60b0c974c48cae04d9ceb00781e7057e"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-sp0-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/SP0.DAT",
+      "size_bytes": 79,
+      "sha256": "6825afa6dc48392e1d4c54b82826b542335edead3ff8402edd7316d257178e7b"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-sp0def-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/SP0DEF.DAT",
+      "size_bytes": 288,
+      "sha256": "06c0529a4ded89774bcd969a6cb1075263d02f907e00fe72859d18af5dd5e8d3"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-top309-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/TOP309.COE",
+      "size_bytes": 1343,
+      "sha256": "17fd3c4cacae6e554ec2918f3b8541aaa7873f7e2e303c5a752524eb0de28d18"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-top98-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/TOP98.COE",
+      "size_bytes": 1343,
+      "sha256": "61a173764621ef1bd36af300a121a2ac4d3f99d47c616e8062ee19bcce15883b"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-upperb02-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/UPPERB02.COE",
+      "size_bytes": 608,
+      "sha256": "9f0059d423a92654514b558318ab4c187bf9948ac47eb60327f1eae6a7d613d8"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-vcg-vri1-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/VCG_VRI1.DAT",
+      "size_bytes": 9816,
+      "sha256": "315385d5f2e967bfd48362c4e110d6de33ca643eb5a6ddb6a65af0ff71ab75ac"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-vcg-vri2-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/VCG_VRI2.DAT",
+      "size_bytes": 9816,
+      "sha256": "315385d5f2e967bfd48362c4e110d6de33ca643eb5a6ddb6a65af0ff71ab75ac"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-vcg-vri3-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/VCG_VRI3.DAT",
+      "size_bytes": 9816,
+      "sha256": "315385d5f2e967bfd48362c4e110d6de33ca643eb5a6ddb6a65af0ff71ab75ac"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-vetdq2-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/VETDQ2.DAT",
+      "size_bytes": 660,
+      "sha256": "92608dedf8b8ef06bd3c82ef19a0750febaff001e8761fa4ccc716d4f4a0aac7"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-vetvol1-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/VETVOL1.DAT",
+      "size_bytes": 640,
+      "sha256": "23558c407480ee18e95b8dacf915b8a67bc2fce8671ea61de5af1eb3d1c32717"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-vgrpdef1-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/VGRPDEF1.DAT",
+      "size_bytes": 2635,
+      "sha256": "3cc798b4ac1ede8047e28e3d6eace463d18382c3795b1eb72d7a07a3a911ec17"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-vtotreg4-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/VTOTREG4.COE",
+      "size_bytes": 7030,
+      "sha256": "27722023cce99c5d57ffd8c25827763f5d4174533eff25f23babff03dea30e14"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-yldba309-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/YLDBA309.COE",
+      "size_bytes": 6083,
+      "sha256": "71606d3e1a351895319ce872f4e1a7fdecc35b76e77bd7838c2ade3889642ad5"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-yldba405-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/YLDBA405.COE",
+      "size_bytes": 13622,
+      "sha256": "48876c7427f438f3c756259692b453cd05e3b02f6afdf45f091d39c66d6376ef"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-yldba407-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/YLDBA407.COE",
+      "size_bytes": 13622,
+      "sha256": "7e5a6dc52f6c0c268e024bf19e9ba3ad64c7af6cd5580a72319b527a5ddc104b"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-ylddq259-dat",
+      "kind": "data",
+      "relative_path": "VDYP_CFG/coe/YLDDQ259.DAT",
+      "size_bytes": 5135,
+      "sha256": "e22635020d3826cca48c578196638ce5c55bbe931f9654e2aa8cb756140917e7"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-ylddq309-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/YLDDQ309.COE",
+      "size_bytes": 5135,
+      "sha256": "cb09828a3f6bb7091d0ce688c68a1914d7f3ec43a34c007f897536d4f7d017cb"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-coe-ylddq45-coe",
+      "kind": "coefficient",
+      "relative_path": "VDYP_CFG/coe/YLDDQ45.COE",
+      "size_bytes": 11676,
+      "sha256": "e3d0289a6cb3827bb0fe4fbb36048c7e75c5c8ded21537c01d9b648c5493790c"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-fipstart-ctr",
+      "kind": "control",
+      "relative_path": "VDYP_CFG/FIPSTART.CTR",
+      "size_bytes": 5386,
+      "sha256": "9fb8827bed9b2962253c076c80385a4db90654731d41f97c058d11f3f6f944f9"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-vdyp-ctr",
+      "kind": "control",
+      "relative_path": "VDYP_CFG/VDYP.CTR",
+      "size_bytes": 10111,
+      "sha256": "6b88be897b4f6a427bfe362671d63081800e5d81fe8c8e9986df31fd7d84e2f7"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-vdyp-tcl",
+      "kind": "control",
+      "relative_path": "VDYP_CFG/VDYP.tcl",
+      "size_bytes": 4862,
+      "sha256": "d37b08f5f35436e60a92652d7dde85908d20264b7d4c4dcd0ec07bbaaee92d1e"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-vdyp7loggingconfig-txt",
+      "kind": "control",
+      "relative_path": "VDYP_CFG/VDYP7LoggingConfig.txt",
+      "size_bytes": 16872,
+      "sha256": "43824ef6a1b4038385dfb000371fded10ea084fbdd4d7e53a3f983b02d5cd1e0"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-vdypback-ctr",
+      "kind": "control",
+      "relative_path": "VDYP_CFG/VDYPBACK.CTR",
+      "size_bytes": 6955,
+      "sha256": "8e61357c655e8bd7e77ec4f9c2ae98892340e065ef6bbc9ecba3a2da3b5639bd"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-vriadjst-ctr",
+      "kind": "control",
+      "relative_path": "VDYP_CFG/VRIADJST.CTR",
+      "size_bytes": 3269,
+      "sha256": "6c1d4cb9361f49fddf9fb5e19310d728603422fe81408b6b3e20df8d21e3524d"
+    },
+    {
+      "id": "vdyp-vdyp-cfg-vristart-ctr",
+      "kind": "control",
+      "relative_path": "VDYP_CFG/VRISTART.CTR",
+      "size_bytes": 6049,
+      "sha256": "3ac9314cc055a9317838591c51ad346a11421ef0f7334fad9a5fffb4bb08f9f1"
+    },
+    {
+      "id": "vdyp-vdypback-exe",
+      "kind": "binary",
+      "relative_path": "VDYPBACK.EXE",
+      "size_bytes": 561152,
+      "sha256": "3b343b63e74e362a163e4276e55cf481ac899fe5adfe9bf5015ccfebb08e069a"
+    },
+    {
+      "id": "vdyp-vdypsi32-dll",
+      "kind": "binary",
+      "relative_path": "VDYPSI32.dll",
+      "size_bytes": 155648,
+      "sha256": "2b66a6124e82be4f1ffa29caf43c4c4d61dc4e5b9e6eeaf0c63207c9ae9cd604"
+    },
+    {
+      "id": "vdyp-vriadjst-exe",
+      "kind": "binary",
+      "relative_path": "VRIADJST.exe",
+      "size_bytes": 385024,
+      "sha256": "af7eaaf3c5e38c33f971dff2d6a8ea34c25a71827347cbcb84be7c2a0f655bc7"
+    },
+    {
+      "id": "vdyp-vristart-exe",
+      "kind": "binary",
+      "relative_path": "VRISTART.EXE",
+      "size_bytes": 516096,
+      "sha256": "eb36c7023b4c19fe544281ec3426777ebcc65229f5d493f5644975adf81d49d1"
+    },
+    {
+      "id": "vdyp-winvdyp7-exe",
+      "kind": "binary",
+      "relative_path": "WinVDYP7.exe",
+      "size_bytes": 1114188,
+      "sha256": "1c6d785da426c163f96546198d9935392b3efa7ef737f18259dd88460e237494"
+    }
+  ]
+}
