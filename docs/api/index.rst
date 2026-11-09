@@ -16,7 +16,10 @@ whenever you add a module to the project.
    curve-api
    dashboard
    equations
+   assistant-tools
    fresh-vdyp
+   fvdyp-api
+   fvdyp-cli
    inventory-vdyp
    key-inference
    normalize
