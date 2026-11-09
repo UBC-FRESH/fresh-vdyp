@@ -52,3 +52,6 @@ VDYP_CFG/
 
 # Host-specific notes (not published)
 notes/local/
+
+# Build metadata
+*.egg-info/

@@ -80,9 +80,9 @@ Until the installable package lands, the first commands run from the repository:
 
 ```bash
 export VDYP_CFG_DIR=/path/to/VDYP_CFG
-python scripts/fresh_vdyp.py bundle validate
-python scripts/fresh_vdyp.py bundle catalog
-python scripts/fresh_vdyp.py bundle extract --output-dir data/normalized
+python scripts/fvdyp_cli.py bundle validate
+python scripts/fvdyp_cli.py bundle catalog
+python scripts/fvdyp_cli.py bundle extract --output-dir data/normalized
 ```
 
 `validate` checks required files, control targets, and key lookups. `catalog`
