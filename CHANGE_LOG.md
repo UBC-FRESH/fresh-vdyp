@@ -21,3 +21,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Merged pull request #12 as `d627751`, closed Phase 1 parent issue #6, and deleted `feature/p1-source-inventory`; P1 is complete.
 - Launched Phase 2 with parent issue #13, child issues #14-#19, and branch `feature/p2-coefficient-catalog`.
 - Completed P2.1-P2.6: `.COE` schemas (38 supported, 2 explicit unsupported), structural PRM/DAT parser, key catalog, normalized CSV manifest, bundle commands, and expanded tests. Closed child issues #14-#19.
+- Opened pull request #20 with the Phase 2 close-out report and queued it for maintainer approval.

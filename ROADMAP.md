@@ -14,7 +14,7 @@ after its parent issue exists and the maintainer approves it.
 | --- | --- | --- | --- |
 | P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | complete |
 | P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | complete |
-| P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | active |
+| P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | pr-open |
 | P3 Console runner and yield parser | TBD | `feature/p3-console-runner` | planned |
 | P4 Curve API and public datasets | TBD | `feature/p4-curve-api` | planned |
 | P5 Incremental Python equations | TBD | `feature/p5-python-equations` | planned |
@@ -89,7 +89,7 @@ Acceptance criteria:
 
 Parent issue: #13
 Branch: `feature/p2-coefficient-catalog`
-Status: active
+Status: pr-open
 
 Goal: convert the plain-text coefficient bundle into a normalized, validated
 catalog.
