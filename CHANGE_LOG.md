@@ -45,3 +45,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Opened pull request #57 with the Phase 7 close-out report and queued it for maintainer approval.
 - Merged pull request #57 as `bf93896`, closed Phase 7 parent issue #51, and deleted `feature/p7-release-integration`; P0-P7 are complete. The 0.1.0 release candidate is built; tag, release, PyPI upload, and the FEMIC repository change remain separate approvals.
 - Published tag `v0.1.0` and GitHub release `fresh-vdyp 0.1.0` with the wheel and sdist. PyPI upload was not run (no credentials); the FEMIC repository change remains pending its own approval and a clean branch.
+- Published `fresh-vdyp 0.1.0` to PyPI with the `release.yml` trusted-publisher workflow (environment `pypi`). TestPyPI rejected the same claims, so it is not configured for this publisher.

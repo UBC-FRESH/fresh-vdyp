@@ -13,9 +13,11 @@ authorship over VDYP7 or BC government data.
 ## Install
 
 ```bash
-python -m pip install dist/fresh_vdyp-0.1.0-py3-none-any.whl
+python -m pip install fresh-vdyp==0.1.0
 fvdyp --help
 ```
+
+Package: <https://pypi.org/project/fresh-vdyp/0.1.0/>
 
 The wheel does not bundle normalized data. Use a local VDYP installation and the
 synthetic golden dataset in the repository for the first run.

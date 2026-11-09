@@ -62,10 +62,16 @@ Read these in order:
 5. [`notes/reference/vdyp-inventory.md`](notes/reference/vdyp-inventory.md)
 6. [`notes/reference/vdyp-model-map.md`](notes/reference/vdyp-model-map.md)
 
-## Quick start
+## Install
 
-This seed is a planning repository. The Python package and data workflows land
-in Phase 2. Until then, the workflow gates are:
+```bash
+python -m pip install fresh-vdyp
+fvdyp --help
+```
+
+Package: <https://pypi.org/project/fresh-vdyp/>
+
+## Development
 
 ```bash
 python -m venv .venv
@@ -76,18 +82,23 @@ python scripts/dashboard.py
 
 ## Bundle inspection
 
-Until the installable package lands, the first commands run from the repository:
-
 ```bash
 export VDYP_CFG_DIR=/path/to/VDYP_CFG
-python scripts/fvdyp_cli.py bundle validate
-python scripts/fvdyp_cli.py bundle catalog
-python scripts/fvdyp_cli.py bundle extract --output-dir data/normalized
+fvdyp bundle validate
+fvdyp bundle catalog
+fvdyp bundle extract --output-dir data/normalized
 ```
 
 `validate` checks required files, control targets, and key lookups. `catalog`
 prints the family and row counts. `extract` writes normalized CSV files plus a
 provenance manifest; the CSV files stay under ignored `data/normalized/`.
+
+Curve queries and the API:
+
+```bash
+fvdyp curve query --age-start 100 --age-end 100
+uvicorn fvdyp_api:app
+```
 
 ## Repository map
 
