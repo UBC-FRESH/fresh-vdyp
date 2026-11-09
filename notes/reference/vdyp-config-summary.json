@@ -1,0 +1,366 @@
+{
+  "file_count": 45,
+  "total_rows": 3313,
+  "files": [
+    {
+      "source_file": "VDYP_CFG/FIPSTART.CTR",
+      "kind": "control",
+      "format": "control",
+      "row_count": 46,
+      "comment_lines": 12,
+      "blank_lines": 17
+    },
+    {
+      "source_file": "VDYP_CFG/VDYP.CTR",
+      "kind": "control",
+      "format": "control",
+      "row_count": 57,
+      "comment_lines": 48,
+      "blank_lines": 17
+    },
+    {
+      "source_file": "VDYP_CFG/VDYPBACK.CTR",
+      "kind": "control",
+      "format": "control",
+      "row_count": 55,
+      "comment_lines": 18,
+      "blank_lines": 18
+    },
+    {
+      "source_file": "VDYP_CFG/VRIADJST.CTR",
+      "kind": "control",
+      "format": "control",
+      "row_count": 13,
+      "comment_lines": 20,
+      "blank_lines": 9
+    },
+    {
+      "source_file": "VDYP_CFG/VRISTART.CTR",
+      "kind": "control",
+      "format": "control",
+      "row_count": 50,
+      "comment_lines": 17,
+      "blank_lines": 15
+    },
+    {
+      "source_file": "VDYP_CFG/coe/BACOE12A.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 79,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/BACOE269.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 79,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/BEC0.DAT",
+      "kind": "data",
+      "format": "lookup",
+      "row_count": 13,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/Becdef.dat",
+      "kind": "data",
+      "format": "table",
+      "row_count": 15,
+      "comment_lines": 0,
+      "blank_lines": 1
+    },
+    {
+      "source_file": "VDYP_CFG/coe/BGRP.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 224,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/CVADJ.PRM",
+      "kind": "parameter",
+      "format": "keyed",
+      "row_count": 31,
+      "comment_lines": 0,
+      "blank_lines": 1
+    },
+    {
+      "source_file": "VDYP_CFG/coe/DGRP.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 224,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/DQCOE12A.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 79,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/EMP111A1.PRM",
+      "kind": "parameter",
+      "format": "keyed",
+      "row_count": 3,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/EMP117A1.prm",
+      "kind": "parameter",
+      "format": "keyed",
+      "row_count": 3,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/FIPSTKR.PRM",
+      "kind": "parameter",
+      "format": "keyed",
+      "row_count": 9,
+      "comment_lines": 0,
+      "blank_lines": 3
+    },
+    {
+      "source_file": "VDYP_CFG/coe/GMODBA1.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 61,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/GRPBA1.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 192,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/mod19813.prm",
+      "kind": "parameter",
+      "format": "keyed",
+      "row_count": 4,
+      "comment_lines": 0,
+      "blank_lines": 4
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REG01.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 73,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGBA2C.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGBAC.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 114,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGDQ4C.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGDQC.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 152,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGHL.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 260,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGHL1C.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGPR1C.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGV1C.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGVDU.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 252,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGVU.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 292,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGVWU.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGYHLP.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 32,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGYHLPA.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 32,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/REGYHLPB.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 32,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/SIAGEMAX.PRM",
+      "kind": "parameter",
+      "format": "keyed",
+      "row_count": 2,
+      "comment_lines": 0,
+      "blank_lines": 1
+    },
+    {
+      "source_file": "VDYP_CFG/coe/SIEQN.PRM",
+      "kind": "parameter",
+      "format": "keyed",
+      "row_count": 0,
+      "comment_lines": 1,
+      "blank_lines": 3
+    },
+    {
+      "source_file": "VDYP_CFG/coe/SP0.DAT",
+      "kind": "data",
+      "format": "lookup",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/SP0DEF.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/VCG_VRI1.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 128,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/VCG_VRI2.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 128,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/VCG_VRI3.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 128,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/VETDQ2.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 20,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/VETVOL1.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 16,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/VGRPDEF1.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 208,
+      "comment_lines": 0,
+      "blank_lines": 0
+    },
+    {
+      "source_file": "VDYP_CFG/coe/YLDDQ259.DAT",
+      "kind": "data",
+      "format": "table",
+      "row_count": 79,
+      "comment_lines": 0,
+      "blank_lines": 0
+    }
+  ]
+}

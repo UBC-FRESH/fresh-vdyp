@@ -10,8 +10,14 @@ whenever you add a module to the project.
    :maxdepth: 2
 
    check-workflow
+   coe-parser
+   config-parser
+   bundle-service
    dashboard
+   fresh-vdyp
    inventory-vdyp
+   key-inference
+   normalize
    provenance
    vdyp-control
    vdyp-map

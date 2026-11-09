@@ -1,0 +1,706 @@
+{
+  "family_count": 40,
+  "parsed_count": 38,
+  "unsupported_count": 2,
+  "families": [
+    {
+      "family": "bafip16",
+      "source_file": "VDYP_CFG/coe/BAFIP16.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "flag"
+      ],
+      "row_count": 79,
+      "reason": ""
+    },
+    {
+      "family": "basp05",
+      "source_file": "VDYP_CFG/coe/BASP05.COE",
+      "status": "parsed",
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 15,
+      "reason": ""
+    },
+    {
+      "family": "basp06",
+      "source_file": "VDYP_CFG/coe/BASP06.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "group",
+        "c0",
+        "c1",
+        "c2",
+        "flag"
+      ],
+      "row_count": 134,
+      "reason": ""
+    },
+    {
+      "family": "complim",
+      "source_file": "VDYP_CFG/coe/COMPLIM.COE",
+      "status": "unsupported",
+      "columns": [],
+      "row_count": 0,
+      "reason": "variable token count: text and numeric columns vary by row"
+    },
+    {
+      "family": "dqfip16z",
+      "source_file": "VDYP_CFG/coe/DQFIP16Z.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "row_count": 79,
+      "reason": ""
+    },
+    {
+      "family": "dqsp05",
+      "source_file": "VDYP_CFG/coe/DQSP05.COE",
+      "status": "parsed",
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 15,
+      "reason": ""
+    },
+    {
+      "family": "dqsp06",
+      "source_file": "VDYP_CFG/coe/DQSP06.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "group",
+        "c0",
+        "c1",
+        "c2",
+        "flag"
+      ],
+      "row_count": 134,
+      "reason": ""
+    },
+    {
+      "family": "gb01",
+      "source_file": "VDYP_CFG/coe/GB01.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ],
+      "row_count": 15,
+      "reason": ""
+    },
+    {
+      "family": "gd19",
+      "source_file": "VDYP_CFG/coe/GD19.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9",
+        "c10"
+      ],
+      "row_count": 15,
+      "reason": ""
+    },
+    {
+      "family": "gd20",
+      "source_file": "VDYP_CFG/coe/GD20.coe",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9",
+        "c10"
+      ],
+      "row_count": 15,
+      "reason": ""
+    },
+    {
+      "family": "gd23",
+      "source_file": "VDYP_CFG/coe/GD23.coe",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7"
+      ],
+      "row_count": 15,
+      "reason": ""
+    },
+    {
+      "family": "growba11",
+      "source_file": "VDYP_CFG/coe/GROWBA11.coe",
+      "status": "parsed",
+      "columns": [
+        "coastal_interior",
+        "c0",
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "row_count": 2,
+      "reason": ""
+    },
+    {
+      "family": "growba27",
+      "source_file": "VDYP_CFG/coe/GROWBA27.COE",
+      "status": "parsed",
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 112,
+      "reason": ""
+    },
+    {
+      "family": "pct_40",
+      "source_file": "VDYP_CFG/coe/PCT_40.COE",
+      "status": "parsed",
+      "columns": [
+        "group",
+        "c0",
+        "c1",
+        "species"
+      ],
+      "row_count": 79,
+      "reason": ""
+    },
+    {
+      "family": "pct_407",
+      "source_file": "VDYP_CFG/coe/PCT_407.coe",
+      "status": "parsed",
+      "columns": [
+        "group",
+        "c0",
+        "c1",
+        "species"
+      ],
+      "row_count": 79,
+      "reason": ""
+    },
+    {
+      "family": "regba25",
+      "source_file": "VDYP_CFG/coe/REGBA25.coe",
+      "status": "parsed",
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 126,
+      "reason": ""
+    },
+    {
+      "family": "regbav01",
+      "source_file": "VDYP_CFG/coe/REGBAV01.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 32,
+      "reason": ""
+    },
+    {
+      "family": "regbreak",
+      "source_file": "VDYP_CFG/coe/REGBREAK.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "row_count": 25,
+      "reason": ""
+    },
+    {
+      "family": "regdq18",
+      "source_file": "VDYP_CFG/coe/REGDQ18.COE",
+      "status": "parsed",
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 98,
+      "reason": ""
+    },
+    {
+      "family": "regdq24",
+      "source_file": "VDYP_CFG/coe/REGDQ24.COE",
+      "status": "parsed",
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 112,
+      "reason": ""
+    },
+    {
+      "family": "regdq26",
+      "source_file": "VDYP_CFG/coe/REGDQ26.coe",
+      "status": "parsed",
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 112,
+      "reason": ""
+    },
+    {
+      "family": "regdqi04",
+      "source_file": "VDYP_CFG/coe/REGDQI04.COE",
+      "status": "unsupported",
+      "columns": [],
+      "row_count": 0,
+      "reason": "variable token count: one summary row and multi-coefficient rows"
+    },
+    {
+      "family": "regdql2",
+      "source_file": "VDYP_CFG/coe/REGDQL2.coe",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8"
+      ],
+      "row_count": 15,
+      "reason": ""
+    },
+    {
+      "family": "reghl",
+      "source_file": "VDYP_CFG/coe/REGHL.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "species_2",
+        "coastal_interior",
+        "curve",
+        "c0",
+        "c1"
+      ],
+      "row_count": 302,
+      "reason": ""
+    },
+    {
+      "family": "regvcu",
+      "source_file": "VDYP_CFG/coe/REGVCU.COE",
+      "status": "parsed",
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 292,
+      "reason": ""
+    },
+    {
+      "family": "regvdu",
+      "source_file": "VDYP_CFG/coe/REGVDU.COE",
+      "status": "parsed",
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 252,
+      "reason": ""
+    },
+    {
+      "family": "regvu",
+      "source_file": "VDYP_CFG/coe/REGVU.COE",
+      "status": "parsed",
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "row_count": 292,
+      "reason": ""
+    },
+    {
+      "family": "regvwu",
+      "source_file": "VDYP_CFG/coe/REGVWU.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "row_count": 16,
+      "reason": ""
+    },
+    {
+      "family": "regyhlp",
+      "source_file": "VDYP_CFG/coe/REGYHLP.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 32,
+      "reason": ""
+    },
+    {
+      "family": "regyhlpa",
+      "source_file": "VDYP_CFG/coe/REGYHLPA.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1"
+      ],
+      "row_count": 32,
+      "reason": ""
+    },
+    {
+      "family": "regyhlpc",
+      "source_file": "VDYP_CFG/coe/REGYHLPC.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 32,
+      "reason": ""
+    },
+    {
+      "family": "top309",
+      "source_file": "VDYP_CFG/coe/TOP309.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 79,
+      "reason": ""
+    },
+    {
+      "family": "top98",
+      "source_file": "VDYP_CFG/coe/TOP98.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 79,
+      "reason": ""
+    },
+    {
+      "family": "upperb02",
+      "source_file": "VDYP_CFG/coe/UPPERB02.COE",
+      "status": "parsed",
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1"
+      ],
+      "row_count": 32,
+      "reason": ""
+    },
+    {
+      "family": "vtotreg4",
+      "source_file": "VDYP_CFG/coe/VTOTREG4.COE",
+      "status": "parsed",
+      "columns": [
+        "group",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8"
+      ],
+      "row_count": 74,
+      "reason": ""
+    },
+    {
+      "family": "yldba309",
+      "source_file": "VDYP_CFG/coe/YLDBA309.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8"
+      ],
+      "row_count": 79,
+      "reason": ""
+    },
+    {
+      "family": "yldba405",
+      "source_file": "VDYP_CFG/coe/YLDBA405.COE",
+      "status": "parsed",
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 98,
+      "reason": ""
+    },
+    {
+      "family": "yldba407",
+      "source_file": "VDYP_CFG/coe/YLDBA407.COE",
+      "status": "parsed",
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 98,
+      "reason": ""
+    },
+    {
+      "family": "ylddq309",
+      "source_file": "VDYP_CFG/coe/YLDDQ309.COE",
+      "status": "parsed",
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "row_count": 79,
+      "reason": ""
+    },
+    {
+      "family": "ylddq45",
+      "source_file": "VDYP_CFG/coe/YLDDQ45.COE",
+      "status": "parsed",
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 84,
+      "reason": ""
+    }
+  ]
+}

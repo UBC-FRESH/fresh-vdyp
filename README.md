@@ -14,7 +14,7 @@ Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 
 ## Status
 
-Phase 1 (source inventory and control map) is active. `ROADMAP.md` lists the phases,
+Phase 2 (coefficient catalog and parser) is queued for approval. `ROADMAP.md` lists the phases,
 and GitHub issues carry the live status. The first working milestone is the
 source inventory and coefficient catalog, not a full VDYP growth-model rewrite.
 
@@ -73,6 +73,21 @@ python -m venv .venv
 python -m pip install -r requirements-dev.txt
 python scripts/dashboard.py
 ```
+
+## Bundle inspection
+
+Until the installable package lands, the first commands run from the repository:
+
+```bash
+export VDYP_CFG_DIR=/path/to/VDYP_CFG
+python scripts/fresh_vdyp.py bundle validate
+python scripts/fresh_vdyp.py bundle catalog
+python scripts/fresh_vdyp.py bundle extract --output-dir data/normalized
+```
+
+`validate` checks required files, control targets, and key lookups. `catalog`
+prints the family and row counts. `extract` writes normalized CSV files plus a
+provenance manifest; the CSV files stay under ignored `data/normalized/`.
 
 ## Repository map
 

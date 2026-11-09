@@ -139,7 +139,7 @@ extracted_at_utc  extractor  parser_version  citation
 Optional fields:
 
 ```text
-family  control_sequence  columns  row_count  units  notes
+family  control_sequence  columns  row_count  units  notes  normalized_sha256
 ```
 
 Field rules:
@@ -147,6 +147,7 @@ Field rules:
 - `id` matches `^vdyp-[a-z0-9]+(?:-[a-z0-9]+)*$` and is unique within a manifest.
 - `kind` is a lowercase underscore name, such as `vdyp_coefficient_table`.
 - `source_sha256` is 64 lowercase hexadecimal characters.
+- `normalized_sha256`, when present, is 64 lowercase hexadecimal characters.
 - `extracted_at_utc` is ISO 8601 ending in `Z` with a UTC offset.
 - `source_file` is a forward-slash relative path without `..` or a drive letter.
 - `parser_version` is an integer of at least 1.
