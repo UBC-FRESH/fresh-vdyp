@@ -51,9 +51,9 @@ Status: active
 Goal: make the repository's public purpose, attribution, and agent contract
 unambiguous before code lands.
 
-- [ ] P0.1 Adapt `README.md`, `AGENTS.md`, `CITATION.cff`, and `LICENSE`
-- [ ] P0.2 Add source-attribution and no-authorship rules to the docs
-- [ ] P0.3 Confirm the workflow validator, tests, and docs build pass
+- [x] P0.1 Adapt `README.md`, `AGENTS.md`, `CITATION.cff`, and `LICENSE`
+- [x] P0.2 Add source-attribution and no-authorship rules to the docs
+- [x] P0.3 Confirm the workflow validator, tests, and docs build pass
 - [x] P0.4 Create the GitHub repository and Phase 0 parent issue
 
 Acceptance criteria:

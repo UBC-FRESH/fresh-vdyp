@@ -12,3 +12,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Created the private `UBC-FRESH/fresh-vdyp` GitHub repository and pushed the seed on `main`.
 - Created Phase 0 parent issue #1 and activated P0 on `feature/p0-bootstrap`; P0.4 is complete.
 - Confirmed the seed already carries attribution in `README.md`, `AGENTS.md`, `CITATION.cff`, and `docs/overview.rst`; P0.1-P0.3 still need their checks recorded.
+- Verified P0.1-P0.3 at `10305b0`: attribution is present in the root files and docs, and the dashboard is green. Closed child issues #2-#4.
