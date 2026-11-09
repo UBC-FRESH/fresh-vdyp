@@ -18,7 +18,7 @@ after its parent issue exists and the maintainer approves it.
 | P3 Console runner and yield parser | #21 | `feature/p3-console-runner` | complete |
 | P4 Curve API and public datasets | #29 | `feature/p4-curve-api` | complete |
 | P5 Incremental Python equations | #36 | `feature/p5-python-equations` | complete |
-| P6 CLI, API, web, and agent | #44 | `feature/p6-interfaces` | active |
+| P6 CLI, API, web, and agent | #44 | `feature/p6-interfaces` | pr-open |
 | P7 Validation, packaging, and FEMIC integration | TBD | `feature/p7-release-integration` | planned |
 
 ## Lifecycle Map
@@ -180,7 +180,7 @@ Acceptance criteria:
 
 Parent issue: #44
 Branch: `feature/p6-interfaces`
-Status: active
+Status: pr-open
 
 Goal: make the package usable by people and agents through a typed API, CLI,
 FRESH-style web UI, and bounded assistant tools.
