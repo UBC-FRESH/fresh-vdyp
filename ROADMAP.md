@@ -12,7 +12,7 @@ after its parent issue exists and the maintainer approves it.
 
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
-| P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | active |
+| P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | pr-open |
 | P1 Source inventory and control map | TBD | `feature/p1-source-inventory` | planned |
 | P2 Coefficient catalog and parser | TBD | `feature/p2-coefficient-catalog` | planned |
 | P3 Console runner and yield parser | TBD | `feature/p3-console-runner` | planned |
@@ -46,7 +46,7 @@ after its parent issue exists and the maintainer approves it.
 
 Parent issue: #1
 Branch: `feature/p0-bootstrap`
-Status: active
+Status: pr-open
 
 Goal: make the repository's public purpose, attribution, and agent contract
 unambiguous before code lands.
