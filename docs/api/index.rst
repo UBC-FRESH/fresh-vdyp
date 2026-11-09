@@ -13,6 +13,7 @@ whenever you add a module to the project.
    coe-parser
    config-parser
    bundle-service
+   curve-api
    dashboard
    fresh-vdyp
    inventory-vdyp
