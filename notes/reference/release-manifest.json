@@ -17,5 +17,5 @@
   ],
   "data_manifest": "fixtures/yield-output/dataset-manifest.json",
   "data_manifest_sha256": "81004f98b53986eaac75f67c9d712f6f3a2ea88c9f2033ce5de61e8c416914f8",
-  "publication": "GitHub release and tag approved 2026-11-09; PyPI upload not run"
+  "publication": "tag v0.1.0 and GitHub release published 2026-11-09; PyPI upload not run (no credentials)"
 }

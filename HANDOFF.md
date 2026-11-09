@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: all phases P0-P7 complete; 0.1.0 release candidate built. Tag, release, PyPI upload, and the FEMIC repository change remain separate approvals.
+Status: all phases P0-P7 complete; tag `v0.1.0` and GitHub release published. PyPI upload is blocked on credentials; the FEMIC repository change is pending.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
