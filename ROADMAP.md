@@ -185,11 +185,11 @@ Status: active
 Goal: make the package usable by people and agents through a typed API, CLI,
 FRESH-style web UI, and bounded assistant tools.
 
-- [ ] P6.1 Build the Typer CLI and command contracts
-- [ ] P6.2 Build the FastAPI service and typed response models
-- [ ] P6.3 Build the FRESH-style bundle, curve, and validation UI
-- [ ] P6.4 Add LLM tools for catalog search, curve query, provenance, and validation
-- [ ] P6.5 Add API, CLI, UI, and assistant tests
+- [x] P6.1 Build the Typer CLI and command contracts
+- [x] P6.2 Build the FastAPI service and typed response models
+- [x] P6.3 Build the FRESH-style bundle, curve, and validation UI
+- [x] P6.4 Add LLM tools for catalog search, curve query, provenance, and validation
+- [x] P6.5 Add API, CLI, UI, and assistant tests
 
 Acceptance criteria:
 

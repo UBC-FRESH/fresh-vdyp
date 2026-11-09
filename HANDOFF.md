@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: Phase 6 active; parent issue #44 on branch `feature/p6-interfaces`.
+Status: Phase 6 all tasks complete; pull request and close-out report are next.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
@@ -127,7 +127,7 @@ P3.2 parse csvyieldtable output
 - Phase 3: complete. Pull request #28 merged as `53ebc2c`; issue #21 closed; child issues #22-#27 closed.
 - Phase 4: complete. Pull request #35 merged as `ba6f339`; issue #29 closed; child issues #30-#34 closed.
 - Phase 5: complete. Pull request #43 merged as `39ce9ce`; issue #36 closed; child issues #37-#42 closed.
-- Phase 6: active on `feature/p6-interfaces`; parent issue #44, child issues #45-#49 open.
+- Phase 6: all five tasks complete on `feature/p6-interfaces`; child issues #45-#49 closed. Pull request and close-out report are next.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.
