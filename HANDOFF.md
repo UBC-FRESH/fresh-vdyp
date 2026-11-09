@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: Phase 5 pr-open; pull request #43 queued for approval.
+Status: Phase 6 pr-open; pull request #50 queued for approval.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
@@ -126,7 +126,8 @@ P3.2 parse csvyieldtable output
 - Phase 2: complete. Pull request #20 merged as `17d274e`; issue #13 closed; child issues #14-#19 closed.
 - Phase 3: complete. Pull request #28 merged as `53ebc2c`; issue #21 closed; child issues #22-#27 closed.
 - Phase 4: complete. Pull request #35 merged as `ba6f339`; issue #29 closed; child issues #30-#34 closed.
-- Phase 5: pr-open. Parent issue #36, pull request #43, child issues #37-#42 closed. Close-out report at `notes/reports/phase-5-closeout.md`. VTOTREG4 is validated; the other families are experimental with documented oracle gaps.
+- Phase 5: complete. Pull request #43 merged as `39ce9ce`; issue #36 closed; child issues #37-#42 closed.
+- Phase 6: pr-open. Parent issue #44, pull request #50, child issues #45-#49 closed. Close-out report at `notes/reports/phase-6-closeout.md`, awaiting maintainer approval.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.
