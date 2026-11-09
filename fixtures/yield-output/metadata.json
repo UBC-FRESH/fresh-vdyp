@@ -12,5 +12,8 @@
   "subset_sha256": "6f381f2d3b8d5d4d8eba64f75730a0c8234ad2395024c9eaa0cc6858ae1776b7",
   "column_count": 33,
   "reproduced_at_utc": "2026-11-09T05:08:00Z",
-  "note": "Header plus the first 10 rows of a reproduced run on synthetic input. Not BC data."
+  "note": "Header plus the first 10 rows of a reproduced run on synthetic input. Not BC data.",
+  "dataset_file": "fixtures/yield-output/golden-full.csv",
+  "dataset_sha256": "36eca18f7f3de35fef6800c96f06a50a4bcabc04961f40850762030da9667ceb",
+  "dataset_row_count": 301
 }

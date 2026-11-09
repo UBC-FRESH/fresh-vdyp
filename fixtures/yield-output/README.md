@@ -1,16 +1,28 @@
 # Reproduced yield output
 
-A small sample of a real `VDYP7Console` run on the synthetic
+A real `VDYP7Console` run on the synthetic
 `fixtures/console-input/Console` fixture. It was reproduced on 2026-11-09 under
-Wine 11.0 with the bundled console version 7.16k.
+WineHQ stable 11.0 with the bundled console version 7.16k.
 
 Files:
 
-- `golden-sample.csv` — the 33-column `CSVYieldTable` header plus 10 rows.
-- `metadata.json` — source, runtime, command, full-output SHA256, full row count
-  (301), and subset row count (10).
+- `golden-full.csv` — the full 301-row, 33-column `CSVYieldTable` output. The
+  console wrote CRLF; this copy is normalized to LF.
+- `golden-sample.csv` — the header plus 10 rows, used by the smaller parser
+  tests.
+- `metadata.json` — source, runtime, console version, command, raw-output
+  SHA256, dataset SHA256, and row counts.
+- `dataset-manifest.json` — a provenance-validated entry for `golden-full.csv`,
+  checked by `scripts/provenance.py`.
+- `README.md` — this note.
 
-The full output is not committed because it is regenerable and large. The
-subset is enough to test header aliases and typed parsing.
+The dataset is synthetic input and synthetic output, not BC government data. It
+is not a native-Windows parity claim.
 
-This is synthetic input and synthetic output, not BC government data.
+Reproduction command, from a working directory containing `Console/` and
+`VDYP_CFG/`:
+
+```bash
+wine VDYP7Console.exe -i Console -o ConsoleOutput.txt -e ConsoleErrors.txt \
+  -c VDYP_CFG/ -d . -ofmt CSVYieldTable -agestart 0 -ageend 300 -inc 1
+```
