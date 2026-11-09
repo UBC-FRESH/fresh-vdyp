@@ -122,7 +122,7 @@ P3.2 parse csvyieldtable output
 - Local repo: seeded and committed.
 - Remote: private `UBC-FRESH/fresh-vdyp`, `main` pushed.
 - Phase 0: complete. Pull request #5 merged as `b73362a`; issue #1 closed; child issues #2-#4 closed.
-- Phase 1: active on `feature/p1-source-inventory`; parent issue #6, child issues #7-#11 open.
+- Phase 1: all five tasks complete on `feature/p1-source-inventory`; parent issue #6, child issues #7-#11 closed. Pull request and close-out report are next.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.

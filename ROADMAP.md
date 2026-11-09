@@ -72,11 +72,11 @@ Status: active
 Goal: inventory the VDYP7 bundle and freeze the control-file and provenance
 contract before extraction begins.
 
-- [ ] P1.1 Inventory install binaries, configuration, coefficient, and sample files
-- [ ] P1.2 Parse `VDYP.CTR`, `VDYPBACK.CTR`, and report column definitions
-- [ ] P1.3 Map control sequences to `.COE`, `.PRM`, and `.DAT` files
-- [ ] P1.4 Write the data-provenance contract and source-citation manifest
-- [ ] P1.5 Capture tiny fixtures and a golden console-output inventory
+- [x] P1.1 Inventory install binaries, configuration, coefficient, and sample files
+- [x] P1.2 Parse `VDYP.CTR`, `VDYPBACK.CTR`, and report column definitions
+- [x] P1.3 Map control sequences to `.COE`, `.PRM`, and `.DAT` files
+- [x] P1.4 Write the data-provenance contract and source-citation manifest
+- [x] P1.5 Capture tiny fixtures and a golden console-output inventory
 
 Acceptance criteria:
 

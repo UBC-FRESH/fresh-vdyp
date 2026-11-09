@@ -16,3 +16,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Opened pull request #5 with the Phase 0 close-out report and queued it for maintainer approval. Recorded the pre-existing `Docs` Pages deployments failure and the missing labels.
 - Merged pull request #5 as `b73362a`, closed Phase 0 parent issue #1, and deleted `feature/p0-bootstrap`; P0 is complete.
 - Launched Phase 1 with parent issue #6, child issues #7-#11, and branch `feature/p1-source-inventory`.
+- Completed P1.1-P1.5: 211-file inventory; control and column parsers (57/55/101); control map (112 entries, 0 missing); binding provenance validator; synthetic fixtures and a golden-output inventory. Closed child issues #7-#11.
