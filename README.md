@@ -14,7 +14,7 @@ Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 
 ## Status
 
-Phase 3 (console runner and yield parser) is active. `ROADMAP.md` lists the phases,
+Phase 3 (console runner and yield parser) is queued for approval. `ROADMAP.md` lists the phases,
 and GitHub issues carry the live status. The first working milestone is the
 source inventory and coefficient catalog, not a full VDYP growth-model rewrite.
 
