@@ -41,3 +41,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Opened pull request #50 with the Phase 6 close-out report and queued it for maintainer approval.
 - Merged pull request #50 as `ce9151a`, closed Phase 6 parent issue #44, and deleted `feature/p6-interfaces`; P6 is complete.
 - Launched Phase 7 with parent issue #51, child issues #52-#56, and branch `feature/p7-release-integration`.
+- Completed P7.1-P7.5: installable package and facade, release regression, release manifest, FEMIC integration docs, and release notes. Closed #52-#56. Publication and the FEMIC repository change are queued for approval.

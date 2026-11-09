@@ -207,11 +207,11 @@ Status: active
 
 Goal: prove the package, publish it, and make it a usable dependency for FEMIC.
 
-- [ ] P7.1 Run golden regression against VDYP7Console and FEMIC outputs
-- [ ] P7.2 Build and test the Python package and data manifest
-- [ ] P7.3 Publish release assets and a stable data manifest
-- [ ] P7.4 Add the FEMIC dependency and back-link documentation
-- [ ] P7.5 Write release notes, known gaps, and citation instructions
+- [x] P7.1 Run golden regression against VDYP7Console and FEMIC outputs
+- [x] P7.2 Build and test the Python package and data manifest
+- [x] P7.3 Publish release assets and a stable data manifest
+- [x] P7.4 Add the FEMIC dependency and back-link documentation
+- [x] P7.5 Write release notes, known gaps, and citation instructions
 
 Acceptance criteria:
 
