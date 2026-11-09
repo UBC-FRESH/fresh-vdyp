@@ -98,6 +98,13 @@ Unknowns:
 `YLDBA407.COE` and `YLDDQ45.COE` are yield-table helpers. `VDYP.tcl` defines the
 output columns.
 
+## Parse status
+
+`notes/reference/vdyp-coe-summary.json` records 38 of the 40 `.COE` families as
+parsed under a named schema with a stable token count. `COMPLIM.COE` and
+`REGDQI04.COE` are explicitly unsupported because their rows have variable
+shapes; they need dedicated parsers before they can be catalogued.
+
 ## What the bundle gives us
 
 - the coefficient values;

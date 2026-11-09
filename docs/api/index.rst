@@ -10,6 +10,7 @@ whenever you add a module to the project.
    :maxdepth: 2
 
    check-workflow
+   coe-parser
    dashboard
    inventory-vdyp
    provenance

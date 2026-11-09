@@ -4,23 +4,35 @@
   "source_model": "synthetic",
   "source_version": "0",
   "source_file": "fixtures/mini-bundle/coe/VTOTREG4.COE",
-  "source_sha256": "0a2fdf13ec6726e1d076d2f42df27ca0a52ef7b36c3289cda5a833fafb34f499",
+  "source_sha256": "9afab35b23e7957d9e51d117ad05b049be277fec7eee18b101a933f94f67641a",
   "extracted_at_utc": "2026-11-09T00:00:00Z",
   "extractor": "fresh-vdyp test fixture",
   "parser_version": 1,
   "family": "whole_stem_volume",
   "control_sequence": "090",
   "columns": [
-    "curve_group",
+    "group",
     "b0",
     "b1",
-    "b2"
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6",
+    "b7",
+    "b8"
   ],
   "row_count": 2,
   "units": {
     "b0": "log_m3",
     "b1": "log_m3",
-    "b2": "log_m3"
+    "b2": "log_m3",
+    "b3": "log_m3",
+    "b4": "log_m3",
+    "b5": "log_m3",
+    "b6": "log_m3",
+    "b7": "log_m3",
+    "b8": "log_m3"
   },
   "citation": "Synthetic fixture. Not BC government data.",
   "notes": "Example manifest entry for schema tests."
