@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: Phase 7 pr-open; pull request #57 queued for approval. Publication and the FEMIC repository change remain separate approvals.
+Status: all phases P0-P7 complete; 0.1.0 release candidate built. Tag, release, PyPI upload, and the FEMIC repository change remain separate approvals.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
@@ -128,7 +128,7 @@ P3.2 parse csvyieldtable output
 - Phase 4: complete. Pull request #35 merged as `ba6f339`; issue #29 closed; child issues #30-#34 closed.
 - Phase 5: complete. Pull request #43 merged as `39ce9ce`; issue #36 closed; child issues #37-#42 closed.
 - Phase 6: complete. Pull request #50 merged as `ce9151a`; issue #44 closed; child issues #45-#49 closed.
-- Phase 7: pr-open. Parent issue #51, pull request #57, child issues #52-#56 closed. Close-out report at `notes/reports/phase-7-closeout.md`. No tag, release, or FEMIC repository change has been made.
+- Phase 7: complete. Pull request #57 merged as `bf93896`; issue #51 closed; child issues #52-#56 closed. All phases P0-P7 are complete.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.

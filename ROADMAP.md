@@ -19,7 +19,7 @@ after its parent issue exists and the maintainer approves it.
 | P4 Curve API and public datasets | #29 | `feature/p4-curve-api` | complete |
 | P5 Incremental Python equations | #36 | `feature/p5-python-equations` | complete |
 | P6 CLI, API, web, and agent | #44 | `feature/p6-interfaces` | complete |
-| P7 Validation, packaging, and FEMIC integration | #51 | `feature/p7-release-integration` | pr-open |
+| P7 Validation, packaging, and FEMIC integration | #51 | `feature/p7-release-integration` | complete |
 
 ## Lifecycle Map
 
@@ -203,7 +203,7 @@ Acceptance criteria:
 
 Parent issue: #51
 Branch: `feature/p7-release-integration`
-Status: pr-open
+Status: complete
 
 Goal: prove the package, publish it, and make it a usable dependency for FEMIC.
 
