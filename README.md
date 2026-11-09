@@ -14,7 +14,7 @@ Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 
 ## Status
 
-Phase 4 (curve API and public datasets) is queued for approval. `ROADMAP.md` lists the phases,
+Phase 5 (incremental Python equations) is active. `ROADMAP.md` lists the phases,
 and GitHub issues carry the live status. The first working milestone is the
 source inventory and coefficient catalog, not a full VDYP growth-model rewrite.
 
