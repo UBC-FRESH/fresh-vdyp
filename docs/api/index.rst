@@ -15,6 +15,7 @@ whenever you add a module to the project.
    bundle-service
    curve-api
    dashboard
+   equations
    fresh-vdyp
    inventory-vdyp
    key-inference

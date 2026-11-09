@@ -41,11 +41,21 @@ From `VDYP.CTR`:
 nine numeric coefficients. The public model overview identifies whole-stem
 volume as a static yield model added after the stand projection.
 
+The equation, coefficient order, and group lookup are implemented from the
+public `bcgov/nr-vdyp` source (EMP090, Apache-2.0). See
+`notes/reference/vdyp-equation-validation.md` for the validated case and
+tolerance.
+
+```text
+ln(V_tree) = b0 + b1 ln(DQ) + b2 ln(HL) + b3 DQ + b4/DQ
+           + b5 HL + b6 DQ^2 + b7 HL DQ + b8 HL/DQ
+V_per_ha = V_tree * TPH
+```
+
 Unknowns:
 
-- exact variable order in the nine coefficient columns;
-- which terms are log-transformed;
-- species/BEC grouping rules.
+- the young-stand / small-component path;
+- how the static equation interacts with compatibility adjustments.
 
 ### Utilization and close-utilization volume
 
