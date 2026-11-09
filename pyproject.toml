@@ -1,6 +1,55 @@
-# Tool configuration for the UBC-FRESH dev workflow. This repository is a seed and
-# documentation kit, not a Python package, so there is no [project] table. Each gate
+# Build and tool configuration for fresh-vdyp. The installable modules live in
+# scripts/ and the public facade lives in scripts/fresh_vdyp/. Each gate
 # configured here is also a check in the green dashboard (scripts/dashboard.py).
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fresh-vdyp"
+version = "0.1.0"
+description = "A public interoperability layer for the BC VDYP7 coefficient bundle, console runner, and yield curves."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "UBC FRESH Lab" }]
+dependencies = [
+    "fastapi>=0.110",
+    "httpx>=0.27",
+    "pydantic>=2",
+    "typer>=0.12",
+    "uvicorn>=0.29",
+]
+
+[project.scripts]
+fvdyp = "fvdyp_cli:main"
+fresh-vdyp = "fvdyp_cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "scripts" }
+packages = ["fresh_vdyp"]
+py-modules = [
+    "assistant_tools",
+    "bundle_service",
+    "check_workflow",
+    "coe_parser",
+    "config_parser",
+    "curve_api",
+    "dashboard",
+    "equations",
+    "fvdyp_api",
+    "fvdyp_cli",
+    "inventory_vdyp",
+    "key_inference",
+    "normalize",
+    "provenance",
+    "run_console",
+    "vdyp_control",
+    "vdyp_map",
+    "vdyp_runtime",
+    "yield_parser",
+]
 
 [tool.ruff]
 line-length = 100

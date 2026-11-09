@@ -14,7 +14,7 @@ Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 
 ## Status
 
-Phase 6 (CLI, API, web, and agent) is queued for approval. `ROADMAP.md` lists the phases,
+Phase 7 (validation, packaging, and FEMIC integration) is queued for approval. `ROADMAP.md` lists the phases,
 and GitHub issues carry the live status. The first working milestone is the
 source inventory and coefficient catalog, not a full VDYP growth-model rewrite.
 
@@ -80,9 +80,9 @@ Until the installable package lands, the first commands run from the repository:
 
 ```bash
 export VDYP_CFG_DIR=/path/to/VDYP_CFG
-python scripts/fresh_vdyp.py bundle validate
-python scripts/fresh_vdyp.py bundle catalog
-python scripts/fresh_vdyp.py bundle extract --output-dir data/normalized
+python scripts/fvdyp_cli.py bundle validate
+python scripts/fvdyp_cli.py bundle catalog
+python scripts/fvdyp_cli.py bundle extract --output-dir data/normalized
 ```
 
 `validate` checks required files, control targets, and key lookups. `catalog`

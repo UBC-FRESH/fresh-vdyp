@@ -133,7 +133,7 @@ def test_bundle_diagnostic_renders() -> None:
 
 def run_cli(*args: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        [sys.executable, str(SCRIPTS / "fresh_vdyp.py"), *args],
+        [sys.executable, str(SCRIPTS / "fvdyp_cli.py"), *args],
         cwd=ROOT,
         capture_output=True,
         text=True,

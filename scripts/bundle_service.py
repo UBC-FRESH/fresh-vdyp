@@ -5,7 +5,7 @@ The service keeps validation, catalog inspection, and extraction out of the CLI
 so the commands share one typed implementation. Every result names the source
 model and the source files behind it.
 
-Command-line usage is through ``scripts/fresh_vdyp.py``.
+Command-line usage is through ``scripts/fvdyp_cli.py``.
 """
 
 from __future__ import annotations
