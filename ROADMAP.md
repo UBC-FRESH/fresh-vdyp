@@ -17,7 +17,7 @@ after its parent issue exists and the maintainer approves it.
 | P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | complete |
 | P3 Console runner and yield parser | #21 | `feature/p3-console-runner` | complete |
 | P4 Curve API and public datasets | #29 | `feature/p4-curve-api` | complete |
-| P5 Incremental Python equations | #36 | `feature/p5-python-equations` | active |
+| P5 Incremental Python equations | #36 | `feature/p5-python-equations` | pr-open |
 | P6 CLI, API, web, and agent | TBD | `feature/p6-interfaces` | planned |
 | P7 Validation, packaging, and FEMIC integration | TBD | `feature/p7-release-integration` | planned |
 
@@ -155,7 +155,7 @@ Acceptance criteria:
 
 Parent issue: #36
 Branch: `feature/p5-python-equations`
-Status: active
+Status: pr-open
 
 Goal: reimplement documented equation families in Python and validate each one
 against the console oracle.
