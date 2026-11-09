@@ -62,7 +62,6 @@ def make_input(tmp_path: Path) -> Path:
 
 def test_build_parameters_without_ini() -> None:
     parameters = build_parameters(
-        config_dir=Path("cfg"),
         output_format="CSVYieldTable",
         has_ini=False,
         extra_args=("-inc", "1"),
@@ -73,9 +72,7 @@ def test_build_parameters_without_ini() -> None:
 
 
 def test_build_parameters_with_ini() -> None:
-    parameters = build_parameters(
-        config_dir=Path("cfg"), output_format="CSVYieldTable", has_ini=True
-    )
+    parameters = build_parameters(output_format="CSVYieldTable", has_ini=True)
     assert parameters[:2] == ("-ini", "VDYP.INI")
 
 

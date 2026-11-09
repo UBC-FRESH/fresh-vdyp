@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Run ``VDYP7Console`` in an isolated directory and capture every stream.
 
-The runner copies the input tree into a temporary working directory, builds the
-console command through :mod:`vdyp_runtime`, captures stdout and stderr, and
-records the output and error files. A failed run is a recorded finding with a
-stable code; it never falls back to generated curves.
+The runner copies the input tree and ``VDYP_CFG`` into a temporary working
+directory, builds the console command through :mod:`vdyp_runtime`, captures
+stdout and stderr, and records the output and error files. A failed run is a
+recorded finding with a stable code; it never falls back to generated curves.
 
 Command-line usage::
 
@@ -142,7 +142,6 @@ def sha256_file(path: Path) -> str:
 
 def build_parameters(
     *,
-    config_dir: Path,
     output_format: str,
     has_ini: bool,
     extra_args: Sequence[str] = (),
@@ -151,8 +150,6 @@ def build_parameters(
 
     Parameters
     ----------
-    config_dir : Path
-        Configuration directory passed with ``-c``.
     output_format : str
         Output format passed with ``-ofmt``.
     has_ini : bool
@@ -163,7 +160,8 @@ def build_parameters(
     Returns
     -------
     tuple of str
-        Arguments after the executable.
+        Arguments after the executable. The configuration is always the copied
+        ``VDYP_CFG`` directory in the working directory.
     """
     parameters: list[str] = []
     if has_ini:
@@ -177,11 +175,23 @@ def build_parameters(
             "-e",
             ERROR_NAME,
             "-c",
-            str(config_dir),
+            "VDYP_CFG\\",
             "-d",
             ".",
             "-ofmt",
             output_format,
+            "-agestart",
+            "0",
+            "-ageend",
+            "300",
+            "-inc",
+            "1",
+            "-forcerefyear",
+            "Yes",
+            "-includeyearrows",
+            "No",
+            "-progressFrequency",
+            "Never",
         )
     )
     parameters.extend(extra_args)
@@ -321,11 +331,11 @@ def run_console(
         )
     work_dir.mkdir(parents=True, exist_ok=True)
     shutil.copytree(input_dir, work_dir / "Console", dirs_exist_ok=True)
+    shutil.copytree(config, work_dir / "VDYP_CFG", dirs_exist_ok=True)
     has_ini = ini_path is not None and ini_path.is_file()
     if has_ini and ini_path is not None:
         shutil.copy2(ini_path, work_dir / "VDYP.INI")
     parameters = build_parameters(
-        config_dir=config,
         output_format=output_format,
         has_ini=has_ini,
         extra_args=extra_args,
