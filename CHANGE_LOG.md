@@ -22,3 +22,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Launched Phase 2 with parent issue #13, child issues #14-#19, and branch `feature/p2-coefficient-catalog`.
 - Completed P2.1-P2.6: `.COE` schemas (38 supported, 2 explicit unsupported), structural PRM/DAT parser, key catalog, normalized CSV manifest, bundle commands, and expanded tests. Closed child issues #14-#19.
 - Opened pull request #20 with the Phase 2 close-out report and queued it for maintainer approval.
+- Merged pull request #20 as `17d274e`, closed Phase 2 parent issue #13, and deleted `feature/p2-coefficient-catalog`; P2 is complete.
+- Launched Phase 3 with parent issue #21, child issues #22-#27, and branch `feature/p3-console-runner`.

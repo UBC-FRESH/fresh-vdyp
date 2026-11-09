@@ -14,8 +14,8 @@ after its parent issue exists and the maintainer approves it.
 | --- | --- | --- | --- |
 | P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | complete |
 | P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | complete |
-| P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | pr-open |
-| P3 Console runner and yield parser | TBD | `feature/p3-console-runner` | planned |
+| P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | complete |
+| P3 Console runner and yield parser | #21 | `feature/p3-console-runner` | active |
 | P4 Curve API and public datasets | TBD | `feature/p4-curve-api` | planned |
 | P5 Incremental Python equations | TBD | `feature/p5-python-equations` | planned |
 | P6 CLI, API, web, and agent | TBD | `feature/p6-interfaces` | planned |
@@ -89,7 +89,7 @@ Acceptance criteria:
 
 Parent issue: #13
 Branch: `feature/p2-coefficient-catalog`
-Status: pr-open
+Status: complete
 
 Goal: convert the plain-text coefficient bundle into a normalized, validated
 catalog.
@@ -110,9 +110,9 @@ Acceptance criteria:
 
 ## Phase 3: Console runner and yield parser
 
-Parent issue: TBD
+Parent issue: #21
 Branch: `feature/p3-console-runner`
-Status: planned
+Status: active
 
 Goal: run `VDYP7Console` safely and turn its CSV yield tables into typed rows.
 

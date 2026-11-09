@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: Phase 2 pr-open; pull request #20 queued for approval.
+Status: Phase 3 active; parent issue #21 on branch `feature/p3-console-runner`.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
@@ -123,7 +123,8 @@ P3.2 parse csvyieldtable output
 - Remote: private `UBC-FRESH/fresh-vdyp`, `main` pushed.
 - Phase 0: complete. Pull request #5 merged as `b73362a`; issue #1 closed; child issues #2-#4 closed.
 - Phase 1: complete. Pull request #12 merged as `d627751`; issue #6 closed; child issues #7-#11 closed.
-- Phase 2: pr-open. Parent issue #13, pull request #20, child issues #14-#19 closed. Close-out report at `notes/reports/phase-2-closeout.md`, awaiting maintainer approval.
+- Phase 2: complete. Pull request #20 merged as `17d274e`; issue #13 closed; child issues #14-#19 closed.
+- Phase 3: active on `feature/p3-console-runner`; parent issue #21, child issues #22-#27 open.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.
