@@ -15,6 +15,7 @@ whenever you add a module to the project.
    dashboard
    inventory-vdyp
    key-inference
+   normalize
    provenance
    vdyp-control
    vdyp-map

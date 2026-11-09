@@ -47,6 +47,7 @@ OPTIONAL_FIELDS: Final[tuple[str, ...]] = (
     "row_count",
     "units",
     "notes",
+    "normalized_sha256",
 )
 
 
@@ -198,6 +199,18 @@ def validate_manifest_entry(entry: Mapping[str, object]) -> tuple[Diagnostic, ..
     if digest is not None and SHA256_PATTERN.fullmatch(digest) is None:
         findings.append(
             Diagnostic("INVALID-SHA256", "source_sha256", "expected 64 lowercase hex characters")
+        )
+    normalized_digest = entry.get("normalized_sha256")
+    if normalized_digest is not None and (
+        not isinstance(normalized_digest, str)
+        or SHA256_PATTERN.fullmatch(normalized_digest) is None
+    ):
+        findings.append(
+            Diagnostic(
+                "INVALID-SHA256",
+                "normalized_sha256",
+                "expected 64 lowercase hex characters",
+            )
         )
     timestamp = values.get("extracted_at_utc")
     if timestamp is not None and not _is_utc_timestamp(timestamp):

@@ -53,6 +53,8 @@ def test_a_complete_entry_is_valid() -> None:
         ("kind", "VDYP", "INVALID-KIND"),
         ("source_sha256", "A" * 64, "INVALID-SHA256"),
         ("source_sha256", "abc", "INVALID-SHA256"),
+        ("normalized_sha256", "A" * 64, "INVALID-SHA256"),
+        ("normalized_sha256", 1, "INVALID-SHA256"),
         ("extracted_at_utc", "2026-11-09T00:00:00", "INVALID-TIMESTAMP"),
         ("extracted_at_utc", "2026-11-09T00:00:00+01:00", "INVALID-TIMESTAMP"),
         ("source_file", "/tmp/VDYP.CTR", "INVALID-SOURCE-FILE"),
