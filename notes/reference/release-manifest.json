@@ -1,21 +1,21 @@
 {
   "name": "fresh-vdyp",
   "version": "0.1.0",
-  "commit": "9577cdd",
+  "commit": "d9ad780",
   "built_at_utc": "2026-11-09T00:00:00Z",
   "artifacts": [
     {
       "file": "fresh_vdyp-0.1.0-py3-none-any.whl",
-      "bytes": 87257,
-      "sha256": "20756463b11258330513d0a9252148dd6435e72039f4f15645439a6c7fbae722"
+      "bytes": 87246,
+      "sha256": "9c8527f665d61381d2d38d8ef818a154f00f3729d8050d94f8e586ac2a36f2bb"
     },
     {
       "file": "fresh_vdyp-0.1.0.tar.gz",
-      "bytes": 115567,
-      "sha256": "45ac0cb1e4efa80b8e04139b9fdf6c5eb53c7ac87e7d1c6d681438f9a3943e1c"
+      "bytes": 115538,
+      "sha256": "93cf143de378b2794dd69f2f9e714dcdb4116154c10c59633f33d0547fd01900"
     }
   ],
   "data_manifest": "fixtures/yield-output/dataset-manifest.json",
   "data_manifest_sha256": "81004f98b53986eaac75f67c9d712f6f3a2ea88c9f2033ce5de61e8c416914f8",
-  "publication": "not published; tag and release require maintainer approval"
+  "publication": "GitHub release and tag approved 2026-11-09; PyPI upload not run"
 }
