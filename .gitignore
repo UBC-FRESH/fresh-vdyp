@@ -45,5 +45,10 @@ VDYP_CFG/
 *.PRM
 *.DAT
 
+# Tiny synthetic fixtures are tracked; the raw model bundle is not
+!fixtures/mini-bundle/coe/*.COE
+!fixtures/mini-bundle/coe/*.PRM
+!fixtures/mini-bundle/coe/*.DAT
+
 # Host-specific notes (not published)
 notes/local/
