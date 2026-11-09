@@ -1,0 +1,56 @@
+{
+  "bundle": "console-input",
+  "status": "synthetic",
+  "note": "Synthetic console input shaped after the shipped CSV headers. Not BC government data.",
+  "acceptance": "accepted by a VDYP7Console run on 2026-11-09 under Wine 11.0; exit 0, 301 output rows.",
+  "files": [
+    {
+      "path": "Console/HISTORY.csv",
+      "source": "synthetic",
+      "size_bytes": 94,
+      "purpose": "One empty history row required by the sample schema."
+    },
+    {
+      "path": "Console/LAYER.csv",
+      "source": "synthetic",
+      "size_bytes": 154,
+      "purpose": "One synthetic layer with utilization level 7.5."
+    },
+    {
+      "path": "Console/NON_VEG.csv",
+      "source": "synthetic",
+      "size_bytes": 75,
+      "purpose": "One synthetic non-vegetation component."
+    },
+    {
+      "path": "Console/OTHER_VEG.csv",
+      "source": "synthetic",
+      "size_bytes": 58,
+      "purpose": "Header only; no other vegetation."
+    },
+    {
+      "path": "Console/POLYGON.csv",
+      "source": "synthetic",
+      "size_bytes": 129,
+      "purpose": "One synthetic polygon with a BEC zone and reference year."
+    },
+    {
+      "path": "Console/POLYGON_ID.csv",
+      "source": "synthetic",
+      "size_bytes": 87,
+      "purpose": "One matching polygon identifier row."
+    },
+    {
+      "path": "Console/SPECIES.csv",
+      "source": "synthetic",
+      "size_bytes": 123,
+      "purpose": "One synthetic 100 percent AT species row."
+    },
+    {
+      "path": "Console/VRIADJST.csv",
+      "source": "synthetic",
+      "size_bytes": 95,
+      "purpose": "Header only; no VRI adjustment values."
+    }
+  ]
+}

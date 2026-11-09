@@ -22,3 +22,8 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Launched Phase 2 with parent issue #13, child issues #14-#19, and branch `feature/p2-coefficient-catalog`.
 - Completed P2.1-P2.6: `.COE` schemas (38 supported, 2 explicit unsupported), structural PRM/DAT parser, key catalog, normalized CSV manifest, bundle commands, and expanded tests. Closed child issues #14-#19.
 - Opened pull request #20 with the Phase 2 close-out report and queued it for maintainer approval.
+- Merged pull request #20 as `17d274e`, closed Phase 2 parent issue #13, and deleted `feature/p2-coefficient-catalog`; P2 is complete.
+- Launched Phase 3 with parent issue #21, child issues #22-#27, and branch `feature/p3-console-runner`.
+- P3 progress: runtime adapter, isolated runner, failure records, synthetic console input, and typed `csvyieldtable` parser. Closed #22, #24, #25, #27. #23 and #26 are blocked because host Wine crashes on every Windows process; the failure is recorded and no curve was invented.
+- Installed WineHQ stable 11.0, which fixed the host startup crash. The synthetic console input was accepted and produced 301 CSV rows. Closed #23 and #26; P3 is complete pending review.
+- Opened pull request #28 with the Phase 3 close-out report and queued it for maintainer approval.

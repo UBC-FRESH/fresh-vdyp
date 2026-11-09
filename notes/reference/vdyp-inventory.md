@@ -155,6 +155,18 @@ file, source SHA256, normalized SHA256, equation family, control sequence, and
 row count. `notes/reference/vdyp-normalized-summary.json` records the counts and
 the two unsupported families.
 
+## Runtime check
+
+`python scripts/vdyp_runtime.py --check` reports `mode: wine`, Wine 11.0
+(WineHQ stable) on Linux x86_64, the 32-bit PE32 `VDYP7Console.exe`, and the
+`VDYP_CFG` configuration directory. The check returns 0 errors and 0 warnings.
+The tracked note omits the absolute paths; they are supplied through
+`VDYP_INSTALL`, `VDYP_CFG_DIR`, and `WINE`.
+
+On 2026-11-09 the console accepted `fixtures/console-input/Console` and wrote
+48,407 bytes of `CSVYieldTable` output with 301 data rows. A 10-row subset is
+tracked under `fixtures/yield-output/`.
+
 ## Runtime note
 
 The console runtime was not exercised in this planning pass. Phase 3 must test:
