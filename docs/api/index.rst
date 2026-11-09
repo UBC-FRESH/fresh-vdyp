@@ -12,3 +12,4 @@ whenever you add a module to the project.
    check-workflow
    dashboard
    inventory-vdyp
+   vdyp-control

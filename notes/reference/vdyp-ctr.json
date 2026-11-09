@@ -1,0 +1,507 @@
+{
+  "source_file": "VDYP_CFG/VDYP.CTR",
+  "entry_count": 57,
+  "comment_lines": 48,
+  "blank_lines": 17,
+  "entries": [
+    {
+      "sequence": "001",
+      "value": "00999999",
+      "description": "Max # of Polygons to process (I8)",
+      "codes": [],
+      "line_number": 7
+    },
+    {
+      "sequence": "009",
+      "value": "coe\\becdef.dat",
+      "description": "BEC Zone Definitions",
+      "codes": [],
+      "line_number": 8
+    },
+    {
+      "sequence": "010",
+      "value": "coe\\sp0def.dat",
+      "description": "Standard SP0 Codes        RD_SP0",
+      "codes": [
+        "RD_SP0"
+      ],
+      "line_number": 9
+    },
+    {
+      "sequence": "011",
+      "value": "vp_fip2.dat",
+      "description": "VDYP7 Polygon input",
+      "codes": [],
+      "line_number": 11
+    },
+    {
+      "sequence": "012",
+      "value": "vs_fip2.dat",
+      "description": "VDYP7 Layer by Species, input",
+      "codes": [],
+      "line_number": 12
+    },
+    {
+      "sequence": "013",
+      "value": "vu_fip2.dat",
+      "description": "VDYP7 Layer by SP0 by Util, input",
+      "codes": [],
+      "line_number": 13
+    },
+    {
+      "sequence": "014",
+      "value": "growto.dat",
+      "description": "Grow-to years",
+      "codes": [],
+      "line_number": 14
+    },
+    {
+      "sequence": "015",
+      "value": "vp_grow2.dat",
+      "description": "VDYP7 Polygon  out",
+      "codes": [],
+      "line_number": 16
+    },
+    {
+      "sequence": "016",
+      "value": "vs_grow2.dat",
+      "description": "VDYP7 Layer by SP0  out",
+      "codes": [],
+      "line_number": 17
+    },
+    {
+      "sequence": "018",
+      "value": "vu_grow2.dat",
+      "description": "VDYP7 Layer by SP0 by Util out",
+      "codes": [],
+      "line_number": 18
+    },
+    {
+      "sequence": "019",
+      "value": "vc_grow2.dat",
+      "description": "Compatibility variables (output file, if any)",
+      "codes": [],
+      "line_number": 19
+    },
+    {
+      "sequence": "020",
+      "value": "coe\\vgrpdef1.dat",
+      "description": "Defines Volume Eqn groups RD_VGRP      IPSJF117",
+      "codes": [
+        "RD_VGRP",
+        "IPSJF117"
+      ],
+      "line_number": 22
+    },
+    {
+      "sequence": "021",
+      "value": "coe\\dgrp.dat",
+      "description": "Defines Decay Groups      RD_DGRP      IPSJF123",
+      "codes": [
+        "RD_DGRP",
+        "IPSJF123"
+      ],
+      "line_number": 23
+    },
+    {
+      "sequence": "022",
+      "value": "coe\\bgrp.dat",
+      "description": "Defines Breakage Groups   RD_BGRP      IPSJF157",
+      "codes": [
+        "RD_BGRP",
+        "IPSJF157"
+      ],
+      "line_number": 24
+    },
+    {
+      "sequence": "025",
+      "value": "coe\\sieqn.prm",
+      "description": "Site Curve Numbers assigned",
+      "codes": [],
+      "line_number": 26
+    },
+    {
+      "sequence": "025",
+      "value": "",
+      "description": "Nullifies above siteCurve #",
+      "codes": [],
+      "line_number": 27
+    },
+    {
+      "sequence": "026",
+      "value": "coe\\siagemax.prm",
+      "description": "Maximum ages for ht incr, by site curve number (SIAGEMAX.prm=140)",
+      "codes": [],
+      "line_number": 28
+    },
+    {
+      "sequence": "028",
+      "value": "coe\\cvadj.prm",
+      "description": "CV adjustment and relalted parameters",
+      "codes": [],
+      "line_number": 29
+    },
+    {
+      "sequence": "030",
+      "value": "coe\\grpba1.dat",
+      "description": "Default Eq # BA=f(CC)     RD_GRBA1",
+      "codes": [
+        "RD_GRBA1"
+      ],
+      "line_number": 31
+    },
+    {
+      "sequence": "031",
+      "value": "coe\\gmodba1.dat",
+      "description": "Eqn modifiers for above   RD_GMBA1",
+      "codes": [
+        "RD_GMBA1"
+      ],
+      "line_number": 32
+    },
+    {
+      "sequence": "043",
+      "value": "coe\\upperb02.coe",
+      "description": "Upper BA, DQ by C/I SP0_P  RD_E043 IPSJF128",
+      "codes": [
+        "RD_E043",
+        "IPSJF128"
+      ],
+      "line_number": 34
+    },
+    {
+      "sequence": "050",
+      "value": "coe\\regyhlp.coe",
+      "description": "HL, Primary SP, Eqn P1     RD_YHL1",
+      "codes": [
+        "RD_YHL1"
+      ],
+      "line_number": 36
+    },
+    {
+      "sequence": "051",
+      "value": "coe\\regyhlpa.coe",
+      "description": "HL, Primary SP, Eqn P2     RD_YHL2",
+      "codes": [
+        "RD_YHL2"
+      ],
+      "line_number": 37
+    },
+    {
+      "sequence": "052",
+      "value": "coe\\regyhlpb.dat",
+      "description": "HL, Primary SP, Eqn P3     RD_YHL3",
+      "codes": [
+        "RD_YHL3"
+      ],
+      "line_number": 38
+    },
+    {
+      "sequence": "053",
+      "value": "coe\\reghl.coe",
+      "description": "HL, Non-primary Species    RD_YHL4",
+      "codes": [
+        "RD_YHL4"
+      ],
+      "line_number": 39
+    },
+    {
+      "sequence": "060",
+      "value": "coe\\REGDQI04.coe",
+      "description": "By-species DQ              RD_E060    IPFJF125",
+      "codes": [
+        "RD_E060",
+        "IPFJF125"
+      ],
+      "line_number": 41
+    },
+    {
+      "sequence": "061",
+      "value": "coe\\COMPLIM.coe",
+      "description": "Species component size limits RD_E061 IPSJF158",
+      "codes": [
+        "RD_E061",
+        "IPSJF158"
+      ],
+      "line_number": 42
+    },
+    {
+      "sequence": "070",
+      "value": "coe\\regbac.dat",
+      "description": "Util. Comp, BA             RD_UBA1",
+      "codes": [
+        "RD_UBA1"
+      ],
+      "line_number": 44
+    },
+    {
+      "sequence": "071",
+      "value": "coe\\regdqc.dat",
+      "description": "Util. Comp, DQ             RD_UDQ1",
+      "codes": [
+        "RD_UDQ1"
+      ],
+      "line_number": 45
+    },
+    {
+      "sequence": "080",
+      "value": "coe\\regpr1c.dat",
+      "description": "Small Comp., Probability   RD_SBA1",
+      "codes": [
+        "RD_SBA1"
+      ],
+      "line_number": 47
+    },
+    {
+      "sequence": "081",
+      "value": "coe\\regba2c.dat",
+      "description": "Small Comp., BA            RD_SBA2",
+      "codes": [
+        "RD_SBA2"
+      ],
+      "line_number": 48
+    },
+    {
+      "sequence": "082",
+      "value": "coe\\regdq4c.dat",
+      "description": "Small Comp., DQ            RD_SDQ1",
+      "codes": [
+        "RD_SDQ1"
+      ],
+      "line_number": 49
+    },
+    {
+      "sequence": "085",
+      "value": "coe\\reghl1c.dat",
+      "description": "Small Comp., HL            RD_SHL1",
+      "codes": [
+        "RD_SHL1"
+      ],
+      "line_number": 50
+    },
+    {
+      "sequence": "086",
+      "value": "coe\\regv1c.dat",
+      "description": "Small Comp., WS Volume     RD_SVT1",
+      "codes": [
+        "RD_SVT1"
+      ],
+      "line_number": 51
+    },
+    {
+      "sequence": "090",
+      "value": "coe\\VTOTREG4.coe",
+      "description": "Total stand WholeStem Vol  RD_YVT1  IPSJF117",
+      "codes": [
+        "RD_YVT1",
+        "IPSJF117"
+      ],
+      "line_number": 53
+    },
+    {
+      "sequence": "091",
+      "value": "coe\\regvu.coe",
+      "description": "Util Comp, WS volume       RD_YVT2  IPSJF121",
+      "codes": [
+        "RD_YVT2",
+        "IPSJF121"
+      ],
+      "line_number": 54
+    },
+    {
+      "sequence": "092",
+      "value": "coe\\regvcu.coe",
+      "description": "Close Utilization Vol      RD_YVC1  IPSJF122",
+      "codes": [
+        "RD_YVC1",
+        "IPSJF122"
+      ],
+      "line_number": 55
+    },
+    {
+      "sequence": "093",
+      "value": "coe\\regvdu.coe",
+      "description": "Vol net of Decay           RD_YVD1  IPSJF123",
+      "codes": [
+        "RD_YVD1",
+        "IPSJF123"
+      ],
+      "line_number": 56
+    },
+    {
+      "sequence": "094",
+      "value": "coe\\regvwu.coe",
+      "description": "Vol net of (Decay+Waste)   RD_YVW1  IPSJF123",
+      "codes": [
+        "RD_YVW1",
+        "IPSJF123"
+      ],
+      "line_number": 57
+    },
+    {
+      "sequence": "095",
+      "value": "coe\\regbreak.coe",
+      "description": "Breakage                   RD_EMP95 IPSJF157",
+      "codes": [
+        "RD_EMP95",
+        "IPSJF157"
+      ],
+      "line_number": 58
+    },
+    {
+      "sequence": "096",
+      "value": "coe\\vetvol1.dat",
+      "description": "Vet-layer volume adjust    RD_YVET",
+      "codes": [
+        "RD_YVET"
+      ],
+      "line_number": 60
+    },
+    {
+      "sequence": "097",
+      "value": "coe\\vetdq2.dat",
+      "description": "DQ for Vet layer           RD_YDQV",
+      "codes": [
+        "RD_YDQV"
+      ],
+      "line_number": 61
+    },
+    {
+      "sequence": "101",
+      "value": "-1   1   2   2   1   1",
+      "description": "Contol variables (10I4)",
+      "codes": [],
+      "line_number": 63
+    },
+    {
+      "sequence": "106",
+      "value": "coe\\YLDBA407.coe",
+      "description": "BA Yield (Primary layer)   RD_E106 ipsjf160",
+      "codes": [
+        "RD_E106",
+        "IPSJF160"
+      ],
+      "line_number": 89
+    },
+    {
+      "sequence": "107",
+      "value": "coe\\YLDDQ45.coe",
+      "description": "DQ Yield (Primary layer)   RD_E107 ipsjf161",
+      "codes": [
+        "RD_E107",
+        "IPSJF161"
+      ],
+      "line_number": 90
+    },
+    {
+      "sequence": "108",
+      "value": "coe\\PCT_407.coe",
+      "description": "Upper bounds (BA, DQ)  RD_E108  ipsjf160 (emp106, emp107)",
+      "codes": [
+        "RD_E108",
+        "IPSJF160"
+      ],
+      "line_number": 91
+    },
+    {
+      "sequence": "111",
+      "value": "coe\\emp111A1.PRM",
+      "description": "Growth in BA (Prim layer) Fiat Model (EMP111A) IPSJF162",
+      "codes": [
+        "IPSJF162"
+      ],
+      "line_number": 92
+    },
+    {
+      "sequence": "117",
+      "value": "coe\\emp117A1.prm",
+      "description": "DQ growth (Pri. L) IPSJF178, fiat & mixed model.",
+      "codes": [
+        "IPSJF178"
+      ],
+      "line_number": 93
+    },
+    {
+      "sequence": "121",
+      "value": "coe\\growba27.coe",
+      "description": "Growth in BA (Prim layer) Emp. Model (EMP121) IPSJF162",
+      "codes": [
+        "IPSJF162"
+      ],
+      "line_number": 94
+    },
+    {
+      "sequence": "122",
+      "value": "coe\\GD23.coe",
+      "description": "DQ growth EMP122  IPSJF178, empirical model",
+      "codes": [
+        "IPSJF178"
+      ],
+      "line_number": 95
+    },
+    {
+      "sequence": "123",
+      "value": "coe\\REGDQL2.coe",
+      "description": "Limits on DQ growth  EMP123  IPSJF178",
+      "codes": [
+        "IPSJF178"
+      ],
+      "line_number": 96
+    },
+    {
+      "sequence": "148",
+      "value": "coe\\basp05.coe",
+      "description": "BA growth Primary SP IPSJF148",
+      "codes": [
+        "IPSJF148"
+      ],
+      "line_number": 97
+    },
+    {
+      "sequence": "149",
+      "value": "coe\\basp06.coe",
+      "description": "BA growth NONPrimary SP IPSJF149",
+      "codes": [
+        "IPSJF149"
+      ],
+      "line_number": 98
+    },
+    {
+      "sequence": "150",
+      "value": "coe\\dqsp05.coe",
+      "description": "DQ growth Primary SP IPSJF150",
+      "codes": [
+        "IPSJF150"
+      ],
+      "line_number": 99
+    },
+    {
+      "sequence": "151",
+      "value": "coe\\dqsp06.coe",
+      "description": "DQ growth NONPrimary Sp. IPSJF151",
+      "codes": [
+        "IPSJF151"
+      ],
+      "line_number": 100
+    },
+    {
+      "sequence": "198",
+      "value": "coe\\MOD19813.prm",
+      "description": "Modifier file (IPSJF155, XII) RD_E198",
+      "codes": [
+        "IPSJF155",
+        "RD_E198"
+      ],
+      "line_number": 102
+    },
+    {
+      "sequence": "199",
+      "value": "2 3 2 2 0 2 0 1 1 0 415 5 713 3",
+      "description": "Debug switches (25) 0=default See IPSJF155, App. IX",
+      "codes": [
+        "IPSJF155"
+      ],
+      "line_number": 104
+    }
+  ]
+}
