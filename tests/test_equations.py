@@ -14,11 +14,17 @@ from equations import (
     VALIDATED_MIN_AGE,
     EquationError,
     WholeStemCoefficients,
+    close_utilization_ratio,
+    estimate_close_utilization_volume,
+    estimate_utilization_components,
     estimate_whole_stem_volume,
     family_status,
+    load_regvcu,
+    load_regvu,
     load_volume_groups,
     load_vtotreg4,
     main,
+    ratio,
     validate_against_golden,
     whole_stem_volume_per_hectare,
     whole_stem_volume_per_tree,
@@ -226,3 +232,106 @@ def test_cli_validation_with_a_synthetic_case(
     output = capsys.readouterr().out
     assert "age-100 tolerance 1%: PASS" in output
     assert "mature (>=80) tolerance 3%: PASS" in output
+
+
+def test_load_regvcu_from_a_synthetic_file(tmp_path: Path) -> None:
+    path = tmp_path / "REGVCU.COE"
+    path.write_text("1 6 -7.425 0.0 0.15032\n", encoding="ascii")
+    rows = load_regvcu(path)
+    assert rows[(1, 6)] == pytest.approx((-7.425, 0.0, 0.15032))
+
+
+def test_load_regvu_from_a_synthetic_file(tmp_path: Path) -> None:
+    path = tmp_path / "REGVU.COE"
+    path.write_text("1 6 -1.14241 1.35050 0.82758 -1.14570\n", encoding="ascii")
+    rows = load_regvu(path)
+    assert rows[(1, 6)] == pytest.approx((-1.14241, 1.35050, 0.82758, -1.14570))
+
+
+def test_ratio_is_clamped() -> None:
+    assert ratio(0.0, 7.0) == pytest.approx(0.5)
+    assert ratio(10.0, 7.0) == 1.0
+    assert ratio(-10.0, 7.0) == 0.0
+
+
+def test_close_utilization_ratio_and_aggregate() -> None:
+    assert close_utilization_ratio((0.0, 0.0, 0.0), 10.0, 20.0) == pytest.approx(0.5)
+    coefficients = {(uc, 6): (0.0, 0.0, 0.0) for uc in (1, 2, 3, 4)}
+    estimate = estimate_close_utilization_volume(
+        coefficients,
+        {("AT", "BWBS"): 6},
+        species="AT",
+        bec="BWBS",
+        whole_stem_by_class={1: 100.0, 2: 100.0, 3: 100.0, 4: 100.0},
+        dq_by_class={1: 10.0, 2: 10.0, 3: 10.0, 4: 10.0},
+        lorey_height=20.0,
+    )
+    assert estimate.value == pytest.approx(200.0)
+    assert estimate.status == "experimental"
+    assert "oracle" in estimate.reason
+
+
+def test_close_utilization_missing_class_is_not_implemented() -> None:
+    coefficients = {(uc, 6): (0.0, 0.0, 0.0) for uc in (1, 2, 3)}
+    estimate = estimate_close_utilization_volume(
+        coefficients,
+        {("AT", "BWBS"): 6},
+        species="AT",
+        bec="BWBS",
+        whole_stem_by_class={1: 100.0, 2: 100.0, 3: 100.0, 4: 100.0},
+        dq_by_class={1: 10.0, 2: 10.0, 3: 10.0, 4: 10.0},
+        lorey_height=20.0,
+    )
+    assert estimate.status == "not_implemented"
+    assert "[4]" in estimate.reason
+
+
+def test_utilization_components_are_normalized() -> None:
+    coefficients = {(uc, 6): (0.0, 1.0, 0.0, 0.0) for uc in (1, 2, 3, 4)}
+    estimate = estimate_utilization_components(
+        coefficients,
+        {("AT", "BWBS"): 6},
+        species="AT",
+        bec="BWBS",
+        base_area_by_class={1: 10.0, 2: 10.0, 3: 10.0, 4: 10.0},
+        dq_by_class={1: 10.0, 2: 10.0, 3: 10.0, 4: 10.0},
+        dq_all=10.0,
+        lorey_height=20.0,
+        total_all=1600.0,
+    )
+    assert estimate.status == "experimental"
+    assert sum(estimate.components.values()) == pytest.approx(1600.0)
+    assert estimate.components[1] == pytest.approx(400.0)
+
+
+def test_utilization_components_missing_class_is_not_implemented() -> None:
+    estimate = estimate_utilization_components(
+        {(1, 6): (0.0, 1.0, 0.0, 0.0)},
+        {("AT", "BWBS"): 6},
+        species="AT",
+        bec="BWBS",
+        base_area_by_class={1: 10.0},
+        dq_by_class={1: 10.0},
+        dq_all=10.0,
+        lorey_height=20.0,
+        total_all=100.0,
+    )
+    assert estimate.status == "not_implemented"
+    assert "[2, 3, 4]" in estimate.reason
+
+
+def test_utilization_components_zero_sum_is_not_implemented() -> None:
+    coefficients = {(uc, 6): (0.0, 0.0, 0.0, 0.0) for uc in (1, 2, 3, 4)}
+    estimate = estimate_utilization_components(
+        coefficients,
+        {("AT", "BWBS"): 6},
+        species="AT",
+        bec="BWBS",
+        base_area_by_class={1: 0.0, 2: 0.0, 3: 0.0, 4: 0.0},
+        dq_by_class={1: 10.0, 2: 10.0, 3: 10.0, 4: 10.0},
+        dq_all=10.0,
+        lorey_height=20.0,
+        total_all=100.0,
+    )
+    assert estimate.status == "not_implemented"
+    assert "not positive" in estimate.reason

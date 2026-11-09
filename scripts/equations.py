@@ -61,8 +61,8 @@ class WholeStemCoefficients:
 
 
 @dataclass(frozen=True)
-class WholeStemEstimate:
-    """One whole-stem volume estimate and its family status.
+class FamilyEstimate:
+    """One family estimate and its family status.
 
     Attributes
     ----------
@@ -254,7 +254,7 @@ def estimate_whole_stem_volume(
     quad_mean_diameter: float,
     trees_per_hectare: float,
     age: int,
-) -> WholeStemEstimate:
+) -> FamilyEstimate:
     """Estimate whole-stem volume with an explicit family status.
 
     Parameters
@@ -278,13 +278,13 @@ def estimate_whole_stem_volume(
 
     Returns
     -------
-    WholeStemEstimate
+    FamilyEstimate
         Value and status. An unknown key or missing row is
         ``not_implemented``; an age below 80 is ``experimental``.
     """
     group = volume_groups.get((species.upper(), bec.upper()))
     if group is None:
-        return WholeStemEstimate(
+        return FamilyEstimate(
             0.0,
             "not_implemented",
             f"no volume group for species {species!r} and BEC {bec!r}",
@@ -292,7 +292,7 @@ def estimate_whole_stem_volume(
         )
     row = coefficients_by_group.get(group)
     if row is None:
-        return WholeStemEstimate(
+        return FamilyEstimate(
             0.0,
             "not_implemented",
             f"no VTOTREG4 coefficients for volume group {group}",
@@ -306,7 +306,285 @@ def estimate_whole_stem_volume(
     )
     status = family_status(age)
     reason = "" if status == "validated" else "young-stand path is not validated (age < 80)"
-    return WholeStemEstimate(value, status, reason, group)
+    return FamilyEstimate(value, status, reason, group)
+
+
+@dataclass(frozen=True)
+class UtilizationEstimate:
+    """One utilization-component estimate.
+
+    Attributes
+    ----------
+    components : dict of int to float
+        Volumes for utilization classes 1-4.
+    all_volume : float
+        Requested class-0 total used for normalization.
+    status : {"experimental", "not_implemented"}
+        Family status.
+    reason : str
+        Why the family is not validated.
+    volume_group : int or None
+        Resolved volume group, or ``None``.
+    """
+
+    components: dict[int, float]
+    all_volume: float
+    status: FamilyStatus
+    reason: str
+    volume_group: int | None
+
+
+def load_regvcu(path: Path) -> dict[tuple[int, int], tuple[float, ...]]:
+    """Load REGVCU coefficients by ``(utilization class, volume group)``.
+
+    Parameters
+    ----------
+    path : Path
+        ``REGVCU.COE`` file.
+
+    Returns
+    -------
+    dict of (int, int) to tuple of float
+        Three coefficients per key, in source order.
+    """
+    table = parse_coe_file(path, source_file="VDYP_CFG/coe/REGVCU.COE")
+    result: dict[tuple[int, int], tuple[float, ...]] = {}
+    for row in table.rows:
+        uc = int(row.values[0])
+        group = int(row.values[1])
+        result[(uc, group)] = tuple(float(value) for value in row.values[2:])
+    return result
+
+
+def load_regvu(path: Path) -> dict[tuple[int, int], tuple[float, ...]]:
+    """Load REGVU coefficients by ``(utilization class, volume group)``.
+
+    Parameters
+    ----------
+    path : Path
+        ``REGVU.COE`` file.
+
+    Returns
+    -------
+    dict of (int, int) to tuple of float
+        Four coefficients per key, in source order.
+    """
+    table = parse_coe_file(path, source_file="VDYP_CFG/coe/REGVU.COE")
+    result: dict[tuple[int, int], tuple[float, ...]] = {}
+    for row in table.rows:
+        uc = int(row.values[0])
+        group = int(row.values[1])
+        result[(uc, group)] = tuple(float(value) for value in row.values[2:])
+    return result
+
+
+def ratio(arg: float, radius: float) -> float:
+    """Clamped logistic ratio from the public source.
+
+    Parameters
+    ----------
+    arg : float
+        Logit value.
+    radius : float
+        Clamp radius.
+
+    Returns
+    -------
+    float
+        ``0`` below ``-radius``, ``1`` above ``radius``, otherwise
+        ``exp(arg) / (1 + exp(arg))``.
+    """
+    if arg < -radius:
+        return 0.0
+    if arg > radius:
+        return 1.0
+    exponential = math.exp(arg)
+    return exponential / (1.0 + exponential)
+
+
+def close_utilization_ratio(
+    coefficients: Sequence[float],
+    quad_mean_diameter: float,
+    lorey_height: float,
+    adjustment: float = 0.0,
+) -> float:
+    """Return the close-utilization volume ratio for one class.
+
+    Parameters
+    ----------
+    coefficients : sequence of float
+        Three REGVCU coefficients.
+    quad_mean_diameter : float
+        Class quadratic mean diameter in centimetres.
+    lorey_height : float
+        Species Lorey height in metres.
+    adjustment : float, optional
+        Compatibility-variable adjustment for the class.
+
+    Returns
+    -------
+    float
+        Ratio in ``[0, 1]``.
+
+    Raises
+    ------
+    EquationError
+        When the coefficient count is not three.
+    """
+    if len(coefficients) != 3:
+        raise EquationError("REGVCU requires three coefficients")
+    a0, a1, a2 = (float(value) for value in coefficients)
+    arg = a0 + a1 * quad_mean_diameter + a2 * lorey_height + adjustment
+    return ratio(arg, 7.0)
+
+
+def estimate_close_utilization_volume(
+    coefficients: Mapping[tuple[int, int], Sequence[float]],
+    volume_groups: Mapping[tuple[str, str], int],
+    *,
+    species: str,
+    bec: str,
+    whole_stem_by_class: Mapping[int, float],
+    dq_by_class: Mapping[int, float],
+    lorey_height: float,
+    adjustments: Mapping[int, float] | None = None,
+) -> FamilyEstimate:
+    """Estimate class-0 close-utilization volume from class vectors.
+
+    Parameters
+    ----------
+    coefficients : mapping of (int, int) to sequence of float
+        REGVCU coefficients by utilization class and volume group.
+    volume_groups : mapping of (str, str) to int
+        Species/BEC volume groups.
+    species : str
+        Species code.
+    bec : str
+        BEC zone code.
+    whole_stem_by_class : mapping of int to float
+        Whole-stem volume for classes 1-4.
+    dq_by_class : mapping of int to float
+        Quadratic mean diameter for classes 1-4.
+    lorey_height : float
+        Species Lorey height.
+    adjustments : mapping of int to float or None, optional
+        Per-class compatibility adjustments.
+
+    Returns
+    -------
+    FamilyEstimate
+        ``experimental`` when computed; ``not_implemented`` when a class or
+        coefficient is missing.
+    """
+    group = volume_groups.get((species.upper(), bec.upper()))
+    if group is None:
+        return FamilyEstimate(0.0, "not_implemented", "no volume group", None)
+    adjust = adjustments or {}
+    total = 0.0
+    missing: list[int] = []
+    for uc in (1, 2, 3, 4):
+        coe = coefficients.get((uc, group))
+        if coe is None or uc not in whole_stem_by_class or uc not in dq_by_class:
+            missing.append(uc)
+            continue
+        total += whole_stem_by_class[uc] * close_utilization_ratio(
+            coe, dq_by_class[uc], lorey_height, adjust.get(uc, 0.0)
+        )
+    if missing:
+        return FamilyEstimate(
+            0.0,
+            "not_implemented",
+            f"missing REGVCU class/coefficients: {sorted(missing)}",
+            group,
+        )
+    return FamilyEstimate(
+        total,
+        "experimental",
+        "per-utilization-class console oracle is not available",
+        group,
+    )
+
+
+def estimate_utilization_components(
+    coefficients: Mapping[tuple[int, int], Sequence[float]],
+    volume_groups: Mapping[tuple[str, str], int],
+    *,
+    species: str,
+    bec: str,
+    base_area_by_class: Mapping[int, float],
+    dq_by_class: Mapping[int, float],
+    dq_all: float,
+    lorey_height: float,
+    total_all: float,
+) -> UtilizationEstimate:
+    """Estimate normalized utilization-class volumes from class vectors.
+
+    Parameters
+    ----------
+    coefficients : mapping of (int, int) to sequence of float
+        REGVU coefficients by utilization class and volume group.
+    volume_groups : mapping of (str, str) to int
+        Species/BEC volume groups.
+    species : str
+        Species code.
+    bec : str
+        BEC zone code.
+    base_area_by_class : mapping of int to float
+        Basal area for classes 1-4.
+    dq_by_class : mapping of int to float
+        Quadratic mean diameter for classes 1-4.
+    dq_all : float
+        Class-0 quadratic mean diameter.
+    lorey_height : float
+        Species Lorey height.
+    total_all : float
+        Class-0 whole-stem volume used for normalization.
+
+    Returns
+    -------
+    UtilizationEstimate
+        ``experimental`` components, or ``not_implemented`` with a reason.
+    """
+    group = volume_groups.get((species.upper(), bec.upper()))
+    if group is None:
+        return UtilizationEstimate({}, 0.0, "not_implemented", "no volume group", None)
+    components: dict[int, float] = {}
+    missing: list[int] = []
+    for uc in (1, 2, 3, 4):
+        coe = coefficients.get((uc, group))
+        if coe is None or uc not in base_area_by_class or uc not in dq_by_class:
+            missing.append(uc)
+            continue
+        if len(coe) != 4:
+            return UtilizationEstimate(
+                {}, 0.0, "not_implemented", f"REGVU class {uc} does not have 4 coefficients", group
+            )
+        a0, a1, a2, a3 = (float(value) for value in coe)
+        last_term = a3 * (dq_all if uc == 4 else math.log(dq_all))
+        arg = a0 + a1 * math.log(lorey_height) + a2 * math.log(dq_by_class[uc]) + last_term
+        components[uc] = base_area_by_class[uc] * math.exp(arg)
+    if missing:
+        return UtilizationEstimate(
+            {},
+            0.0,
+            "not_implemented",
+            f"missing REGVU class/coefficients: {sorted(missing)}",
+            group,
+        )
+    component_sum = sum(components.values())
+    if component_sum <= 0.0:
+        return UtilizationEstimate(
+            {}, 0.0, "not_implemented", "component sum is not positive", group
+        )
+    factor = total_all / component_sum
+    normalized = {uc: value * factor for uc, value in components.items()}
+    return UtilizationEstimate(
+        normalized,
+        total_all,
+        "experimental",
+        "per-utilization-class console oracle is not available",
+        group,
+    )
 
 
 def validate_against_golden(

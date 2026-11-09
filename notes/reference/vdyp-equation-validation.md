@@ -42,8 +42,8 @@ for the domain and tolerance shown.
 
 | Family | Status |
 | --- | --- |
-| `REGVCU` close-utilization volume | `not_implemented` — needs per-utilization-class inputs |
-| `REGVU` utilization component | `not_implemented` — needs per-utilization-class inputs |
+| `REGVCU` close-utilization volume | `experimental` — implemented; synthetic vectors only; no per-class oracle |
+| `REGVU` utilization component | `experimental` — implemented; synthetic vectors only; no per-class oracle |
 | `REGHL` height / Lorey height | `not_implemented` |
 | BA increment | `not_implemented` |
 | DQ increment | `not_implemented` |
@@ -56,7 +56,7 @@ columns (`PRJ_VOL_WS`, `PRJ_VOL_CU`, `PRJ_BA`, `PRJ_TPH`, and so on). It does
 not expose class 1-4 basal area, TPH, DQ, or whole-stem volume.
 
 Without those vectors, a Python `REGVCU`/`REGVU` result cannot be validated
-against the console. Implementing them from the public source is possible, but
-promoting them would not meet the project rule that a family needs a console
-case. They stay `not_implemented` until an oracle output with per-class detail
-is captured.
+against the console. Both families are implemented from the public source and
+tested with synthetic per-class vectors, but they are marked `experimental`.
+They stay outside the validated matrix until an oracle output with per-class
+detail is captured.
