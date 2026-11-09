@@ -214,3 +214,55 @@ def test_cli_records_a_run(
     assert result == 0
     assert json.loads(record_path.read_text(encoding="utf-8"))["status"] == "success"
     assert "status: success" in capsys.readouterr().out
+
+
+def test_ini_is_copied_into_the_work_dir(tmp_path: Path) -> None:
+    console = make_console(tmp_path)
+    runtime = make_runtime(tmp_path, console)
+    ini = tmp_path / "VDYP.INI"
+    ini.write_text("[section]\n", encoding="ascii")
+    record = run_console(
+        runtime,
+        input_dir=make_input(tmp_path),
+        work_dir=tmp_path / "work",
+        ini_path=ini,
+    )
+    assert record.status == "success"
+    assert (tmp_path / "work" / "VDYP.INI").is_file()
+
+
+def test_oserror_is_recorded(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    console = make_console(tmp_path)
+    runtime = make_runtime(tmp_path, console)
+
+    def raise_oserror(*args: object, **kwargs: object) -> None:
+        raise OSError("cannot execute")
+
+    monkeypatch.setattr("run_console.subprocess.run", raise_oserror)
+    record = run_console(runtime, input_dir=make_input(tmp_path), work_dir=tmp_path / "work")
+    assert record.failure_code == "RUNTIME-UNAVAILABLE"
+
+
+def test_cli_without_a_runtime_fails(
+    monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str], tmp_path: Path
+) -> None:
+    monkeypatch.delenv("VDYP_CONSOLE", raising=False)
+    monkeypatch.delenv("VDYP_INSTALL", raising=False)
+    assert (
+        main(["--input-dir", str(make_input(tmp_path)), "--work-dir", str(tmp_path / "work")]) == 2
+    )
+    assert "MISSING-CONSOLE" in capsys.readouterr().err
+
+
+def test_cli_failure_without_json(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    console = make_console(tmp_path, body="#!/bin/sh\nexit 4\n")
+    config = tmp_path / "VDYP_CFG"
+    config.mkdir()
+    monkeypatch.setenv("VDYP_CONSOLE", str(console))
+    monkeypatch.setenv("VDYP_CFG_DIR", str(config))
+    monkeypatch.setenv("WINE", str(make_wine(tmp_path)))
+    result = main(["--input-dir", str(make_input(tmp_path)), "--work-dir", str(tmp_path / "work")])
+    assert result == 1
+    assert "failure: NONZERO-EXIT" in capsys.readouterr().out

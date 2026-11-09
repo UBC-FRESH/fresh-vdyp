@@ -157,3 +157,48 @@ def test_cli_reports_a_parse_error(tmp_path: Path, capsys: pytest.CaptureFixture
     path.write_text("Year,Age\n2001,50\n", encoding="utf-8")
     assert main(["--csv", str(path), "--schema", str(SCHEMA)]) == 1
     assert "MISSING-COLUMN" in capsys.readouterr().err
+
+
+def test_schema_unreadable(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="SCHEMA-UNREADABLE"):
+        load_schema(tmp_path / "absent.json")
+
+
+def test_schema_empty(tmp_path: Path) -> None:
+    path = tmp_path / "schema.json"
+    path.write_text('{"columns": []}', encoding="utf-8")
+    with pytest.raises(ValueError, match="SCHEMA-EMPTY"):
+        load_schema(path)
+
+
+def test_schema_column_is_not_an_object(tmp_path: Path) -> None:
+    path = tmp_path / "schema.json"
+    path.write_text('{"columns": [1]}', encoding="utf-8")
+    with pytest.raises(ValueError, match="SCHEMA-MALFORMED"):
+        load_schema(path)
+
+
+def test_schema_column_is_malformed(tmp_path: Path) -> None:
+    path = tmp_path / "schema.json"
+    path.write_text('{"columns": [{"id": "x", "name": "Year", "decimals": 0}]}', encoding="utf-8")
+    with pytest.raises(ValueError, match="SCHEMA-MALFORMED"):
+        load_schema(path)
+
+
+def test_empty_csv_text_fails() -> None:
+    columns = columns_for("Year", "Age", "Vol ws")
+    with pytest.raises(ValueError, match="EMPTY"):
+        parse_yield_text("", source_file="x.csv", schema=columns)
+
+
+def test_blank_csv_line_is_skipped() -> None:
+    columns = columns_for("Year", "Age", "Vol ws")
+    table = parse_yield_text("Year,Age,Vol ws\n\n2001,50,1\n", source_file="x.csv", schema=columns)
+    assert len(table.rows) == 1
+
+
+def test_cli_without_json_succeeds(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    path = tmp_path / "out.csv"
+    path.write_text("Year,Age,Vol ws\n2001,50,100.5\n", encoding="utf-8")
+    assert main(["--csv", str(path), "--schema", str(SCHEMA)]) == 0
+    assert "rows: 1" in capsys.readouterr().out

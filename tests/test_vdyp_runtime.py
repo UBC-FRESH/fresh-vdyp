@@ -176,3 +176,38 @@ def test_cli_with_a_missing_config_fails(
     monkeypatch.setenv("WINE", str(make_wine(tmp_path)))
     assert main(["--check"]) == 1
     assert "MISSING-CONFIG" in capsys.readouterr().out
+
+
+def test_find_ci_returns_none_for_an_absent_name(tmp_path: Path) -> None:
+    from vdyp_runtime import find_ci
+
+    assert find_ci(tmp_path, "absent") is None
+
+
+def test_wine_is_found_on_path(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    root, config, console = make_tree(tmp_path)
+    wine = make_wine(tmp_path)
+    monkeypatch.delenv("WINE", raising=False)
+    monkeypatch.setattr("vdyp_runtime.shutil.which", lambda name: str(wine))
+    runtime = discover_runtime(
+        install_root=root,
+        config_dir=config,
+        console=console,
+        native_platform=False,
+    )
+    assert runtime.mode == "wine"
+    assert runtime.wine == wine
+
+
+def test_cli_reports_an_unknown_wine_version(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    _root, config, console = make_tree(tmp_path)
+    wine = tmp_path / "wine"
+    wine.write_text("#!/bin/sh\nexit 1\n", encoding="utf-8")
+    wine.chmod(0o755)
+    monkeypatch.setenv("VDYP_CONSOLE", str(console))
+    monkeypatch.setenv("VDYP_CFG_DIR", str(config))
+    monkeypatch.setenv("WINE", str(wine))
+    assert main(["--check"]) == 0
+    assert "UNKNOWN-WINE-VERSION" in capsys.readouterr().out
