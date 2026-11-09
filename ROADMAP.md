@@ -94,12 +94,12 @@ Status: active
 Goal: convert the plain-text coefficient bundle into a normalized, validated
 catalog.
 
-- [ ] P2.1 Implement `.COE` family parsers
-- [ ] P2.2 Implement `.PRM`, `.DAT`, and `VDYP.CTR` parsers
-- [ ] P2.3 Infer family, species/BEC, site-curve, and parameter keys
-- [ ] P2.4 Write normalized Parquet/CSV plus checksum manifest
-- [ ] P2.5 Add `fresh-vdyp bundle extract`, `validate`, and `catalog` commands
-- [ ] P2.6 Add parser, schema, and catalog tests
+- [x] P2.1 Implement `.COE` family parsers
+- [x] P2.2 Implement `.PRM`, `.DAT`, and `VDYP.CTR` parsers
+- [x] P2.3 Infer family, species/BEC, site-curve, and parameter keys
+- [x] P2.4 Write normalized Parquet/CSV plus checksum manifest
+- [x] P2.5 Add `fresh-vdyp bundle extract`, `validate`, and `catalog` commands
+- [x] P2.6 Add parser, schema, and catalog tests
 
 Acceptance criteria:
 
