@@ -10,3 +10,5 @@
 - [Data provenance](https://github.com/UBC-FRESH/fresh-vdyp/blob/main/notes/plan/0002-data-provenance.md): source classes, manifest schema, and publication boundary.
 - [Architecture](https://github.com/UBC-FRESH/fresh-vdyp/blob/main/notes/plan/0003-architecture.md): package, runner, API, web, assistant, and FEMIC boundary.
 - [Validation and release](https://github.com/UBC-FRESH/fresh-vdyp/blob/main/notes/plan/0004-validation-release.md): golden evidence, gates, and integration.
+- [Bundle fixtures](https://github.com/UBC-FRESH/fresh-vdyp/blob/main/fixtures/README.md): tiny synthetic files and the manifest that records them.
+- [Golden output inventory](https://github.com/UBC-FRESH/fresh-vdyp/blob/main/notes/reference/vdyp-golden-outputs.md): shipped console outputs, versions, hashes, and their limits.

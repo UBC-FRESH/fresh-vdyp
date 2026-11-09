@@ -1,7 +1,7 @@
 # Data and provenance contract
 
 Date: 2026-11-09
-Status: draft, binding once Phase 1 closes
+Status: binding (Phase 1)
 
 ## Principles
 
@@ -119,6 +119,49 @@ units:
 citation: "Province of British Columbia. VDYP7 coefficient bundle."
 notes: ""
 ```
+
+### Validation
+
+`scripts/provenance.py` is the executable form of this schema. Run it on a
+manifest before publishing:
+
+```bash
+python scripts/provenance.py --manifest path/to/manifest.json
+```
+
+Required fields:
+
+```text
+id  kind  source_model  source_version  source_file  source_sha256
+extracted_at_utc  extractor  parser_version  citation
+```
+
+Optional fields:
+
+```text
+family  control_sequence  columns  row_count  units  notes
+```
+
+Field rules:
+
+- `id` matches `^vdyp-[a-z0-9]+(?:-[a-z0-9]+)*$` and is unique within a manifest.
+- `kind` is a lowercase underscore name, such as `vdyp_coefficient_table`.
+- `source_sha256` is 64 lowercase hexadecimal characters.
+- `extracted_at_utc` is ISO 8601 ending in `Z` with a UTC offset.
+- `source_file` is a forward-slash relative path without `..` or a drive letter.
+- `parser_version` is an integer of at least 1.
+- `row_count`, when present, is an integer of at least 0.
+- `columns`, when present, is a non-empty list of unique names.
+- `units`, when present, maps field names to unit strings.
+
+Stable finding codes are `MISSING-FIELD`, `INVALID-ID`, `INVALID-KIND`,
+`INVALID-SHA256`, `INVALID-TIMESTAMP`, `INVALID-SOURCE-FILE`,
+`INVALID-PARSER-VERSION`, `INVALID-ROW-COUNT`, `INVALID-COLUMNS`,
+`INVALID-UNITS`, and `INVALID-PAYLOAD`.
+
+The inventory, control-map, and column files under `notes/reference/` are
+repository artifacts, not extracted-asset manifests. They carry source labels
+and counts, but they do not need this per-asset entry shape.
 
 ## Asset layout
 

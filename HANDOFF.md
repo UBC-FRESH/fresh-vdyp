@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: Phase 0 pr-open; pull request #5 queued for approval.
+Status: Phase 1 pr-open; pull request #12 queued for approval.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
@@ -62,11 +62,11 @@ Do **not** start with a full Python VDYP rewrite.
 
 Start with P0 → P1 → P2 → P3:
 
-1. The Phase 0 parent issue (#1) and `feature/p0-bootstrap` branch exist; finish
-   P0.1-P0.3 and their evidence.
-4. Move to P1: bundle inventory and control-file map.
-5. Move to P2: coefficient/parameter catalog and parser.
-6. Move to P3: console runner and CSV yield-table parser.
+1. Phase 0 is complete and merged; issue #1 is closed.
+2. Phase 1 is active: bundle inventory, control-file map, provenance contract,
+   and fixtures on `feature/p1-source-inventory`.
+3. Move to P2: coefficient/parameter catalog and parser.
+4. Move to P3: console runner and CSV yield-table parser.
 
 The first real deliverable is:
 
@@ -121,7 +121,8 @@ P3.2 parse csvyieldtable output
 
 - Local repo: seeded and committed.
 - Remote: private `UBC-FRESH/fresh-vdyp`, `main` pushed.
-- Phase 0: pr-open. Parent issue #1, pull request #5, child issues #2-#4 closed. Close-out report at `notes/reports/phase-0-closeout.md`, awaiting maintainer approval.
+- Phase 0: complete. Pull request #5 merged as `b73362a`; issue #1 closed; child issues #2-#4 closed.
+- Phase 1: pr-open. Parent issue #6, pull request #12, child issues #7-#11 closed. Close-out report at `notes/reports/phase-1-closeout.md`, awaiting maintainer approval.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.

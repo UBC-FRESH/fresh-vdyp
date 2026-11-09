@@ -1,0 +1,1016 @@
+{
+  "source_file": "VDYP_CFG/VDYP.tcl",
+  "column_count": 101,
+  "columns": [
+    {
+      "id": 0,
+      "name": "Table Num",
+      "units": "-",
+      "decimals": 0,
+      "description": "Table Number",
+      "width": 8,
+      "header_id": 0,
+      "line_number": 3
+    },
+    {
+      "id": 1,
+      "name": "Forest Cover ID",
+      "units": "",
+      "decimals": 0,
+      "description": "Forest Cover ID",
+      "width": 12,
+      "header_id": 1,
+      "line_number": 4
+    },
+    {
+      "id": 2,
+      "name": "Mapsheet",
+      "units": "",
+      "decimals": 0,
+      "description": "Mapsheet",
+      "width": 7,
+      "header_id": 2,
+      "line_number": 5
+    },
+    {
+      "id": 3,
+      "name": "Polygon Num",
+      "units": "",
+      "decimals": 0,
+      "description": "Polygon Number",
+      "width": 10,
+      "header_id": 3,
+      "line_number": 6
+    },
+    {
+      "id": 4,
+      "name": "Layer ID",
+      "units": "",
+      "decimals": 0,
+      "description": "Layer ID",
+      "width": 1,
+      "header_id": 4,
+      "line_number": 7
+    },
+    {
+      "id": 5,
+      "name": "VDYP7 Layer ID",
+      "units": "",
+      "decimals": 0,
+      "description": "VDYP7 Layer ID",
+      "width": 1,
+      "header_id": 5,
+      "line_number": 8
+    },
+    {
+      "id": 6,
+      "name": "Year",
+      "units": "",
+      "decimals": 0,
+      "description": "Year",
+      "width": 4,
+      "header_id": 6,
+      "line_number": 9
+    },
+    {
+      "id": 7,
+      "name": "Age",
+      "units": "yr",
+      "decimals": 0,
+      "description": "Age",
+      "width": 4,
+      "header_id": 7,
+      "line_number": 10
+    },
+    {
+      "id": 8,
+      "name": "Spcs 1 Cd",
+      "units": "",
+      "decimals": 0,
+      "description": "Species 1 Code",
+      "width": 3,
+      "header_id": 8,
+      "line_number": 11
+    },
+    {
+      "id": 9,
+      "name": "Spcs 1 Pct",
+      "units": "%",
+      "decimals": 0,
+      "description": "Species 1 Pcnt",
+      "width": 3,
+      "header_id": 9,
+      "line_number": 12
+    },
+    {
+      "id": 10,
+      "name": "Spcs 2 Cd",
+      "units": "",
+      "decimals": 0,
+      "description": "Species 2 Code",
+      "width": 3,
+      "header_id": 8,
+      "line_number": 13
+    },
+    {
+      "id": 11,
+      "name": "Spcs 2 Pct",
+      "units": "%",
+      "decimals": 0,
+      "description": "Species 2 Pcnt",
+      "width": 3,
+      "header_id": 9,
+      "line_number": 14
+    },
+    {
+      "id": 12,
+      "name": "Spcs 3 Cd",
+      "units": "",
+      "decimals": 0,
+      "description": "Species 3 Code",
+      "width": 3,
+      "header_id": 8,
+      "line_number": 15
+    },
+    {
+      "id": 13,
+      "name": "Spcs 3 Pct",
+      "units": "%",
+      "decimals": 0,
+      "description": "Species 3 Pcnt",
+      "width": 3,
+      "header_id": 9,
+      "line_number": 16
+    },
+    {
+      "id": 14,
+      "name": "Spcs 4 Cd",
+      "units": "",
+      "decimals": 0,
+      "description": "Species 4 Code",
+      "width": 3,
+      "header_id": 8,
+      "line_number": 17
+    },
+    {
+      "id": 15,
+      "name": "Spcs 4 Pct",
+      "units": "%",
+      "decimals": 0,
+      "description": "Species 4 Pcnt",
+      "width": 3,
+      "header_id": 9,
+      "line_number": 18
+    },
+    {
+      "id": 16,
+      "name": "Spcs 5 Cd",
+      "units": "",
+      "decimals": 0,
+      "description": "Species 5 Code",
+      "width": 3,
+      "header_id": 8,
+      "line_number": 19
+    },
+    {
+      "id": 17,
+      "name": "Spcs 5 Pct",
+      "units": "%",
+      "decimals": 0,
+      "description": "Species 5 Pcnt",
+      "width": 3,
+      "header_id": 9,
+      "line_number": 20
+    },
+    {
+      "id": 18,
+      "name": "Spcs 6 Cd",
+      "units": "",
+      "decimals": 0,
+      "description": "Species 6 Code",
+      "width": 3,
+      "header_id": 8,
+      "line_number": 21
+    },
+    {
+      "id": 19,
+      "name": "Spcs 6 Pct",
+      "units": "%",
+      "decimals": 0,
+      "description": "Species 6 Pcnt",
+      "width": 3,
+      "header_id": 9,
+      "line_number": 22
+    },
+    {
+      "id": 20,
+      "name": "Pct Stk",
+      "units": "%",
+      "decimals": 0,
+      "description": "Pcnt Stockable",
+      "width": 3,
+      "header_id": 10,
+      "line_number": 23
+    },
+    {
+      "id": 21,
+      "name": "SI",
+      "units": "m",
+      "decimals": 1,
+      "description": "Site Index",
+      "width": 4,
+      "header_id": 11,
+      "line_number": 24
+    },
+    {
+      "id": 22,
+      "name": "Dom Ht",
+      "units": "m",
+      "decimals": 1,
+      "description": "Dom Ht",
+      "width": 5,
+      "header_id": 11,
+      "line_number": 25
+    },
+    {
+      "id": 23,
+      "name": "Lorey Ht",
+      "units": "m",
+      "decimals": 1,
+      "description": "Lorey Ht",
+      "width": 5,
+      "header_id": 11,
+      "line_number": 26
+    },
+    {
+      "id": 24,
+      "name": "Dia",
+      "units": "cm",
+      "decimals": 1,
+      "description": "Diameter",
+      "width": 5,
+      "header_id": 12,
+      "line_number": 27
+    },
+    {
+      "id": 25,
+      "name": "TPH",
+      "units": "t/ha",
+      "decimals": 2,
+      "description": "TPH",
+      "width": 8,
+      "header_id": 13,
+      "line_number": 28
+    },
+    {
+      "id": 26,
+      "name": "BA",
+      "units": "m2/ha",
+      "decimals": 2,
+      "description": "BA",
+      "width": 8,
+      "header_id": 14,
+      "line_number": 29
+    },
+    {
+      "id": 27,
+      "name": "Vol ws",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Vol ws",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 30
+    },
+    {
+      "id": 28,
+      "name": "Vol cu",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Vol cu",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 31
+    },
+    {
+      "id": 29,
+      "name": "Vol d",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Vol d",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 32
+    },
+    {
+      "id": 30,
+      "name": "Vol dw",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Vol dw",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 33
+    },
+    {
+      "id": 31,
+      "name": "Vol dwb",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Vol dwb",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 34
+    },
+    {
+      "id": 32,
+      "name": "MoF Bio ws",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "MoF Bio ws",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 35
+    },
+    {
+      "id": 33,
+      "name": "MoF Bio cu",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "MoF Bio cu",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 36
+    },
+    {
+      "id": 34,
+      "name": "MoF Bio d",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "MoF Bio d",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 37
+    },
+    {
+      "id": 35,
+      "name": "MoF Bio dw",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "MoF Bio dw",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 38
+    },
+    {
+      "id": 36,
+      "name": "MoF Bio dwb",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "MoF Bio dwb",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 39
+    },
+    {
+      "id": 37,
+      "name": "Spcs 1 Vol ws",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 1 Vol ws",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 40
+    },
+    {
+      "id": 38,
+      "name": "Spcs 1 Vol cu",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 1 Vol cu",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 41
+    },
+    {
+      "id": 39,
+      "name": "Spcs 1 Vol d",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 1 Vol d",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 42
+    },
+    {
+      "id": 40,
+      "name": "Spcs 1 Vol dw",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 1 Vol dw",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 43
+    },
+    {
+      "id": 41,
+      "name": "Spcs 1 Vol dwb",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 1 Vol dwb",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 44
+    },
+    {
+      "id": 42,
+      "name": "Spcs 2 Vol ws",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 2 Vol ws",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 45
+    },
+    {
+      "id": 43,
+      "name": "Spcs 2 Vol cu",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 2 Vol cu",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 46
+    },
+    {
+      "id": 44,
+      "name": "Spcs 2 Vol d",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 2 Vol d",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 47
+    },
+    {
+      "id": 45,
+      "name": "Spcs 2 Vol dw",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 2 Vol dw",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 48
+    },
+    {
+      "id": 46,
+      "name": "Spcs 2 Vol dwb",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 2 Vol dwb",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 49
+    },
+    {
+      "id": 47,
+      "name": "Spcs 3 Vol ws",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 3 Vol ws",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 50
+    },
+    {
+      "id": 48,
+      "name": "Spcs 3 Vol cu",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 3 Vol cu",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 51
+    },
+    {
+      "id": 49,
+      "name": "Spcs 3 Vol d",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 3 Vol d",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 52
+    },
+    {
+      "id": 50,
+      "name": "Spcs 3 Vol dw",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 3 Vol dw",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 53
+    },
+    {
+      "id": 51,
+      "name": "Spcs 3 Vol dwb",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 3 Vol dwb",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 54
+    },
+    {
+      "id": 52,
+      "name": "Spcs 4 Vol ws",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 4 Vol ws",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 55
+    },
+    {
+      "id": 53,
+      "name": "Spcs 4 Vol cu",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 4 Vol cu",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 56
+    },
+    {
+      "id": 54,
+      "name": "Spcs 4 Vol d",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 4 Vol d",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 57
+    },
+    {
+      "id": 55,
+      "name": "Spcs 4 Vol dw",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 4 Vol dw",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 58
+    },
+    {
+      "id": 56,
+      "name": "Spcs 4 Vol dwb",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 4 Vol dwb",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 59
+    },
+    {
+      "id": 57,
+      "name": "Spcs 5 Vol ws",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 5 Vol ws",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 60
+    },
+    {
+      "id": 58,
+      "name": "Spcs 5 Vol cu",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 5 Vol cu",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 61
+    },
+    {
+      "id": 59,
+      "name": "Spcs 5 Vol d",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 5 Vol d",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 62
+    },
+    {
+      "id": 60,
+      "name": "Spcs 5 Vol dw",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 5 Vol dw",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 63
+    },
+    {
+      "id": 61,
+      "name": "Spcs 5 Vol dwb",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 5 Vol dwb",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 64
+    },
+    {
+      "id": 62,
+      "name": "Spcs 6 Vol ws",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 6 Vol ws",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 65
+    },
+    {
+      "id": 63,
+      "name": "Spcs 6 Vol cu",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 6 Vol cu",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 66
+    },
+    {
+      "id": 64,
+      "name": "Spcs 6 Vol d",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 6 Vol d",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 67
+    },
+    {
+      "id": 65,
+      "name": "Spcs 6 Vol dw",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 6 Vol dw",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 68
+    },
+    {
+      "id": 66,
+      "name": "Spcs 6 Vol dwb",
+      "units": "m3/ha",
+      "decimals": 1,
+      "description": "Spcs 6 Vol dwb",
+      "width": 8,
+      "header_id": 15,
+      "line_number": 69
+    },
+    {
+      "id": 67,
+      "name": "Spcs 1 MoF Bio ws",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 1 MoF Bio ws",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 70
+    },
+    {
+      "id": 68,
+      "name": "Spcs 1 MoF Bio cu",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 1 MoF Bio cu",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 71
+    },
+    {
+      "id": 69,
+      "name": "Spcs 1 MoF Bio d",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 1 MoF Bio d",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 72
+    },
+    {
+      "id": 70,
+      "name": "Spcs 1 MoF Bio dw",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 1 MoF Bio dw",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 73
+    },
+    {
+      "id": 71,
+      "name": "Spcs 1 MoF Bio dwb",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 1 MoF Bio dwb",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 74
+    },
+    {
+      "id": 72,
+      "name": "Spcs 2 MoF Bio ws",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 2 MoF Bio ws",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 75
+    },
+    {
+      "id": 73,
+      "name": "Spcs 2 MoF Bio cu",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 2 MoF Bio cu",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 76
+    },
+    {
+      "id": 74,
+      "name": "Spcs 2 MoF Bio d",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 2 MoF Bio d",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 77
+    },
+    {
+      "id": 75,
+      "name": "Spcs 2 MoF Bio dw",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 2 MoF Bio dw",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 78
+    },
+    {
+      "id": 76,
+      "name": "Spcs 2 MoF Bio dwb",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 2 MoF Bio dwb",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 79
+    },
+    {
+      "id": 77,
+      "name": "Spcs 3 MoF Bio ws",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 3 MoF Bio ws",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 80
+    },
+    {
+      "id": 78,
+      "name": "Spcs 3 MoF Bio cu",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 3 MoF Bio cu",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 81
+    },
+    {
+      "id": 79,
+      "name": "Spcs 3 MoF Bio d",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 3 MoF Bio d",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 82
+    },
+    {
+      "id": 80,
+      "name": "Spcs 3 MoF Bio dw",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 3 MoF Bio dw",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 83
+    },
+    {
+      "id": 81,
+      "name": "Spcs 3 MoF Bio dwb",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 3 MoF Bio dwb",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 84
+    },
+    {
+      "id": 82,
+      "name": "Spcs 4 MoF Bio ws",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 4 MoF Bio ws",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 85
+    },
+    {
+      "id": 83,
+      "name": "Spcs 4 MoF Bio cu",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 4 MoF Bio cu",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 86
+    },
+    {
+      "id": 84,
+      "name": "Spcs 4 MoF Bio d",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 4 MoF Bio d",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 87
+    },
+    {
+      "id": 85,
+      "name": "Spcs 4 MoF Bio dw",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 4 MoF Bio dw",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 88
+    },
+    {
+      "id": 86,
+      "name": "Spcs 4 MoF Bio dwb",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 4 MoF Bio dwb",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 89
+    },
+    {
+      "id": 87,
+      "name": "Spcs 5 MoF Bio ws",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 5 MoF Bio ws",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 90
+    },
+    {
+      "id": 88,
+      "name": "Spcs 5 MoF Bio cu",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 5 MoF Bio cu",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 91
+    },
+    {
+      "id": 89,
+      "name": "Spcs 5 MoF Bio d",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 5 MoF Bio d",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 92
+    },
+    {
+      "id": 90,
+      "name": "Spcs 5 MoF Bio dw",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 5 MoF Bio dw",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 93
+    },
+    {
+      "id": 91,
+      "name": "Spcs 5 MoF Bio dwb",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 5 MoF Bio dwb",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 94
+    },
+    {
+      "id": 92,
+      "name": "Spcs 6 MoF Bio ws",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 6 MoF Bio ws",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 95
+    },
+    {
+      "id": 93,
+      "name": "Spcs 6 MoF Bio cu",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 6 MoF Bio cu",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 96
+    },
+    {
+      "id": 94,
+      "name": "Spcs 6 MoF Bio d",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 6 MoF Bio d",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 97
+    },
+    {
+      "id": 95,
+      "name": "Spcs 6 MoF Bio dw",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 6 MoF Bio dw",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 98
+    },
+    {
+      "id": 96,
+      "name": "Spcs 6 MoF Bio dwb",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "Spcs 6 MoF Bio dwb",
+      "width": 8,
+      "header_id": 16,
+      "line_number": 99
+    },
+    {
+      "id": 97,
+      "name": "CFS Bio stem",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "CFS Bio stem",
+      "width": 8,
+      "header_id": 17,
+      "line_number": 100
+    },
+    {
+      "id": 98,
+      "name": "CFS Bio bark",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "CFS Bio bark",
+      "width": 8,
+      "header_id": 17,
+      "line_number": 101
+    },
+    {
+      "id": 99,
+      "name": "CFS Bio branch",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "CFS Bio branch",
+      "width": 8,
+      "header_id": 17,
+      "line_number": 102
+    },
+    {
+      "id": 100,
+      "name": "CFS Bio foliage",
+      "units": "tons/ha",
+      "decimals": 1,
+      "description": "CFS Bio foliage",
+      "width": 8,
+      "header_id": 17,
+      "line_number": 103
+    }
+  ]
+}

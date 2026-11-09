@@ -1,0 +1,5 @@
+  0    Synthetic fresh-vdyp fixture; not the BC VDYP7 bundle.
+001 00000010                                          Max # of Polygons to process (I8)
+025                                                   Synthetic nullification
+090 coe\VTOTREG4.coe                                  Synthetic whole-stem volume  RD_YVT1  IPSJF117
+091 coe\SIEQN.PRM                                     Synthetic site-curve assignment  RD_YVT2  IPSJF121

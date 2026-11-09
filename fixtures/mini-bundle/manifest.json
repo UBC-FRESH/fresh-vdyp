@@ -1,0 +1,37 @@
+{
+  "bundle": "mini-bundle",
+  "status": "synthetic",
+  "note": "Synthetic fixtures for fresh-vdyp tests. Not BC government data.",
+  "files": [
+    {
+      "path": "coe/BEC0.DAT",
+      "source": "synthetic",
+      "size_bytes": 9,
+      "purpose": "Two-row synthetic BEC lookup."
+    },
+    {
+      "path": "coe/SIEQN.PRM",
+      "source": "synthetic",
+      "size_bytes": 12,
+      "purpose": "Two-row synthetic parameter table."
+    },
+    {
+      "path": "coe/VTOTREG4.COE",
+      "source": "synthetic",
+      "size_bytes": 28,
+      "purpose": "Two-row synthetic coefficient table."
+    },
+    {
+      "path": "control/VDYP.CTR",
+      "source": "synthetic",
+      "size_bytes": 434,
+      "purpose": "Fixed-column control file with a comment, a nullification, and two file targets."
+    },
+    {
+      "path": "control/VDYP.tcl",
+      "source": "synthetic",
+      "size_bytes": 161,
+      "purpose": "Column table with the row-20 space quirk and a units column."
+    }
+  ]
+}
