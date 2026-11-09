@@ -587,6 +587,142 @@ def estimate_utilization_components(
     )
 
 
+@dataclass(frozen=True)
+class ReghlCoefficients:
+    """One REGHL non-primary height row.
+
+    Attributes
+    ----------
+    non_primary : str
+        Non-primary species code.
+    primary : str
+        Primary species code.
+    region : str
+        ``C`` or ``I``.
+    equation_index : int
+        ``1`` uses lead height; ``2`` uses primary height.
+    coefficients : tuple of float
+        Two coefficients.
+    """
+
+    non_primary: str
+    primary: str
+    region: str
+    equation_index: int
+    coefficients: tuple[float, ...]
+
+
+def load_reghl(path: Path) -> dict[tuple[str, str, str], ReghlCoefficients]:
+    """Load REGHL non-primary height coefficients.
+
+    Parameters
+    ----------
+    path : Path
+        ``REGHL.COE`` file.
+
+    Returns
+    -------
+    dict of (str, str, str) to ReghlCoefficients
+        Keys are ``(non_primary, primary, region)``.
+    """
+    table = parse_coe_file(path, source_file="VDYP_CFG/coe/REGHL.COE")
+    result: dict[tuple[str, str, str], ReghlCoefficients] = {}
+    for row in table.rows:
+        non_primary = str(row.values[0])
+        primary = str(row.values[1])
+        region = str(row.values[2])
+        equation_index = int(row.values[3])
+        coefficients = tuple(float(value) for value in row.values[4:])
+        if len(coefficients) != 2:
+            raise EquationError("REGHL requires two coefficients")
+        result[(non_primary, primary, region)] = ReghlCoefficients(
+            non_primary, primary, region, equation_index, coefficients
+        )
+    return result
+
+
+def non_primary_lorey_height(
+    coefficients: ReghlCoefficients,
+    *,
+    lead_height: float,
+    primary_height: float,
+) -> float:
+    """Estimate a non-primary species Lorey height.
+
+    Parameters
+    ----------
+    coefficients : ReghlCoefficients
+        Row selected by species pair and region.
+    lead_height : float
+        Dominant height of the lead species.
+    primary_height : float
+        Lorey height of the primary species.
+
+    Returns
+    -------
+    float
+        Non-primary Lorey height.
+
+    Raises
+    ------
+    EquationError
+        When the equation index is not 1 or 2, or a height is invalid.
+    """
+    height = lead_height if coefficients.equation_index == 1 else primary_height
+    if coefficients.equation_index not in (1, 2):
+        raise EquationError(f"unknown REGHL equation index {coefficients.equation_index}")
+    if height <= 1.3:
+        raise EquationError("height must exceed 1.3 metres")
+    if len(coefficients.coefficients) != 2:
+        raise EquationError("REGHL requires two coefficients")
+    c1 = float(coefficients.coefficients[0])
+    c2 = float(coefficients.coefficients[1])
+    return 1.3 + c1 * math.pow(height - 1.3, c2)
+
+
+def estimate_non_primary_height(
+    coefficients: Mapping[tuple[str, str, str], ReghlCoefficients],
+    *,
+    non_primary: str,
+    primary: str,
+    region: str,
+    lead_height: float,
+    primary_height: float,
+) -> FamilyEstimate:
+    """Estimate a non-primary height with an explicit family status.
+
+    Parameters
+    ----------
+    coefficients : mapping of (str, str, str) to ReghlCoefficients
+        Parsed REGHL rows.
+    non_primary : str
+        Non-primary species code.
+    primary : str
+        Primary species code.
+    region : str
+        ``C`` or ``I``.
+    lead_height : float
+        Dominant height of the lead species.
+    primary_height : float
+        Lorey height of the primary species.
+
+    Returns
+    -------
+    FamilyEstimate
+        Value with status ``experimental``; the fallback row is the public
+        default from ``NonprimaryHLCoefficients``.
+    """
+    row = coefficients.get((non_primary, primary, region))
+    used_default = row is None
+    if row is None:
+        row = ReghlCoefficients(non_primary, primary, region, 2, (1.0, 1.0))
+    value = non_primary_lorey_height(row, lead_height=lead_height, primary_height=primary_height)
+    reason = "per-species height oracle is not available"
+    if used_default:
+        reason = "default REGHL coefficients used; " + reason
+    return FamilyEstimate(value, "experimental", reason, None)
+
+
 def validate_against_golden(
     config_dir: Path,
     golden_csv: Path,

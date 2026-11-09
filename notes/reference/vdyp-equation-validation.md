@@ -6,7 +6,8 @@ Input: `fixtures/console-input/Console` (synthetic, AT/BWBS)
 Golden output: `fixtures/yield-output/golden-full.csv`
 
 This is not a claim of full VDYP7 parity. A family is listed as `validated` only
-for the domain and tolerance shown.
+for the domain and tolerance shown. The machine-readable form is
+`notes/reference/vdyp-equation-matrix.json`.
 
 ## VTOTREG4 whole-stem volume
 
@@ -44,7 +45,7 @@ for the domain and tolerance shown.
 | --- | --- |
 | `REGVCU` close-utilization volume | `experimental` — implemented; synthetic vectors only; no per-class oracle |
 | `REGVU` utilization component | `experimental` — implemented; synthetic vectors only; no per-class oracle |
-| `REGHL` height / Lorey height | `not_implemented` |
+| `REGHL` non-primary height | `experimental` — implemented; per-species height oracle unavailable |
 | BA increment | `not_implemented` |
 | DQ increment | `not_implemented` |
 
@@ -60,3 +61,17 @@ against the console. Both families are implemented from the public source and
 tested with synthetic per-class vectors, but they are marked `experimental`.
 They stay outside the validated matrix until an oracle output with per-class
 detail is captured.
+
+### Height oracle gap
+
+`REGHL.COE` converts a lead or primary height into a non-primary Lorey height.
+The console CSV exposes only stand-level dominant and Lorey heights, not
+per-species heights. `REGHL` is implemented and unit-tested with synthetic
+species pairs, but it stays `experimental` until a per-species height output is
+captured.
+
+### Increment families
+
+BA and DQ increment families are deferred. They require a controlled
+multi-year state sequence and an increment-level oracle case; no implementation
+is claimed.

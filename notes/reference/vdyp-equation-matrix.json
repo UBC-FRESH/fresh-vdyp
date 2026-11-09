@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "console_version": "7.16k",
+  "runtime": "Wine 11.0",
+  "note": "Validated only within the stated domain. This is not full VDYP7 parity.",
+  "families": [
+    {
+      "family": "VTOTREG4",
+      "status": "validated",
+      "equation_source": "bcgov/nr-vdyp EstimationMethods EMP090",
+      "coefficient_file": "VTOTREG4.COE",
+      "case": "age 100, AT/BWBS, synthetic console input",
+      "error": 0.00836,
+      "tolerance": 0.01,
+      "domain": "age >= 80; static mature path",
+      "evidence": "notes/reference/vdyp-equation-validation.md"
+    },
+    {
+      "family": "REGVCU",
+      "status": "experimental",
+      "equation_source": "bcgov/nr-vdyp EstimationMethods EMP092",
+      "coefficient_file": "REGVCU.COE",
+      "reason": "per-utilization-class console oracle is not available",
+      "evidence": "notes/reference/vdyp-equation-validation.md"
+    },
+    {
+      "family": "REGVU",
+      "status": "experimental",
+      "equation_source": "bcgov/nr-vdyp EstimationMethods EMP091",
+      "coefficient_file": "REGVU.COE",
+      "reason": "per-utilization-class console oracle is not available",
+      "evidence": "notes/reference/vdyp-equation-validation.md"
+    },
+    {
+      "family": "REGHL",
+      "status": "experimental",
+      "equation_source": "bcgov/nr-vdyp EstimationMethods EMP053",
+      "coefficient_file": "REGHL.COE",
+      "reason": "per-species height oracle is not available",
+      "evidence": "notes/reference/vdyp-equation-validation.md"
+    },
+    {
+      "family": "BA increment",
+      "status": "not_implemented",
+      "coefficient_file": "BASP05.COE, BASP06.COE",
+      "reason": "increment families are deferred; no console case yet",
+      "evidence": "notes/reference/vdyp-equation-validation.md"
+    },
+    {
+      "family": "DQ increment",
+      "status": "not_implemented",
+      "coefficient_file": "DQSP05.COE, DQSP06.COE",
+      "reason": "increment families are deferred; no console case yet",
+      "evidence": "notes/reference/vdyp-equation-validation.md"
+    }
+  ]
+}

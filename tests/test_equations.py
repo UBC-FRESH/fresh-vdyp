@@ -16,14 +16,17 @@ from equations import (
     WholeStemCoefficients,
     close_utilization_ratio,
     estimate_close_utilization_volume,
+    estimate_non_primary_height,
     estimate_utilization_components,
     estimate_whole_stem_volume,
     family_status,
+    load_reghl,
     load_regvcu,
     load_regvu,
     load_volume_groups,
     load_vtotreg4,
     main,
+    non_primary_lorey_height,
     ratio,
     validate_against_golden,
     whole_stem_volume_per_hectare,
@@ -335,3 +338,56 @@ def test_utilization_components_zero_sum_is_not_implemented() -> None:
     )
     assert estimate.status == "not_implemented"
     assert "not positive" in estimate.reason
+
+
+def test_load_reghl_and_height_equations(tmp_path: Path) -> None:
+    path = tmp_path / "REGHL.COE"
+    path.write_text("AC AT C 1 0.86323 1.00505\nAC AT I 2 0.5 1.0\n", encoding="ascii")
+    rows = load_reghl(path)
+    first = rows[("AC", "AT", "C")]
+    assert first.equation_index == 1
+    assert non_primary_lorey_height(first, lead_height=30.0, primary_height=25.0) == pytest.approx(
+        1.3 + 0.86323 * (30.0 - 1.3) ** 1.00505
+    )
+    second = rows[("AC", "AT", "I")]
+    assert non_primary_lorey_height(second, lead_height=30.0, primary_height=25.0) == pytest.approx(
+        1.3 + 0.5 * (25.0 - 1.3)
+    )
+
+
+def test_reghl_rejects_an_unknown_equation_index() -> None:
+    from equations import ReghlCoefficients
+
+    row = ReghlCoefficients("AC", "AT", "C", 3, (1.0, 1.0))
+    with pytest.raises(EquationError):
+        non_primary_lorey_height(row, lead_height=30.0, primary_height=25.0)
+
+
+def test_estimate_non_primary_height_is_experimental() -> None:
+    from equations import ReghlCoefficients
+
+    rows = {("AC", "AT", "C"): ReghlCoefficients("AC", "AT", "C", 1, (1.0, 1.0))}
+    estimate = estimate_non_primary_height(
+        rows,
+        non_primary="AC",
+        primary="AT",
+        region="C",
+        lead_height=30.0,
+        primary_height=25.0,
+    )
+    assert estimate.status == "experimental"
+    assert estimate.value == pytest.approx(30.0)
+
+
+def test_missing_reghl_row_uses_the_public_default() -> None:
+    estimate = estimate_non_primary_height(
+        {},
+        non_primary="AC",
+        primary="AT",
+        region="C",
+        lead_height=30.0,
+        primary_height=25.0,
+    )
+    assert estimate.status == "experimental"
+    assert "default" in estimate.reason
+    assert estimate.value == pytest.approx(25.0)
