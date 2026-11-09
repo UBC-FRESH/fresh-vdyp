@@ -138,6 +138,14 @@ No coefficient target is missing. 33 files under `VDYP_CFG/coe` are not
 referenced by either control file and remain candidates for later catalog
 investigation.
 
+## Structural configuration parse
+
+`notes/reference/vdyp-config-summary.json` records 45 files: 5 control, 7
+parameter, and 33 data files, with 3,313 parsed rows. Of the data files, 2 are
+one-token lookups (`BEC0.DAT`, `SP0.DAT`) and 31 are token tables. `SIEQN.PRM`
+is comment-only and valid with zero records. The summary records structure, not
+equation semantics.
+
 ## Runtime note
 
 The console runtime was not exercised in this planning pass. Phase 3 must test:

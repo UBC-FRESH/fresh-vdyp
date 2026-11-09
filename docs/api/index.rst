@@ -11,6 +11,7 @@ whenever you add a module to the project.
 
    check-workflow
    coe-parser
+   config-parser
    dashboard
    inventory-vdyp
    provenance
