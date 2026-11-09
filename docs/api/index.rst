@@ -23,3 +23,4 @@ whenever you add a module to the project.
    vdyp-control
    vdyp-map
    vdyp-runtime
+   yield-parser
