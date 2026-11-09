@@ -33,3 +33,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Opened pull request #35 with the Phase 4 close-out report and queued it for maintainer approval.
 - Merged pull request #35 as `ba6f339`, closed Phase 4 parent issue #29, and deleted `feature/p4-curve-api`; P4 is complete.
 - Launched Phase 5 with parent issue #36, child issues #37-#42, and branch `feature/p5-python-equations`.
+- Completed P5.1-P5.6: VTOTREG4 validated (0.836% age-100 error); REGVCU, REGVU, REGHL, and BA/DQ increments implemented as experimental; validation matrix records all gaps. Closed child issues #37-#42.

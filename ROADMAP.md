@@ -160,12 +160,12 @@ Status: active
 Goal: reimplement documented equation families in Python and validate each one
 against the console oracle.
 
-- [ ] P5.1 Implement whole-stem volume (`VTOTREG4`) and validate
-- [ ] P5.2 Implement close-utilization volume (`REGVCU`) and validate
-- [ ] P5.3 Implement utilization volume (`REGVU`) and validate
-- [ ] P5.4 Implement height/Lorey height (`REGHL`) and validate
-- [ ] P5.5 Implement BA and DQ increment families and validate
-- [ ] P5.6 Add a family-by-family validation matrix and tolerance report
+- [x] P5.1 Implement whole-stem volume (`VTOTREG4`) and validate
+- [x] P5.2 Implement close-utilization volume (`REGVCU`) and validate
+- [x] P5.3 Implement utilization volume (`REGVU`) and validate
+- [x] P5.4 Implement height/Lorey height (`REGHL`) and validate
+- [x] P5.5 Implement BA and DQ increment families and validate
+- [x] P5.6 Add a family-by-family validation matrix and tolerance report
 
 Acceptance criteria:
 
