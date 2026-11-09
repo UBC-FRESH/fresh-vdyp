@@ -138,11 +138,11 @@ Status: active
 
 Goal: expose a stable typed curve API and publish a small public curve dataset.
 
-- [ ] P4.1 Define `CurveQuery` and `CurvePoint` models with provenance
-- [ ] P4.2 Build a curve service over parsed console outputs
-- [ ] P4.3 Add age/year queries, units, and explicit unsupported cases
-- [ ] P4.4 Publish a golden curve dataset and manifest
-- [ ] P4.5 Add API, property, and regression tests
+- [x] P4.1 Define `CurveQuery` and `CurvePoint` models with provenance
+- [x] P4.2 Build a curve service over parsed console outputs
+- [x] P4.3 Add age/year queries, units, and explicit unsupported cases
+- [x] P4.4 Publish a golden curve dataset and manifest
+- [x] P4.5 Add API, property, and regression tests
 
 Acceptance criteria:
 

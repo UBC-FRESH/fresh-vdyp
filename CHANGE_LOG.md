@@ -29,3 +29,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Opened pull request #28 with the Phase 3 close-out report and queued it for maintainer approval.
 - Merged pull request #28 as `53ebc2c`, closed Phase 3 parent issue #21, and deleted `feature/p3-console-runner`; P3 is complete.
 - Launched Phase 4 with parent issue #29, child issues #30-#34, and branch `feature/p4-curve-api`.
+- Completed P4.1-P4.5: typed curve API and service, 301-row synthetic curve dataset, provenance manifest, and unit/property/regression tests. Closed child issues #30-#34.
