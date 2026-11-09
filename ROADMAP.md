@@ -17,8 +17,8 @@ after its parent issue exists and the maintainer approves it.
 | P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | complete |
 | P3 Console runner and yield parser | #21 | `feature/p3-console-runner` | complete |
 | P4 Curve API and public datasets | #29 | `feature/p4-curve-api` | complete |
-| P5 Incremental Python equations | #36 | `feature/p5-python-equations` | pr-open |
-| P6 CLI, API, web, and agent | TBD | `feature/p6-interfaces` | planned |
+| P5 Incremental Python equations | #36 | `feature/p5-python-equations` | complete |
+| P6 CLI, API, web, and agent | #44 | `feature/p6-interfaces` | active |
 | P7 Validation, packaging, and FEMIC integration | TBD | `feature/p7-release-integration` | planned |
 
 ## Lifecycle Map
@@ -155,7 +155,7 @@ Acceptance criteria:
 
 Parent issue: #36
 Branch: `feature/p5-python-equations`
-Status: pr-open
+Status: complete
 
 Goal: reimplement documented equation families in Python and validate each one
 against the console oracle.
@@ -178,9 +178,9 @@ Acceptance criteria:
 
 ## Phase 6: CLI, API, web, and agent
 
-Parent issue: TBD
+Parent issue: #44
 Branch: `feature/p6-interfaces`
-Status: planned
+Status: active
 
 Goal: make the package usable by people and agents through a typed API, CLI,
 FRESH-style web UI, and bounded assistant tools.

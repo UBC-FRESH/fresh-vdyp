@@ -35,3 +35,5 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Launched Phase 5 with parent issue #36, child issues #37-#42, and branch `feature/p5-python-equations`.
 - Completed P5.1-P5.6: VTOTREG4 validated (0.836% age-100 error); REGVCU, REGVU, REGHL, and BA/DQ increments implemented as experimental; validation matrix records all gaps. Closed child issues #37-#42.
 - Opened pull request #43 with the Phase 5 close-out report and queued it for maintainer approval.
+- Merged pull request #43 as `39ce9ce`, closed Phase 5 parent issue #36, and deleted `feature/p5-python-equations`; P5 is complete.
+- Launched Phase 6 with parent issue #44, child issues #45-#49, and branch `feature/p6-interfaces`.
