@@ -16,8 +16,8 @@ after its parent issue exists and the maintainer approves it.
 | P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | complete |
 | P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | complete |
 | P3 Console runner and yield parser | #21 | `feature/p3-console-runner` | complete |
-| P4 Curve API and public datasets | #29 | `feature/p4-curve-api` | pr-open |
-| P5 Incremental Python equations | TBD | `feature/p5-python-equations` | planned |
+| P4 Curve API and public datasets | #29 | `feature/p4-curve-api` | complete |
+| P5 Incremental Python equations | #36 | `feature/p5-python-equations` | pr-open |
 | P6 CLI, API, web, and agent | TBD | `feature/p6-interfaces` | planned |
 | P7 Validation, packaging, and FEMIC integration | TBD | `feature/p7-release-integration` | planned |
 
@@ -134,7 +134,7 @@ Acceptance criteria:
 
 Parent issue: #29
 Branch: `feature/p4-curve-api`
-Status: pr-open
+Status: complete
 
 Goal: expose a stable typed curve API and publish a small public curve dataset.
 
@@ -153,19 +153,19 @@ Acceptance criteria:
 
 ## Phase 5: Incremental Python equations
 
-Parent issue: TBD
+Parent issue: #36
 Branch: `feature/p5-python-equations`
-Status: planned
+Status: pr-open
 
 Goal: reimplement documented equation families in Python and validate each one
 against the console oracle.
 
-- [ ] P5.1 Implement whole-stem volume (`VTOTREG4`) and validate
-- [ ] P5.2 Implement close-utilization volume (`REGVCU`) and validate
-- [ ] P5.3 Implement utilization volume (`REGVU`) and validate
-- [ ] P5.4 Implement height/Lorey height (`REGHL`) and validate
-- [ ] P5.5 Implement BA and DQ increment families and validate
-- [ ] P5.6 Add a family-by-family validation matrix and tolerance report
+- [x] P5.1 Implement whole-stem volume (`VTOTREG4`) and validate
+- [x] P5.2 Implement close-utilization volume (`REGVCU`) and validate
+- [x] P5.3 Implement utilization volume (`REGVU`) and validate
+- [x] P5.4 Implement height/Lorey height (`REGHL`) and validate
+- [x] P5.5 Implement BA and DQ increment families and validate
+- [x] P5.6 Add a family-by-family validation matrix and tolerance report
 
 Acceptance criteria:
 
