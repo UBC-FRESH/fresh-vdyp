@@ -12,7 +12,9 @@ whenever you add a module to the project.
    check-workflow
    coe-parser
    config-parser
+   bundle-service
    dashboard
+   fresh-vdyp
    inventory-vdyp
    key-inference
    normalize
