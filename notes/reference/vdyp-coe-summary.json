@@ -184,7 +184,7 @@
       "source_file": "VDYP_CFG/coe/GROWBA11.coe",
       "status": "parsed",
       "columns": [
-        "species",
+        "coastal_interior",
         "c0",
         "c1",
         "c2",
@@ -198,7 +198,7 @@
       "source_file": "VDYP_CFG/coe/GROWBA27.COE",
       "status": "parsed",
       "columns": [
-        "species",
+        "bec",
         "label",
         "flag",
         "v0",
@@ -252,7 +252,7 @@
       "source_file": "VDYP_CFG/coe/REGBA25.coe",
       "status": "parsed",
       "columns": [
-        "species",
+        "bec",
         "label",
         "flag",
         "v0",
@@ -281,7 +281,7 @@
       "status": "parsed",
       "columns": [
         "species",
-        "bec",
+        "coastal_interior",
         "c0",
         "c1",
         "c2"
@@ -308,7 +308,7 @@
       "source_file": "VDYP_CFG/coe/REGDQ18.COE",
       "status": "parsed",
       "columns": [
-        "species",
+        "bec",
         "label",
         "flag",
         "v0",
@@ -336,7 +336,7 @@
       "source_file": "VDYP_CFG/coe/REGDQ24.COE",
       "status": "parsed",
       "columns": [
-        "species",
+        "bec",
         "label",
         "flag",
         "v0",
@@ -364,7 +364,7 @@
       "source_file": "VDYP_CFG/coe/REGDQ26.coe",
       "status": "parsed",
       "columns": [
-        "species",
+        "bec",
         "label",
         "flag",
         "v0",
@@ -419,7 +419,7 @@
       "status": "parsed",
       "columns": [
         "species",
-        "bec",
+        "species_2",
         "coastal_interior",
         "curve",
         "c0",
@@ -493,7 +493,7 @@
       "status": "parsed",
       "columns": [
         "species",
-        "bec",
+        "coastal_interior",
         "c0",
         "c1",
         "c2"
@@ -507,7 +507,7 @@
       "status": "parsed",
       "columns": [
         "species",
-        "bec",
+        "coastal_interior",
         "c0",
         "c1"
       ],
@@ -520,7 +520,7 @@
       "status": "parsed",
       "columns": [
         "species",
-        "bec",
+        "coastal_interior",
         "c0",
         "c1",
         "c2"
@@ -558,7 +558,7 @@
       "status": "parsed",
       "columns": [
         "species",
-        "bec",
+        "coastal_interior",
         "c0",
         "c1"
       ],
@@ -607,7 +607,7 @@
       "source_file": "VDYP_CFG/coe/YLDBA405.COE",
       "status": "parsed",
       "columns": [
-        "species",
+        "bec",
         "label",
         "flag",
         "v0",
@@ -635,7 +635,7 @@
       "source_file": "VDYP_CFG/coe/YLDBA407.COE",
       "status": "parsed",
       "columns": [
-        "species",
+        "bec",
         "label",
         "flag",
         "v0",
@@ -679,7 +679,7 @@
       "source_file": "VDYP_CFG/coe/YLDDQ45.COE",
       "status": "parsed",
       "columns": [
-        "species",
+        "bec",
         "label",
         "flag",
         "v0",

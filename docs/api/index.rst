@@ -14,6 +14,7 @@ whenever you add a module to the project.
    config-parser
    dashboard
    inventory-vdyp
+   key-inference
    provenance
    vdyp-control
    vdyp-map

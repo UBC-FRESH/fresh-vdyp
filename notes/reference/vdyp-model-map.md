@@ -61,13 +61,13 @@ Unknowns:
 
 ### Height / Lorey height
 
-`REGHL.COE` has 302 rows. Rows contain species, BEC, coastal/interior indicator,
-and two coefficients. This is one of the easier families to map and validate.
+`REGHL.COE` has 302 rows. Rows contain a species pair, a coastal/interior
+indicator, a curve number, and two coefficients. This is one of the easier
+families to map and validate.
 
 Unknowns:
 
 - exact predictor variables;
-- BEC and species interactions;
 - whether the coefficient pair is a base/exponent or intercept/slope.
 
 ### Basal-area increment
@@ -104,6 +104,14 @@ output columns.
 parsed under a named schema with a stable token count. `COMPLIM.COE` and
 `REGDQI04.COE` are explicitly unsupported because their rows have variable
 shapes; they need dedicated parsers before they can be catalogued.
+
+## Key catalog
+
+`notes/reference/vdyp-key-catalog.json` records 27 mapped families, 11 unmapped
+numeric helper families that carry no key columns, and the 2 unsupported
+families. Species keys are validated against `SP0.DAT`; BEC keys against
+`BEC0.DAT`, plus the `BG` aggregate code that appears in increment files but not
+in the zone lookup.
 
 ## What the bundle gives us
 

@@ -106,7 +106,14 @@ def test_parse_text_family_columns() -> None:
         source_file="VDYP_CFG/coe/REGHL.COE",
         family="reghl",
     )
-    assert table.columns == ("species", "bec", "coastal_interior", "curve", "c0", "c1")
+    assert table.columns == (
+        "species",
+        "species_2",
+        "coastal_interior",
+        "curve",
+        "c0",
+        "c1",
+    )
     assert table.rows[0].values == ("AC", "AT", "C", 1, 0.86323, 1.00505)
 
 

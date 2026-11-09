@@ -1,0 +1,956 @@
+{
+  "lookups": {
+    "species": [
+      "AC",
+      "AT",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "H",
+      "L",
+      "MB",
+      "PA",
+      "PL",
+      "PW",
+      "PY",
+      "S",
+      "Y"
+    ],
+    "bec": [
+      "AT",
+      "BWBS",
+      "CDF",
+      "CWH",
+      "ESSF",
+      "ICH",
+      "IDF",
+      "MH",
+      "MS",
+      "PP",
+      "SBPS",
+      "SBS",
+      "SWB"
+    ],
+    "bec_aliases": [
+      "BG"
+    ]
+  },
+  "family_count": 40,
+  "row_count": 3260,
+  "status_counts": {
+    "mapped": 27,
+    "unsupported": 2,
+    "unmapped": 11
+  },
+  "families": [
+    {
+      "family": "bafip16",
+      "equation_family": "fip_helper",
+      "control_sequences": [],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "flag"
+      ],
+      "row_count": 79,
+      "mapped_rows": 79,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "basp05",
+      "equation_family": "ba_growth_species",
+      "control_sequences": [
+        "148"
+      ],
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 15,
+      "mapped_rows": 15,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "basp06",
+      "equation_family": "ba_growth_species",
+      "control_sequences": [
+        "149"
+      ],
+      "columns": [
+        "species",
+        "group",
+        "c0",
+        "c1",
+        "c2",
+        "flag"
+      ],
+      "row_count": 134,
+      "mapped_rows": 134,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "complim",
+      "equation_family": "species_limits",
+      "control_sequences": [
+        "061"
+      ],
+      "columns": [],
+      "row_count": 0,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "unsupported",
+      "reason": "variable token count: text and numeric columns vary by row"
+    },
+    {
+      "family": "dqfip16z",
+      "equation_family": "fip_helper",
+      "control_sequences": [],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "row_count": 79,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 79,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "dqsp05",
+      "equation_family": "dq_growth_species",
+      "control_sequences": [
+        "150"
+      ],
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 15,
+      "mapped_rows": 15,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "dqsp06",
+      "equation_family": "dq_growth_species",
+      "control_sequences": [
+        "151"
+      ],
+      "columns": [
+        "species",
+        "group",
+        "c0",
+        "c1",
+        "c2",
+        "flag"
+      ],
+      "row_count": 134,
+      "mapped_rows": 134,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "gb01",
+      "equation_family": "growth_curve_helper",
+      "control_sequences": [],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ],
+      "row_count": 15,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 15,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "gd19",
+      "equation_family": "growth_curve_helper",
+      "control_sequences": [],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9",
+        "c10"
+      ],
+      "row_count": 15,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 15,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "gd20",
+      "equation_family": "growth_curve_helper",
+      "control_sequences": [
+        "122"
+      ],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9",
+        "c10"
+      ],
+      "row_count": 15,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 15,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "gd23",
+      "equation_family": "growth_curve_helper",
+      "control_sequences": [
+        "122"
+      ],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7"
+      ],
+      "row_count": 15,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 15,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "growba11",
+      "equation_family": "ba_growth_empirical",
+      "control_sequences": [
+        "121"
+      ],
+      "columns": [
+        "coastal_interior",
+        "c0",
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "row_count": 2,
+      "mapped_rows": 2,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "growba27",
+      "equation_family": "ba_growth_empirical",
+      "control_sequences": [
+        "121"
+      ],
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 112,
+      "mapped_rows": 112,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "pct_40",
+      "equation_family": "upper_bounds",
+      "control_sequences": [],
+      "columns": [
+        "group",
+        "c0",
+        "c1",
+        "species"
+      ],
+      "row_count": 79,
+      "mapped_rows": 79,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "pct_407",
+      "equation_family": "upper_bounds",
+      "control_sequences": [
+        "108"
+      ],
+      "columns": [
+        "group",
+        "c0",
+        "c1",
+        "species"
+      ],
+      "row_count": 79,
+      "mapped_rows": 79,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regba25",
+      "equation_family": "ba_increment",
+      "control_sequences": [],
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 126,
+      "mapped_rows": 126,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regbav01",
+      "equation_family": "ba_adjustment",
+      "control_sequences": [],
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 32,
+      "mapped_rows": 32,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regbreak",
+      "equation_family": "breakage",
+      "control_sequences": [
+        "095"
+      ],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "row_count": 25,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 25,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "regdq18",
+      "equation_family": "dq_increment",
+      "control_sequences": [],
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 98,
+      "mapped_rows": 98,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regdq24",
+      "equation_family": "dq_increment",
+      "control_sequences": [],
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 112,
+      "mapped_rows": 112,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regdq26",
+      "equation_family": "dq_increment",
+      "control_sequences": [],
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 112,
+      "mapped_rows": 112,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regdqi04",
+      "equation_family": "dq_increment",
+      "control_sequences": [
+        "060"
+      ],
+      "columns": [],
+      "row_count": 0,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "unsupported",
+      "reason": "variable token count: one summary row and multi-coefficient rows"
+    },
+    {
+      "family": "regdql2",
+      "equation_family": "dq_limits",
+      "control_sequences": [
+        "123"
+      ],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8"
+      ],
+      "row_count": 15,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 15,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "reghl",
+      "equation_family": "height",
+      "control_sequences": [
+        "053"
+      ],
+      "columns": [
+        "species",
+        "species_2",
+        "coastal_interior",
+        "curve",
+        "c0",
+        "c1"
+      ],
+      "row_count": 302,
+      "mapped_rows": 302,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regvcu",
+      "equation_family": "close_utilization_volume",
+      "control_sequences": [
+        "092"
+      ],
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 292,
+      "mapped_rows": 292,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regvdu",
+      "equation_family": "decay_volume",
+      "control_sequences": [
+        "093"
+      ],
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 252,
+      "mapped_rows": 252,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regvu",
+      "equation_family": "utilization_volume",
+      "control_sequences": [
+        "091"
+      ],
+      "columns": [
+        "group",
+        "species",
+        "c0",
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "row_count": 292,
+      "mapped_rows": 292,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regvwu",
+      "equation_family": "decay_waste_volume",
+      "control_sequences": [
+        "094"
+      ],
+      "columns": [
+        "species",
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "row_count": 16,
+      "mapped_rows": 16,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regyhlp",
+      "equation_family": "height_primary",
+      "control_sequences": [
+        "050"
+      ],
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 32,
+      "mapped_rows": 32,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regyhlpa",
+      "equation_family": "height_primary",
+      "control_sequences": [
+        "051"
+      ],
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1"
+      ],
+      "row_count": 32,
+      "mapped_rows": 32,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "regyhlpc",
+      "equation_family": "height_primary",
+      "control_sequences": [],
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 32,
+      "mapped_rows": 32,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "top309",
+      "equation_family": "top_height",
+      "control_sequences": [],
+      "columns": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 79,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 79,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "top98",
+      "equation_family": "top_height",
+      "control_sequences": [],
+      "columns": [
+        "c0",
+        "c1",
+        "c2"
+      ],
+      "row_count": 79,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 79,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "upperb02",
+      "equation_family": "upper_bounds",
+      "control_sequences": [
+        "043"
+      ],
+      "columns": [
+        "species",
+        "coastal_interior",
+        "c0",
+        "c1"
+      ],
+      "row_count": 32,
+      "mapped_rows": 32,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "vtotreg4",
+      "equation_family": "whole_stem_volume",
+      "control_sequences": [
+        "090"
+      ],
+      "columns": [
+        "group",
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8"
+      ],
+      "row_count": 74,
+      "mapped_rows": 74,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "yldba309",
+      "equation_family": "ba_yield",
+      "control_sequences": [],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8"
+      ],
+      "row_count": 79,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 79,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "yldba405",
+      "equation_family": "ba_yield",
+      "control_sequences": [],
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 98,
+      "mapped_rows": 98,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "yldba407",
+      "equation_family": "ba_yield",
+      "control_sequences": [
+        "106"
+      ],
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 98,
+      "mapped_rows": 98,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    },
+    {
+      "family": "ylddq309",
+      "equation_family": "dq_yield",
+      "control_sequences": [],
+      "columns": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "row_count": 79,
+      "mapped_rows": 0,
+      "invalid_rows": 0,
+      "unmapped_rows": 79,
+      "status": "unmapped",
+      "reason": "no rows have key columns"
+    },
+    {
+      "family": "ylddq45",
+      "equation_family": "dq_yield",
+      "control_sequences": [
+        "107"
+      ],
+      "columns": [
+        "bec",
+        "label",
+        "flag",
+        "v0",
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8",
+        "v9",
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v15"
+      ],
+      "row_count": 84,
+      "mapped_rows": 84,
+      "invalid_rows": 0,
+      "unmapped_rows": 0,
+      "status": "mapped",
+      "reason": ""
+    }
+  ]
+}

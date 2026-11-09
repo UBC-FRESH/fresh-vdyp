@@ -291,7 +291,7 @@ def _schema(
     )
 
 
-_INCREMENT = ("species", "label", "flag", *_columns("v", 16))
+_INCREMENT = ("bec", "label", "flag", *_columns("v", 16))
 
 COE_SCHEMAS: Final[dict[str, CoeSchema]] = {
     "bafip16": _schema("bafip16", (*_columns("c", 8), "flag"), (8,)),
@@ -304,12 +304,12 @@ COE_SCHEMAS: Final[dict[str, CoeSchema]] = {
     "gd19": _schema("gd19", _columns("c", 11)),
     "gd20": _schema("gd20", _columns("c", 11)),
     "gd23": _schema("gd23", _columns("c", 8)),
-    "growba11": _schema("growba11", ("species", *_columns("c", 4)), (0,)),
+    "growba11": _schema("growba11", ("coastal_interior", *_columns("c", 4)), (0,)),
     "growba27": _schema("growba27", _INCREMENT, (0, 1)),
     "pct_40": _schema("pct_40", ("group", *_columns("c", 2), "species"), (3,)),
     "pct_407": _schema("pct_407", ("group", *_columns("c", 2), "species"), (3,)),
     "regba25": _schema("regba25", _INCREMENT, (0, 1)),
-    "regbav01": _schema("regbav01", ("species", "bec", *_columns("c", 3)), (0, 1)),
+    "regbav01": _schema("regbav01", ("species", "coastal_interior", *_columns("c", 3)), (0, 1)),
     "regbreak": _schema("regbreak", _columns("c", 5)),
     "regdq18": _schema("regdq18", _INCREMENT, (0, 1)),
     "regdq24": _schema("regdq24", _INCREMENT, (0, 1)),
@@ -317,19 +317,19 @@ COE_SCHEMAS: Final[dict[str, CoeSchema]] = {
     "regdql2": _schema("regdql2", _columns("c", 9)),
     "reghl": _schema(
         "reghl",
-        ("species", "bec", "coastal_interior", "curve", *_columns("c", 2)),
+        ("species", "species_2", "coastal_interior", "curve", *_columns("c", 2)),
         (0, 1, 2),
     ),
     "regvcu": _schema("regvcu", ("group", "species", *_columns("c", 3))),
     "regvdu": _schema("regvdu", ("group", "species", *_columns("c", 3))),
     "regvu": _schema("regvu", ("group", "species", *_columns("c", 4))),
     "regvwu": _schema("regvwu", ("species", *_columns("c", 6)), (0,)),
-    "regyhlp": _schema("regyhlp", ("species", "bec", *_columns("c", 3)), (0, 1)),
-    "regyhlpa": _schema("regyhlpa", ("species", "bec", *_columns("c", 2)), (0, 1)),
-    "regyhlpc": _schema("regyhlpc", ("species", "bec", *_columns("c", 3)), (0, 1)),
+    "regyhlp": _schema("regyhlp", ("species", "coastal_interior", *_columns("c", 3)), (0, 1)),
+    "regyhlpa": _schema("regyhlpa", ("species", "coastal_interior", *_columns("c", 2)), (0, 1)),
+    "regyhlpc": _schema("regyhlpc", ("species", "coastal_interior", *_columns("c", 3)), (0, 1)),
     "top309": _schema("top309", _columns("c", 3)),
     "top98": _schema("top98", _columns("c", 3)),
-    "upperb02": _schema("upperb02", ("species", "bec", *_columns("c", 2)), (0, 1)),
+    "upperb02": _schema("upperb02", ("species", "coastal_interior", *_columns("c", 2)), (0, 1)),
     "vtotreg4": _schema("vtotreg4", ("group", *_columns("b", 9))),
     "yldba309": _schema("yldba309", _columns("c", 9)),
     "yldba405": _schema("yldba405", _INCREMENT, (0, 1)),
