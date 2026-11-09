@@ -54,6 +54,24 @@ also crashes, the console binary itself is not implicated.
 - P3.3 (run and capture), P3.5 (golden output), and the run half of P3.6 are
   blocked on this host.
 
+## Runner reproduction
+
+`scripts/run_console.py` isolated the input, copied `VDYP.INI`, and ran the
+console through the adapter. The record is:
+
+```text
+status: failed
+failure_code: NONZERO-EXIT
+exit_code: -6          (SIGABRT)
+mode: wine
+stdout: (empty)
+stderr: free(): invalid pointer
+output: (not created)
+errors: (not created)
+```
+
+The runner wrote no curve, and the record is kept outside the repository.
+
 ## What is needed to proceed
 
 A working 32-bit Wine runtime, a Windows host, or a container image with a

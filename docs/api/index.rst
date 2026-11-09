@@ -19,6 +19,7 @@ whenever you add a module to the project.
    key-inference
    normalize
    provenance
+   run-console
    vdyp-control
    vdyp-map
    vdyp-runtime
