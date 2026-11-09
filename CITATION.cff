@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this package, cite it and the BC source models and tables it reads."
+title: "fresh-vdyp"
+abstract: "A public Python interoperability layer for the BC VDYP7 coefficient bundle, console runner, yield curves, and incremental validated growth equations. Reimplementation and provenance layer, not a claim of authorship over BC government models or data."
+authors:
+  - name: "UBC FRESH Lab"
+repository-code: "https://github.com/UBC-FRESH/fresh-vdyp"
+url: "https://github.com/UBC-FRESH/fresh-vdyp"
+license: "MIT"
+version: "0.1.0"
+date-released: "2026-11-09"
+references:
+  - type: software
+    title: "VDYP7"
+    authors:
+      - name: "Province of British Columbia"
+    notes: "BC government Variable Density Yield Projection model; source coefficients, control files, and outputs retain BC attribution."

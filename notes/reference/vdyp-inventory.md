@@ -1,0 +1,139 @@
+# VDYP7 source inventory
+
+Date: 2026-11-09
+Status: observed from the local VDYP7 installation
+Scope: bundle extraction, console runner, and yield-table planning
+
+## Installation shape
+
+The local VDYP7 bundle contains:
+
+```text
+VDYP7Console.exe        console yield-table generator
+VDYP7Batch.exe          batch runner
+WinVDYP7.exe            interactive Windows UI
+VDYP7.EXE               legacy front end
+VDYPBACK.EXE            backward projection
+VDYP7CORE.dll           core model library
+VDYP7Interface.dll      extended interface library
+VDYP7IO.dll             I/O library
+VDYPSI32.dll            site-index library
+VDYP_CFG/               control, coefficient, parameter, and report files
+```
+
+The binaries are PE32 32-bit Windows executables.
+
+Use `VDYP_INSTALL`, `VDYP_CFG_DIR`, and `VDYP_CONSOLE` for discovery. Do not
+commit the installation.
+
+## Control files
+
+```text
+VDYP_CFG/VDYP.CTR
+VDYP_CFG/VDYPBACK.CTR
+VDYP_CFG/VDYP.tcl
+VDYP_CFG/VDYP7LoggingConfig.txt
+```
+
+`VDYP.CTR` is the model control map. Each numbered sequence points to a model
+step and a coefficient or parameter file. Examples observed:
+
+```text
+090  coe\VTOTREG4.coe     total whole-stem volume
+091  coe\regvu.coe        utilization volume
+092  coe\regvcu.coe       close-utilization volume
+093  coe\regvdu.coe       volume net of decay
+094  coe\regvwu.coe       volume net of decay and waste
+095  coe\regbreak.coe     breakage
+050  coe\regyhlp.coe      height, primary species
+053  coe\reghl.coe        height, non-primary species
+148  coe\basp05.coe       BA growth, primary species
+149  coe\basp06.coe       BA growth, non-primary species
+150  coe\dqsp05.coe       DQ growth, primary species
+151  coe\dqsp06.coe       DQ growth, non-primary species
+106  coe\YLDBA407.coe     BA yield
+107  coe\YLDDQ45.coe      DQ yield
+```
+
+The sequence numbers are the join keys for the catalog.
+
+## Coefficient bundle
+
+Observed in `VDYP_CFG/coe`:
+
+```text
+40 .COE files
+7  .PRM files
+33 .DAT files
+about 568 KB
+```
+
+The files are ASCII, not binary. They contain model coefficients, control
+settings, constraints, and species/BEC tables.
+
+Representative families:
+
+```text
+VTOTREG4.COE    whole-stem volume
+REGVU.COE       utilization volume
+REGVCU.COE      close-utilization volume
+REGVDU.COE      volume net of decay
+REGVWU.COE      volume net of decay and waste
+REGHL.COE       height / Lorey height
+REGBA25.COE     basal-area increment
+BASP05.COE      BA growth, primary species
+BASP06.COE      BA growth, non-primary species
+DQSP05.COE      DQ growth, primary species
+DQSP06.COE      DQ growth, non-primary species
+YLDBA407.COE    BA yield
+YLDDQ45.COE     DQ yield
+SIEQN.PRM       site-curve assignments
+CVADJ.PRM       compatibility-variable adjustment
+MOD19813.PRM    model modifier
+BEC0.DAT        BEC definitions
+SP0.DAT         species definitions
+```
+
+## Yield-table schema
+
+`VDYP_CFG/VDYP.tcl` defines 101 output columns. Major groups:
+
+```text
+feature / map / polygon / layer keys
+year, age
+species codes and percentages
+stockability
+site index, dominant height, Lorey height
+diameter, TPH, basal area
+whole-stem, close-utilization, decay, waste, and breakage volumes
+MoF biomass
+species-specific volumes and biomass
+CFS biomass
+```
+
+The public Volume 3 console guide documents `csvyieldtable` output and the
+`VDYP7Console` command line.
+
+## Runtime note
+
+The console runtime was not exercised in this planning pass. Phase 3 must test:
+
+- native Windows execution;
+- Wine execution on Linux;
+- config and path discovery;
+- `csvyieldtable` output;
+- failure capture for missing binaries or config.
+
+A failed runtime is a finding, not a reason to invent a Python substitute.
+
+## Source attribution
+
+Every extracted file and output must cite:
+
+```text
+Province of British Columbia
+VDYP7
+VDYP_CFG/<file> or VDYP7Console output
+```
+
+The package is `fresh-vdyp`; the source model is BC VDYP7. Do not blur those.
