@@ -3,7 +3,7 @@
 Date: 2026-11-09
 Repository: <https://github.com/UBC-FRESH/fresh-vdyp>
 Branch: `main`
-Status: seed and detailed planning complete; no Phase 0 issue or phase branch yet.
+Status: Phase 0 active; parent issue #1 open on branch `feature/p0-bootstrap`.
 
 This note is the first thing a new session agent should read after `AGENTS.md`.
 
@@ -62,9 +62,8 @@ Do **not** start with a full Python VDYP rewrite.
 
 Start with P0 → P1 → P2 → P3:
 
-1. Create the Phase 0 parent issue and activate P0 in `ROADMAP.md`.
-2. Create `feature/p0-bootstrap`.
-3. Finish the attribution/bootstrap checks.
+1. The Phase 0 parent issue (#1) and `feature/p0-bootstrap` branch exist; finish
+   P0.1-P0.3 and their evidence.
 4. Move to P1: bundle inventory and control-file map.
 5. Move to P2: coefficient/parameter catalog and parser.
 6. Move to P3: console runner and CSV yield-table parser.
@@ -122,7 +121,7 @@ P3.2 parse csvyieldtable output
 
 - Local repo: seeded and committed.
 - Remote: private `UBC-FRESH/fresh-vdyp`, `main` pushed.
-- Phase 0: not yet activated; no parent issue or child issues.
+- Phase 0: active on `feature/p0-bootstrap`; parent issue #1 open and P0.4 complete. P0.1-P0.3 still need their checks recorded, and no child task issues exist yet.
 - Python package: not scaffolded yet; that is Phase 2 work after the control map.
 - Data assets: not committed; extraction starts in Phase 2.
 - Runtime: not yet exercised; test in Phase 3.
