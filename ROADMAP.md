@@ -12,8 +12,8 @@ after its parent issue exists and the maintainer approves it.
 
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
-| P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | pr-open |
-| P1 Source inventory and control map | TBD | `feature/p1-source-inventory` | planned |
+| P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | complete |
+| P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | active |
 | P2 Coefficient catalog and parser | TBD | `feature/p2-coefficient-catalog` | planned |
 | P3 Console runner and yield parser | TBD | `feature/p3-console-runner` | planned |
 | P4 Curve API and public datasets | TBD | `feature/p4-curve-api` | planned |
@@ -46,7 +46,7 @@ after its parent issue exists and the maintainer approves it.
 
 Parent issue: #1
 Branch: `feature/p0-bootstrap`
-Status: pr-open
+Status: complete
 
 Goal: make the repository's public purpose, attribution, and agent contract
 unambiguous before code lands.
@@ -65,9 +65,9 @@ Acceptance criteria:
 
 ## Phase 1: Source inventory and control map
 
-Parent issue: TBD
+Parent issue: #6
 Branch: `feature/p1-source-inventory`
-Status: planned
+Status: active
 
 Goal: inventory the VDYP7 bundle and freeze the control-file and provenance
 contract before extraction begins.
