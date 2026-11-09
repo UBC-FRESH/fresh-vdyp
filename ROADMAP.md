@@ -15,8 +15,8 @@ after its parent issue exists and the maintainer approves it.
 | P0 Bootstrap and attribution | #1 | `feature/p0-bootstrap` | complete |
 | P1 Source inventory and control map | #6 | `feature/p1-source-inventory` | complete |
 | P2 Coefficient catalog and parser | #13 | `feature/p2-coefficient-catalog` | complete |
-| P3 Console runner and yield parser | #21 | `feature/p3-console-runner` | pr-open |
-| P4 Curve API and public datasets | TBD | `feature/p4-curve-api` | planned |
+| P3 Console runner and yield parser | #21 | `feature/p3-console-runner` | complete |
+| P4 Curve API and public datasets | #29 | `feature/p4-curve-api` | pr-open |
 | P5 Incremental Python equations | TBD | `feature/p5-python-equations` | planned |
 | P6 CLI, API, web, and agent | TBD | `feature/p6-interfaces` | planned |
 | P7 Validation, packaging, and FEMIC integration | TBD | `feature/p7-release-integration` | planned |
@@ -112,7 +112,7 @@ Acceptance criteria:
 
 Parent issue: #21
 Branch: `feature/p3-console-runner`
-Status: pr-open
+Status: complete
 
 Goal: run `VDYP7Console` safely and turn its CSV yield tables into typed rows.
 
@@ -132,17 +132,17 @@ Acceptance criteria:
 
 ## Phase 4: Curve API and public datasets
 
-Parent issue: TBD
+Parent issue: #29
 Branch: `feature/p4-curve-api`
-Status: planned
+Status: pr-open
 
 Goal: expose a stable typed curve API and publish a small public curve dataset.
 
-- [ ] P4.1 Define `CurveQuery` and `CurvePoint` models with provenance
-- [ ] P4.2 Build a curve service over parsed console outputs
-- [ ] P4.3 Add age/year queries, units, and explicit unsupported cases
-- [ ] P4.4 Publish a golden curve dataset and manifest
-- [ ] P4.5 Add API, property, and regression tests
+- [x] P4.1 Define `CurveQuery` and `CurvePoint` models with provenance
+- [x] P4.2 Build a curve service over parsed console outputs
+- [x] P4.3 Add age/year queries, units, and explicit unsupported cases
+- [x] P4.4 Publish a golden curve dataset and manifest
+- [x] P4.5 Add API, property, and regression tests
 
 Acceptance criteria:
 
