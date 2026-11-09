@@ -24,3 +24,4 @@ Newest entries last. Each milestone gets a dated entry that matches the roadmap 
 - Opened pull request #20 with the Phase 2 close-out report and queued it for maintainer approval.
 - Merged pull request #20 as `17d274e`, closed Phase 2 parent issue #13, and deleted `feature/p2-coefficient-catalog`; P2 is complete.
 - Launched Phase 3 with parent issue #21, child issues #22-#27, and branch `feature/p3-console-runner`.
+- P3 progress: runtime adapter, isolated runner, failure records, synthetic console input, and typed `csvyieldtable` parser. Closed #22, #24, #25, #27. #23 and #26 are blocked because host Wine crashes on every Windows process; the failure is recorded and no curve was invented.
